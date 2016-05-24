@@ -9,7 +9,7 @@ This is the Trek tours business flyer built with Symphony 3
 - You must have Git installed locally.
 - You must have Composer installed locally.
 - You are recommended to use an advanced IDE such as Netbeans or PhpStorm
-- 
+
 # Contributing
 
 This is a private project. Contributing is not open except for Puzzlout team members.
