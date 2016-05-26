@@ -1,8 +1,15 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "puzzlout/trektoursflyer",
+    "description": "The Trek Tours flyer website built with Symphony 3",
     "license": "MIT",
-    "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "keywords": ["Puzzlout", "web", "dev", "jl", "trek", "tours"],
+    "authors": [
+        {
+            "name": "Jeremie Litzler, David Davidov, Souvik Ghosh",
+            "email": "contact@puzzlout.com"
+        }
+    ],
+    "version": "1.0.0",
     "autoload": {
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
@@ -23,6 +30,7 @@
         "incenteev/composer-parameter-handler": "^2.0"
     },
     "require-dev": {
+        "phpunit/phpunit": "4.8.*",
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
     },
