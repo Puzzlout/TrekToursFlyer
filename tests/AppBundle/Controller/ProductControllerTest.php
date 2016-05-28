@@ -16,8 +16,8 @@ class ProductControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/product/' . $productId);
         $this->assertGreaterThan(
             0,
-            $crawler->filter('html:contains("Product display ' . $productId . '")')->count(),
-            "GET /product/$productId; Failed asserting that 'Product display $productId' is shown on page");
+            $crawler->filter('html:contains("Highlights")')->count(),
+            "GET /product/$productId; Failed asserting that 'Highlights is shown on page");
 
         $client->request('GET', '/product/asd');
         $this->assertTrue(
