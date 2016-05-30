@@ -4,9 +4,18 @@
 }
 
 #product-sections {
-	padding:0px;
+	padding: 0;
 }
 
 .section-list {
 	margin-bottom:20px;
+}
+
+#vertical-menu {
+	height: 12em;
+	position: fixed;
+	right: 2em;
+	top: 50%;
+	margin-top: -8em;
+	z-index: 999;
 }
