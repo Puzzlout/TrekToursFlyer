@@ -31,6 +31,7 @@
 #product-header {
 	background-image: url('/bundles/app/images/mtblanc_header.jpg');
 	background-position: center;
+	background-size: cover;
 }
 
 .product-section {

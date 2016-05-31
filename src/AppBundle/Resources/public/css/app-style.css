@@ -12,10 +12,10 @@
 }
 
 #vertical-menu {
-	height: 12em;
+	height: 10em;
 	position: fixed;
 	right: 2em;
 	top: 50%;
-	margin-top: -8em;
+	margin-top: -6em;
 	z-index: 999;
 }
