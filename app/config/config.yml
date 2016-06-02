@@ -31,6 +31,7 @@ framework:
     fragments:       ~
     http_method_override: true
     assets: ~
+    translator: { fallbacks: [en] }
 
 # Twig Configuration
 twig:
@@ -66,3 +67,7 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+lexik_translation:
+    fallback_locale: [en]
+    managed_locales: [en, fr, de]
