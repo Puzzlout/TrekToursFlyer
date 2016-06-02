@@ -19,3 +19,7 @@
 	margin-top: -6em;
 	z-index: 999;
 }
+
+.product-section {
+	min-height: 900px;
+}
