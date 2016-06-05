@@ -8,7 +8,7 @@
     {% endif %}
     <span class="caret"></span>
 </a>
-<ul class="dropdown-menu" role="menu">
+<ul class="dropdown-menu navbar-inverse" role="menu">
     <li><a href="{{ path(route,routeParams|merge({'_locale':'en'})) }}" class="language" rel="en-US"><img class="language-flag" src="{{ asset('bundles/app/images/flags/us.svg') }}" alt="English"/> EN</a></li>
     <li><a href="{{ path(route,routeParams|merge({'_locale':'fr'})) }}" class="language" rel="fr-FR"><img class="language-flag" src="{{ asset('bundles/app/images/flags/fr.svg') }}" alt="French"/> FR</a></li>
     <li><a href="{{ path(route,routeParams|merge({'_locale':'de'})) }}" class="language" rel="de-DE"><img class="language-flag" src="{{ asset('bundles/app/images/flags/de.svg') }}" alt="German"/> DE</a></li>

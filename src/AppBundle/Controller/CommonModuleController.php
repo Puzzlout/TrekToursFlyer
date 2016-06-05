@@ -5,13 +5,15 @@ namespace AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-
 class CommonModuleController extends Controller
 {
 
     public function headerMenuAction()
     {
-        return $this->render("AppBundle:module:header-menu.html.twig");
+        $masterRequest = $this->getMasterRequest();
+        $currentUri = $masterRequest->getRequestUri();
+        $currentRoute = $masterRequest->get('_route');
+        return $this->render("AppBundle:module:header-menu.html.twig",['currentUri'=>$currentUri,'route'=>$currentRoute]);
     }
 
     public function languageMenuAction()

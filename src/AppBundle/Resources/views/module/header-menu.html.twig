@@ -1,18 +1,18 @@
-<nav id="header-menu" class="navbar transparent navbar-fixed-top navbar-default">
+<nav id="header-menu" class="navbar navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-collapse collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ path('home') }}">Home</a></li>
-                <li>
+                <li class="{% if route=='home' %}active{% endif %}"><a href="{{ path('home') }}">Home</a></li>
+                <li class="dropdown {% if route=='product_get' %}active{% endif %}">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Products <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="{{ path('product_get', {'productId':1}) }}">Product 1</a></li>
-                        <li><a href="{{ path('product_get', {'productId':2}) }}">Product 2</a></li>
+                    <ul class="dropdown-menu navbar-inverse" role="menu">
+                        <li class="{% if currentUri==path('product_get', {'productId': 1}) %}active{% endif %}"><a href="{{ path('product_get', {'productId': 1}) }}">Product 1</a></li>
+                        <li class="{% if currentUri==path('product_get', {'productId': 2}) %}active{% endif %}"><a href="{{ path('product_get', {'productId': 2}) }}">Product 2</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ path('contact') }}">Contact</a></li>
+                <li class="{% if route=='contact' %}active{% endif %}"><a href="{{ path('contact') }}">Contact</a></li>
                 <li class="divider"></li>
-                <li>
+                <li  class="dropdown">
                     {{ render(controller('AppBundle:CommonModule:languageMenu')) }}
                 </li>
             </ul>
