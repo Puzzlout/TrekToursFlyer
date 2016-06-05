@@ -2,22 +2,18 @@
     <div class="container-fluid">
         <div class="navbar-collapse collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Home</a></li>
+                <li><a href="{{ path('home') }}">Home</a></li>
                 <li>
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Products <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Product 1</a></li>
-                        <li><a href="#">Product 2</a></li>
+                        <li><a href="{{ path('product_get', {'productId':1}) }}">Product 1</a></li>
+                        <li><a href="{{ path('product_get', {'productId':2}) }}">Product 2</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{ path('contact') }}">Contact</a></li>
                 <li class="divider"></li>
                 <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="/favicon.ico" alt="English" /> <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#" class="language" rel="en-US"><img src="/favicon.ico" alt="English" /> EN</a></li>
-                        <li><a href="#" class="language" rel="fr-FR"><img src="/favicon.ico" alt="French"/> FR</a></li>
-                    </ul>
+                    {{ render(controller('AppBundle:CommonModule:languageMenu')) }}
                 </li>
             </ul>
         </div>

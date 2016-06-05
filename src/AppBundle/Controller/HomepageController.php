@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class HomepageController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="home")
      */
     public function homeAction()
     {

@@ -16,7 +16,11 @@ class CommonModuleController extends Controller
 
     public function languageMenuAction()
     {
-        return $this->render("AppBundle:module:language-menu.html.twig");
+        $masterRequest = $this->getMasterRequest();
+        $currentRoute = $masterRequest->get('_route');
+        $currentRouteParams = $masterRequest->attributes->get('_route_params');
+        return $this->render("AppBundle:module:language-menu.html.twig", ['route'=>$currentRoute,
+            'routeParams'=>$currentRouteParams]);
     }
 
     public function footerAction()
@@ -37,6 +41,16 @@ class CommonModuleController extends Controller
     public function cookieAction()
     {
         return $this->render("AppBundle:module:cookie.html.twig");
+    }
+
+    /**
+     * Get top level Request object
+     */
+    private function getMasterRequest()
+    {
+        $stack = $this->get('request_stack');
+        $masterRequest = $stack->getMasterRequest();
+        return $masterRequest;
     }
 
 }

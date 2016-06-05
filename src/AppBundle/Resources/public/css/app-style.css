@@ -23,3 +23,8 @@
 .product-section {
 	min-height: 900px;
 }
+
+/* Language menu */
+.language-flag {
+	width:2em;
+}
