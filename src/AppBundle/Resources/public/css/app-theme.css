@@ -41,3 +41,8 @@
 .section-list {
 	font-size: 1.3em;
 }
+
+#product-sections>section:nth-child(even) {
+	color: white;
+	background-color: #222;
+}
