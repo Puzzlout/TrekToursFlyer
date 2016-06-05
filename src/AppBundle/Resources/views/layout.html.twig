@@ -13,30 +13,12 @@
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
             crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/js/common.js') }}" type="text/javascript"></script>
 {% endblock %}
 {% block body %}
     {% block header %}
         <header>
-            <nav class="navbar transparent navbar-fixed-top navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-collapse collapse" id="navbar">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Home</a></li>
-                            <li class="active"><a href="#">Trek "Mont Blanc"</a></li>
-                            <li><a href="#">Basket</a></li>
-                            <li><a href="#">My Account</a></li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="/favicon.ico" alt="English" /> <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#" class="language" rel="en-US"><img src="/favicon.ico" alt="English" /> EN</a></li>
-                                    <li><a href="#" class="language" rel="fr-FR"><img src="/favicon.ico" alt="French"/> FR</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            {{ render(controller('AppBundle:CommonModule:headerMenu')) }}
         </header>
     {% endblock %}
     {% block content %}{% endblock %}
