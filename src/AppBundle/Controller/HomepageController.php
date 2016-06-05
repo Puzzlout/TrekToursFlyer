@@ -15,4 +15,9 @@ class HomepageController extends Controller
         //Render the template for home page
     		return $this->render("AppBundle:home:get.html.twig");
     }
+
+    public function indexAction()
+    {
+        return $this->redirectToRoute('home');
+    }
 }

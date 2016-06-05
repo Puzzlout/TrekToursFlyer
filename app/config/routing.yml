@@ -2,6 +2,12 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
     prefix: /{_locale}
+    defaults: { _locale: en}
+    requirements:
+      _locale: fr|en|de
+app_homepage:
+    defaults: { _controller: AppBundle:Homepage:index, _locale: en }
+    path: /
 lexik_translation_edition:
     resource: "@LexikTranslationBundle/Resources/config/routing.yml"
     prefix:   /translation
