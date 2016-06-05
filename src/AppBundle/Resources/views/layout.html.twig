@@ -23,17 +23,6 @@
     {% endblock %}
     {% block content %}{% endblock %}
     {% block footer %}
-        <footer>
-            <hr/>
-            <div class="container">
-                <div class="row">
-                    <span class="col-md-3">Sales terms</span>
-                    <span class="col-md-3">Legal Information</span>
-                    <span class="col-md-3">Hotel Chenamaz</span>
-                    <span class="col-md-3">Contact</span>
-                </div>
-
-            </div>
-        </footer>
+        {{ render(controller('AppBundle:CommonModule:footer')) }}
     {% endblock %}
 {% endblock %}
