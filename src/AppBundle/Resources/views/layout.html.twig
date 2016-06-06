@@ -3,8 +3,9 @@
 {% block stylesheets %}
     {{ parent() }}
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-    <link href="{{ asset('bundles/app/css/app-style.css') }}" type="text/css" rel="stylesheet" />
-    <link href="{{ asset('bundles/app/css/app-theme.css') }}" type="text/css" rel="stylesheet" />
+    {% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
