@@ -71,3 +71,8 @@ swiftmailer:
 lexik_translation:
     fallback_locale: [en]
     managed_locales: [en, fr, de]
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
