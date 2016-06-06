@@ -13,7 +13,7 @@ body {
 }
 
 .section-list {
-	margin-bottom:20px;
+	margin-bottom: 20px;
 }
 
 #vertical-menu {
@@ -31,5 +31,16 @@ body {
 
 /* Language menu */
 .language-flag {
-	width:2em;
+	width: 2em;
+}
+
+/* Footer */
+#footer-menu {
+	background-color: #222;
+	color: #fff;
+	padding-bottom: 10px;
+}
+
+#footer-left span, #footer-right span {
+	margin-right: 10px
 }
