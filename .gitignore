@@ -75,7 +75,6 @@ build/
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
-/web/css/*
 
 # Assets managed by Bower
 /web/assets/vendor/
