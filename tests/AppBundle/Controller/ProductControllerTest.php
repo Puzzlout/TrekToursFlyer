@@ -13,7 +13,7 @@ class ProductControllerTest extends WebTestCase
     {
         $client = static::createClient();
         $productId = mt_rand(1, 3000);
-        $crawler = $client->request('GET', '/product/' . $productId);
+        $crawler = $client->request('GET', '/en/product/' . $productId);
         $this->assertGreaterThan(
             0,
             $crawler->filter('html:contains("Highlights")')->count(),
