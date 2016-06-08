@@ -12,15 +12,19 @@
 	background-image: -o-linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,0));
 }
 
-#navbar li a {
-	color: black;
-}
-
-#navbar .active a{
-	background: none;
+#navbar .active>a{
+	background-color: transparent;
 	text-decoration: underline;
+	color: #fff;
 }
 
+.dropdown-menu.navbar-inverse>li>a {
+	color: #9d9d9d;
+}
+.dropdown-menu.navbar-inverse>li>a:hover, .dropdown-menu.navbar-inverse>li>a:focus {
+	background-color: transparent;
+	color: #fff;
+}
 /* Vertical menu */
 #vertical-menu {
 	background: white;
