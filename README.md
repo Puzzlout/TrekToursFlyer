@@ -20,8 +20,6 @@ This is a private project. Contributing is not open except for Puzzlout team mem
 Run the following commands to get started:
 - `git clone https://github.com/Puzzlout/TrekToursFlyer.git`
 - `cd TrekToursFlyer`
-- `composer install`
-- `composer update`
 - Setup your localhost to listen to port 80.
 - Point Apache document root to /path/to/repo/TrekToursFlyer/web
 - Setup MySql server to listen to port 3306.
@@ -45,6 +43,6 @@ Run the following commands to get started:
 </VirtualHost>
 ```
 
-- In Terminal: `php bin/console asset:install --symlink`
-- Launch your web server and go to http://trektoursflyer.dev/. You should see this: [Default Symphony app view](https://drive.google.com/file/d/0B2j01q2xtCOtZUI1V0ZhWmRhREE/view?usp=drivesdk)
-- If you don't the above, check http://trektoursflyer.dev/config.php for any warnings or errors.
+- In Terminal, run the following to install the application dependencies: `sh sh/install.sh` and then `sh sh/refresh.sh dev`
+- Launch your web server and go to http://trektoursflyer.dev/. You should see the homepage.
+- If you don't see the homepage, check http://trektoursflyer.dev/config.php for any warnings or errors.
