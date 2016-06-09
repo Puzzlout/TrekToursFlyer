@@ -45,3 +45,17 @@
 .section-list {
 	font-size: 1.3em;
 }
+
+/* Footer */
+#footer-menu {
+	background-color: #222;
+	color: #fff;
+}
+
+#footer-links span>a {
+	color: #9d9d9d;
+}
+
+#footer-links span>a:hover {
+	color: #fff;
+}
