@@ -13,7 +13,9 @@ class CommonModuleController extends Controller
         $masterRequest = $this->getMasterRequest();
         $currentUri = $masterRequest->getRequestUri();
         $currentRoute = $masterRequest->get('_route');
-        return $this->render("AppBundle:module:header-menu.html.twig",['currentUri'=>$currentUri,'route'=>$currentRoute]);
+        return $this->render(
+            "AppBundle:module:header-menu.html.twig",
+            ['currentUri'=>$currentUri,'route'=>$currentRoute]);
     }
 
     public function languageMenuAction()
@@ -21,8 +23,9 @@ class CommonModuleController extends Controller
         $masterRequest = $this->getMasterRequest();
         $currentRoute = $masterRequest->get('_route');
         $currentRouteParams = $masterRequest->attributes->get('_route_params');
-        return $this->render("AppBundle:module:language-menu.html.twig", ['route'=>$currentRoute,
-            'routeParams'=>$currentRouteParams]);
+        return $this->render(
+            "AppBundle:module:language-menu.html.twig",
+            ['route'=>$currentRoute, 'routeParams'=>$currentRouteParams]);
     }
 
     public function footerAction()
