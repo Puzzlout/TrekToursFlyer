@@ -21,6 +21,7 @@
     {% endjavascripts %}
 {% endblock %}
 {% block body %}
+    {{ render(controller('AppBundle:CommonModule:cookie')) }}
     {% block header %}
         <header>
             {{ render(controller('AppBundle:CommonModule:headerMenu')) }}

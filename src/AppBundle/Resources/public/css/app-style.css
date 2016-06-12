@@ -42,3 +42,41 @@ body {
 #footer-left span, #footer-right span {
 	margin-right: 10px
 }
+
+/* Cookie consent banner */
+/*.cookie-consent {
+	background: #000 none repeat scroll 0 0;
+	bottom: -50px;
+	color: #fff;
+	display: none;
+	font-size: 1.3em;
+	height: 50px;
+	padding-top: 11px;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 999999;
+}*/
+
+.cookie-consent {
+	display: none;
+	font-size: 1.3em;
+	min-height: 50px;
+	padding: 11px;
+	position: fixed;
+	text-align: center;
+	top:50;
+	width: 100%;
+	z-index: 999999;
+}
+
+.cc-button-wrapper {
+	display: inline-block;
+	margin: 0 15px;
+	width: auto;
+}
+
+.cookie-consent-button {
+	display: inline-block;
+	cursor: pointer;
+}
