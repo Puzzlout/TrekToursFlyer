@@ -3,6 +3,7 @@
 echo "Run composer..."
 composer install
 composer update
+npm install -g bower
 echo "Run bower..."
 bower install
 bower update
