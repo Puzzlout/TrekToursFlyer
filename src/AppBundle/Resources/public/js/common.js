@@ -17,22 +17,22 @@ $(document).ready(function(){
 $(document).ready(function () {
 	showCookieConsent();
 
-	$('.cookie-consent-button').click(function(){
+	$(".cookie-consent-button").click(function(){
 		var cc_val;
-		if($(this).hasClass('cc-button-positive')) {
-			cc_val = '1';
+		if($(this).hasClass("cc-button-positive")) {
+			cc_val = "1";
 		} else {
-			cc_val = '0';
+			cc_val = "0";
 		}
-		createCookie('usr_cc', cc_val, 4745);
-		$('.cookie-consent').slideUp('fast');
+		createCookie("usr_cc", cc_val, 4745);
+		$(".cookie-consent").slideUp("fast");
 	})
 });
 
 function showCookieConsent() {
-	var usr_cc = readCookie('usr_cc');
+	var usr_cc = readCookie("usr_cc");
 	if(!usr_cc) {
-		$('.cookie-consent').slideDown('slow');
+		$(".cookie-consent").slideDown("slow");
 	}
 }
 

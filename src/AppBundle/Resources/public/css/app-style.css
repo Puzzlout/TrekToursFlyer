@@ -31,7 +31,7 @@ body {
 
 /* Language menu */
 .language-flag {
-	width: 2em;
+	width: 1.5em;
 }
 
 /* Footer */
@@ -62,7 +62,7 @@ body {
 	display: none;
 	font-size: 1.3em;
 	min-height: 50px;
-	padding: 11px;
+	padding: 10px 0;
 	position: fixed;
 	text-align: center;
 	top:50;

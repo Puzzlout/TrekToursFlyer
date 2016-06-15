@@ -13,7 +13,7 @@ class AdminControllerTest extends WebTestCase
         $client = static::createClient();
 
         $client->request('GET', '/admin/');
-        $this->assertEquals(302, $client->getResponse()->getStatusCode(),'Assert that status code returned is 302');
+        $this->assertEquals(302, $client->getResponse()->getStatusCode(), 'Assert that status code returned is 302');
         $this->assertContains('admin/login', $client->getResponse()->headers->get('location'),
             'Assert that unauthorized access redirects to admin/login');
 
@@ -29,7 +29,7 @@ class AdminControllerTest extends WebTestCase
 
         //we login the client through the code so we don't show password in plaintext
         $client = $this->logIn($client);
-        $crawler = $client->request('GET', '/admin/');
+        $crawler = $client->request("GET", "/admin/");
         $this->assertGreaterThan(
             0,
             $crawler->filter('html:contains("Welcome to Admin panel")')->count(),
@@ -52,8 +52,8 @@ class AdminControllerTest extends WebTestCase
         $this->assertEquals('302', $client->getResponse()->getStatusCode(), 'Assert that logout redirects you');
 
         $client->request('GET', '/admin/');
-        $this->assertEquals(302, $client->getResponse()->getStatusCode(),'Assert that status code returned is 302');
-        $this->assertContains('admin/login', $client->getResponse()->headers->get('location'),
+        $this->assertEquals(302, $client->getResponse()->getStatusCode(), 'Assert that status code returned is 302');
+        $this->assertContains('admin/login', $client->getResponse()->headers->get("location"),
             'Assert that unauthorized access redirects to admin/login');
     }
 
@@ -63,8 +63,8 @@ class AdminControllerTest extends WebTestCase
         $session = $client->getContainer()->get('session');
 
         $firewall = 'main';
-        $token = new UsernamePasswordToken('admin', null, $firewall, array('ROLE_ADMIN'));
-        $session->set('_security_'.$firewall, serialize($token));
+        $token = new UsernamePasswordToken('admin', null, $firewall, array("ROLE_ADMIN"));
+        $session->set("_security_" . $firewall, serialize($token));
         $session->save();
 
         $cookie = new Cookie($session->getName(), $session->getId());
