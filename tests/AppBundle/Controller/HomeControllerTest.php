@@ -22,11 +22,11 @@ class HomeControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertContains('Welcome to Homepage', $crawler->filter('h1')->text());
 
-        $client->request('GET','/fr/');
+        $client->request('GET', '/fr/');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals('fr', $client->getRequest()->attributes->get('_locale'));
 
-        $client->request('GET','/de/');
+        $client->request('GET', '/de/');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals('de', $client->getRequest()->attributes->get('_locale'));
     }

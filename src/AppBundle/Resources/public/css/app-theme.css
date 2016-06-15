@@ -76,3 +76,27 @@
 #footer-links span>a:hover {
 	color: #fff;
 }
+
+.cookie-consent {
+	background: #000 none repeat scroll 0 0;
+	color: #fff;
+}
+
+.cookie-consent-button {
+	background-color: #e2e2e2;
+	border: 1px solid #e2e2e2;
+	border-radius: 5px;
+	color: #000;
+	font-size: 0.8em;
+	margin-left: 3px;
+	margin-right: 3px;
+	width: 100px;
+}
+
+.cc-button-positive {
+	color: #3bb20d;
+}
+
+.cc-button-negative {
+	color: #ff0000;
+}
