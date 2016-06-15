@@ -33,7 +33,7 @@
 
 /* Product page */
 #product-header {
-	background-image: url('/bundles/app/images/mtblanc_header.jpg');
+	background-image: url('../images/mtblanc_header.jpg');
 	background-position: center;
 	background-size: cover;
 }
@@ -52,15 +52,15 @@
 }
 
 #product-sections>section#section-iternary {
-	background: rgba(0, 0, 0, 0) url("/bundles/app/images/product/background1.jpg") no-repeat fixed center center / cover ;
+	background: rgba(0, 0, 0, 0) url("../images/product/background1.jpg") no-repeat fixed center center / cover ;
 }
 
 #product-sections>section#section-trip {
-	background: rgba(0, 0, 0, 0) url("/bundles/app/images/product/background2.jpg") no-repeat fixed center center / cover ;
+	background: rgba(0, 0, 0, 0) url("../images/product/background2.jpg") no-repeat fixed center center / cover ;
 }
 
 #product-sections>section#section-review {
-	background: rgba(0, 0, 0, 0) url("/bundles/app/images/product/background3.jpg") no-repeat fixed center center / cover ;
+	background: rgba(0, 0, 0, 0) url("../images/product/background3.jpg") no-repeat fixed center center / cover ;
 }
 
 /* Footer */
