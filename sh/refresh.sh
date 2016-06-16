@@ -1,3 +1,4 @@
+# See https://github.com/Puzzlout/CloudDeploy/tree/master/Projects/TrekTours/install.sh
 #$1 dev or prod
 rm -R var/cache
 rm -R var/sessions
