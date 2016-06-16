@@ -27,7 +27,9 @@ body {
 
 .product-section {
 	min-height: 900px;
+	padding: 50px 0 0 50px;
 }
+
 
 /* Language menu */
 .language-flag {
