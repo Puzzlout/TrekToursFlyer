@@ -1,0 +1,28 @@
+[15-Jun-2016 15:50:15 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/appProdUrlMatcher.php:192
+Stack trace:
+#0 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(1356): appProdUrlMatcher->match('/css/bootstrap....')
+#1 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(1225): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(2370): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(2173): call_user_func(Array, Object(Symfony\Compo in /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php on line 5123
+[15-Jun-2016 15:50:29 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/appProdUrlMatcher.php:192
+Stack trace:
+#0 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(1356): appProdUrlMatcher->match('/css/bootstrap....')
+#1 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(1225): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(2370): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(2173): call_user_func(Array, Object(Symfony\Compo in /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php on line 5123
+[15-Jun-2016 15:51:04 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/appProdUrlMatcher.php:192
+Stack trace:
+#0 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(1356): appProdUrlMatcher->match('/css/bootstrap....')
+#1 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(1225): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(2370): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(2173): call_user_func(Array, Object(Symfony\Compo in /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php on line 5123
+[15-Jun-2016 15:51:09 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/appProdUrlMatcher.php:192
+Stack trace:
+#0 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(1356): appProdUrlMatcher->match('/css/bootstrap....')
+#1 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(1225): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(2370): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php(2173): call_user_func(Array, Object(Symfony\Compo in /home/ubuntu/workspace/TrekToursFlyer/var/cache/prod/classes.php on line 5123
