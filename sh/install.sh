@@ -1,5 +1,6 @@
 # git clone https://github.com/Puzzlout/TrekToursFlyer.git
 # cd TrekToursFlyer
+git pull
 echo "Run composer..."
 composer install
 composer update
