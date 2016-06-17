@@ -25,6 +25,8 @@
     {% block header %}
         <header>
             {{ render(controller('AppBundle:CommonModule:headerMenu')) }}
+            {% block homepage_carousel %}
+            {% endblock %}
         </header>
     {% endblock %}
     {% block content %}{% endblock %}
