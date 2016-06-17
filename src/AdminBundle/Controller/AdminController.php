@@ -3,7 +3,6 @@
 namespace AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 class AdminController extends Controller
@@ -25,6 +24,6 @@ class AdminController extends Controller
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
         return $this->render('AdminBundle:security:login.html.twig',
-        ["last_username" => $lastUsername, "error" => $error]);
+            ["last_username" => $lastUsername, "error" => $error]);
     }
 }

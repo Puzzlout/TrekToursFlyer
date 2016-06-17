@@ -3,7 +3,6 @@
 namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class CommonModuleController extends Controller
 {
@@ -15,7 +14,17 @@ class CommonModuleController extends Controller
         $currentRoute = $masterRequest->get('_route');
         return $this->render(
             "AppBundle:module:header-menu.html.twig",
-            ['currentUri'=>$currentUri,'route'=>$currentRoute]);
+            ['currentUri' => $currentUri, 'route' => $currentRoute]);
+    }
+
+    /**
+     * Get top level Request object
+     */
+    private function getMasterRequest()
+    {
+        $stack = $this->get('request_stack');
+        $masterRequest = $stack->getMasterRequest();
+        return $masterRequest;
     }
 
     public function languageMenuAction()
@@ -25,7 +34,7 @@ class CommonModuleController extends Controller
         $currentRouteParams = $masterRequest->attributes->get('_route_params');
         return $this->render(
             "AppBundle:module:language-menu.html.twig",
-            ['route'=>$currentRoute, 'routeParams'=>$currentRouteParams]);
+            ['route' => $currentRoute, 'routeParams' => $currentRouteParams]);
     }
 
     public function footerAction()
@@ -46,16 +55,6 @@ class CommonModuleController extends Controller
     public function cookieAction()
     {
         return $this->render("AppBundle:module:cookie.html.twig");
-    }
-
-    /**
-     * Get top level Request object
-     */
-    private function getMasterRequest()
-    {
-        $stack = $this->get('request_stack');
-        $masterRequest = $stack->getMasterRequest();
-        return $masterRequest;
     }
 
 }
