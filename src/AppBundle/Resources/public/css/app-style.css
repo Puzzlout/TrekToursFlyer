@@ -70,5 +70,8 @@ body {
 .tt-carousel-item {
 	background-position: center center;
 	background-size: cover;
-	height: 600px;
+	height: 800px;
+}
+.carousel-view-product {
+    line-height: 16px;
 }
