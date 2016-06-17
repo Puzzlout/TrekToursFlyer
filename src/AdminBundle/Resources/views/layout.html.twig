@@ -3,10 +3,9 @@
 {% block stylesheets %}
     {{ parent() }}
     {% stylesheets
-        'assets/vendor/bootstrap/dist/css/bootstrap.min.css'
-        filter='cssrewrite'
-    %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
+    'assets/vendor/bootstrap/dist/css/bootstrap.min.css'
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
 {% endblock %}
 {% block body %}

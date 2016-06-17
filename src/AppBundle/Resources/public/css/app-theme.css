@@ -1,102 +1,104 @@
 /* Navbar */
 .navbar.transparent {
-	border-width: 0;
-	-webkit-box-shadow: 0 0;
-	-moz-box-shadow: 0 0;
-	box-shadow: 0 0;
-	background-color: rgba(0,0,0,0.0);
-	background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
-	background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-	background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-	background-image: -moz-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
-	background-image: -o-linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,0));
+    border-width: 0;
+    -webkit-box-shadow: 0 0;
+    -moz-box-shadow: 0 0;
+    box-shadow: 0 0;
+    background-color: rgba(0, 0, 0, 0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop(0%, rgba(0, 0, 0, 0.00)), color-stop(100%, rgba(0, 0, 0, 0.00)));
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%);
+    background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    background-image: -o-linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
-#navbar .active>a{
-	background-color: transparent;
-	text-decoration: underline;
-	color: #fff;
+#navbar .active > a {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #fff;
 }
 
-.dropdown-menu.navbar-inverse>li>a {
-	color: #9d9d9d;
+.dropdown-menu.navbar-inverse > li > a {
+    color: #9d9d9d;
 }
-.dropdown-menu.navbar-inverse>li>a:hover, .dropdown-menu.navbar-inverse>li>a:focus {
-	background-color: transparent;
-	color: #fff;
+
+.dropdown-menu.navbar-inverse > li > a:hover, .dropdown-menu.navbar-inverse > li > a:focus {
+    background-color: transparent;
+    color: #fff;
 }
+
 /* Vertical menu */
 #vertical-menu {
-	background: white;
-	font-size: 3em;
+    background: white;
+    font-size: 3em;
 }
 
 /* Product page */
 #product-header {
-	background-image: url('../images/mtblanc_header.jpg');
-	background-position: center;
-	background-size: cover;
+    background-image: url('../images/mtblanc_header.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .product-section {
-	border-bottom: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 
 .section-list {
-	font-size: 1.3em;
+    font-size: 1.3em;
 }
 
-#product-sections>section:nth-child(even) {
-	color: white;
-	background-color: #222;
+#product-sections > section:nth-child(even) {
+    color: white;
+    background-color: #222;
 }
 
-#product-sections>section#section-iternary {
-	background: rgba(0, 0, 0, 0) url("../images/product/background1.jpg") no-repeat fixed center center / cover ;
+#product-sections > section#section-iternary {
+    background: rgba(0, 0, 0, 0) url("../images/product/background1.jpg") no-repeat fixed center center / cover;
 }
 
-#product-sections>section#section-trip {
-	background: rgba(0, 0, 0, 0) url("../images/product/background2.jpg") no-repeat fixed center center / cover ;
+#product-sections > section#section-trip {
+    background: rgba(0, 0, 0, 0) url("../images/product/background2.jpg") no-repeat fixed center center / cover;
 }
 
-#product-sections>section#section-review {
-	background: rgba(0, 0, 0, 0) url("../images/product/background3.jpg") no-repeat fixed center center / cover ;
+#product-sections > section#section-review {
+    background: rgba(0, 0, 0, 0) url("../images/product/background3.jpg") no-repeat fixed center center / cover;
 }
 
 /* Footer */
 #footer-menu {
-	background-color: #222;
-	color: #fff;
+    background-color: #222;
+    color: #fff;
 }
 
-#footer-links span>a {
-	color: #9d9d9d;
+#footer-links span > a {
+    color: #9d9d9d;
 }
 
-#footer-links span>a:hover {
-	color: #fff;
+#footer-links span > a:hover {
+    color: #fff;
 }
 
 .cookie-consent {
-	background: #000 none repeat scroll 0 0;
-	color: #fff;
+    background: #000 none repeat scroll 0 0;
+    color: #fff;
 }
 
 .cookie-consent-button {
-	background-color: #e2e2e2;
-	border: 1px solid #e2e2e2;
-	border-radius: 5px;
-	color: #000;
-	font-size: 0.8em;
-	margin-left: 3px;
-	margin-right: 3px;
-	width: 100px;
+    background-color: #e2e2e2;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    color: #000;
+    font-size: 0.8em;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 100px;
 }
 
 .cc-button-positive {
-	color: #3bb20d;
+    color: #3bb20d;
 }
 
 .cc-button-negative {
-	color: #ff0000;
+    color: #ff0000;
 }
