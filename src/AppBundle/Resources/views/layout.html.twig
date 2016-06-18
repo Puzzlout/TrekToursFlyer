@@ -3,21 +3,19 @@
 {% block stylesheets %}
     {{ parent() }}
     {% stylesheets
-        'assets/vendor/bootstrap/dist/css/bootstrap.min.css'
-        'bundles/app/css/*'
-        filter='cssrewrite'
-    %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
+    'assets/vendor/bootstrap/dist/css/bootstrap.min.css'
+    'bundles/app/css/*'
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
     {% javascripts
-        'assets/vendor/jquery/dist/jquery.min.js'
-        'assets/vendor/bootstrap/dist/js/bootstrap.min.js'
-        'bundles/app/js/*'
-    %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
+    'assets/vendor/jquery/dist/jquery.min.js'
+    'assets/vendor/bootstrap/dist/js/bootstrap.min.js'
+    'bundles/app/js/*' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 {% endblock %}
 {% block body %}
@@ -25,6 +23,8 @@
     {% block header %}
         <header>
             {{ render(controller('AppBundle:CommonModule:headerMenu')) }}
+            {% block homepage_carousel %}
+            {% endblock %}
         </header>
     {% endblock %}
     {% block content %}{% endblock %}
