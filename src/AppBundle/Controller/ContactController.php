@@ -28,8 +28,9 @@ class ContactController extends Controller
             $formData['status'] = 'TBP';
             try {
                 $response = $restClient->post($apiUrl.'/customerinforequests'.$apiFormat, json_encode($formData));
-                if($response->getStatusCode() != 201)
+                if($response->getStatusCode() != 201) {
                     throw new \Exception();
+                }
 
                 unset($form);
                 $form = $this->createForm(CustomerInfoRequestType::class, null, array(
