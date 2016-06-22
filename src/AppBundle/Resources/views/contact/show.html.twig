@@ -1,0 +1,17 @@
+{% extends 'AppBundle::layout.html.twig' %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+{% block title %}{{ parent() }}Contact Us {% endblock %}
+
+{% block content %}
+    <h2>Contact Page</h2>
+    <div class="container">
+        {% for flash_message in app.session.flashBag.get('cri_success') %}
+            <div class="alert alert-success">
+                {{ flash_message }}
+            </div>
+        {% endfor %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

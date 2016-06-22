@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@AdminBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -31,11 +32,13 @@ framework:
     fragments:       ~
     http_method_override: true
     assets: ~
+    translator: { fallbacks: [en] }
 
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form_themes: ['bootstrap_3_layout.html.twig']
 
 # Doctrine Configuration
 doctrine:
@@ -66,3 +69,17 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+lexik_translation:
+    fallback_locale: [en]
+    managed_locales: [en, fr, de]
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+
+circle_rest_client:
+    curl:
+        defaults:
+            CURLOPT_HTTPHEADER: [ 'Content-Type: application/json' ]
