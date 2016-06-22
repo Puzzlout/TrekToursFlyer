@@ -19,7 +19,7 @@ class CustomerInfoRequestType extends AbstractType
                     new Constraints\NotBlank(),
                     new Constraints\Length(array('min' => 3, 'max' => 100)),
                     new Constraints\Regex(array('pattern' => '/^[\p{L}]+$/ui')))
-                ))
+            ))
             ->add('last_name', TextType::class, array(
                 'constraints' => array(
                     new Constraints\NotBlank(),
@@ -29,12 +29,15 @@ class CustomerInfoRequestType extends AbstractType
             ->add('email', EmailType::class, array(
                 'constraints' => array(
                     new Constraints\NotBlank(),
-                    new Constraints\Length(array('max' => 100)))
+                    new Constraints\Length(array('max' => 100)),
+                    new Constraints\Regex(array('pattern' => '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/')))
+
             ))
             ->add('phone_number', TextType::class, array(
                 'constraints' => array(
                     new Constraints\Regex(array('pattern' => '/^\+\d+$/'))),
-                'attr' => array('placeholder' => '+XXXYYYYYYYYY')
+                'attr' => array('placeholder' => '+XXXYYYYYYYYY'),
+                'required' => false
             ))
             ->add('message', TextareaType::class,array(
                 'constraints' => array(
