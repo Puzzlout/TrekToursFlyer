@@ -80,3 +80,8 @@ assetic:
     use_controller: '%kernel.debug%'
     filters:
         cssrewrite: ~
+
+circle_rest_client:
+    curl:
+        defaults:
+            CURLOPT_HTTPHEADER: [ 'Content-Type: application/json' ]
