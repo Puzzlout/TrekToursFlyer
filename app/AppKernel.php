@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Lexik\Bundle\TranslationBundle\LexikTranslationBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new AdminBundle\AdminBundle(),
+            new Circle\RestClientBundle\CircleRestClientBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
