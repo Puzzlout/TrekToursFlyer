@@ -10,3 +10,5 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: ThisTokenIsNotSoSecretChangeIt
+    api_url: 'http://trektoursflyer.dev/TrekToursApi/web'
+    api_format: .json
