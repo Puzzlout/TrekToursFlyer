@@ -1,5 +1,10 @@
 {% extends 'AppBundle::layout.html.twig' %}
-{% block title %}{{ parent() }}Product - {{ id }}{% endblock %}
+{% block title %}
+    {{ parent() }}
+    {% trans from "product" %}
+        page_title
+    {% endtrans %} - {{ id }}
+{% endblock %}
 {% block javascripts %}
     {{ parent() }}
     <script src="{{ asset('/bundles/app/js/product.js') }}" type="text/javascript"></script>
