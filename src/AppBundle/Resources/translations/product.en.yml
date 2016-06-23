@@ -1,6 +1,31 @@
-page_title: "Product: {0} "
-highlights_h3: "Highlights"
-highlights_li_point1: "Highlights description 1"
-highlights_li_point2: "Highlights description 2"
-highlights_li_point3: "Highlights description 3"
-highlights_li_point4: "Highlights description 4"
+page_title: 'Product: {0} '
+highlights_h3: '{{highlights_h3}}{{en}}'
+highlights_li_point1: '{{highlights_li_point1}}{{en}}'
+highlights_li_point2: '{{highlights_li_point2}}{{en}}'
+highlights_li_point3: '{{highlights_li_point3}}{{en}}'
+highlights_li_point4: '{{highlights_li_point4}}{{en}}'
+iternary_h3: '{{iternary_h3}}{{en}}'
+iternary_li_point1: '{{iternary_li_point1}}{{en}}'
+iternary_li_point2: '{{iternary_li_point2}}{{en}}'
+iternary_li_point3: '{{iternary_li_point3}}{{en}}'
+iternary_li_point4: '{{iternary_li_point4}}{{en}}'
+accommodation_h3: '{{accommodation_h3}}{{en}}'
+trip_h3: '{{trip_h3}}{{en}}'
+trip_li_point1: '{{trip_li_point1}}{{en}}'
+trip_li_point2: '{{trip_li_point2}}{{en}}'
+trip_li_point3: '{{trip_li_point3}}{{en}}'
+trip_li_point4: '{{trip_li_point4}}{{en}}'
+faq_h3: '{{faq_h3}}{{en}}'
+faq_li_point1: '{{faq_li_point1}}{{en}}'
+faq_li_point2: '{{faq_li_point2}}{{en}}'
+faq_li_point3: '{{faq_li_point3}}{{en}}'
+faq_li_point4: '{{faq_li_point4}}{{en}}'
+review_h3: '{{review_h3}}{{en}}'
+review_li_point1: '{{review_li_point1}}{{en}}'
+review_li_point2: '{{review_li_point2}}{{en}}'
+review_li_point3: '{{review_li_point3}}{{en}}'
+review_li_point4: '{{review_li_point4}}{{en}}'
+accommodation_li_point1: '{{accommodation_li_point1}}{{en}}'
+accommodation_li_point2: '{{accommodation_li_point2}}{{en}}'
+accommodation_li_point3: '{{accommodation_li_point3}}{{en}}'
+accommodation_li_point4: '{{accommodation_li_point4}}{{en}}'

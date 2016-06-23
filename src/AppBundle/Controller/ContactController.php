@@ -15,6 +15,7 @@ class ContactController extends Controller
      */
     public function showContact(Request $request) {
         $form = $this->createForm(CustomerInfoRequestType::class, null, array(
+            'translation_domain' => 'contact',
             'action' => $this->generateUrl('contact'),
             'method' => 'POST'
         ));
@@ -37,7 +38,7 @@ class ContactController extends Controller
                     'action' => $this->generateUrl('contact'),
                     'method' => 'POST'
                 ));
-                $this->addFlash('cri_success', 'Thank You for your inquiry! We will contact you soon.');
+                $this->addFlash('cri_success', $this->get('translator')->trans('div_success'));
             } catch (\Exception $e) {
                 $form->addError(new FormError('API error'));
             }
