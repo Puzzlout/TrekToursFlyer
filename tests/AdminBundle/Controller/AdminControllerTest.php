@@ -25,7 +25,7 @@ class AdminControllerTest extends WebTestCase
         $client->followRedirects(true);
         $crawler = $client->submit($form);
         $this->assertGreaterThan(0, $crawler->filter('div#login-error')->count(),
-            'Assert that failed login results in showing an error');
+            'Assert that failed login results is showing an error');
 
         //we login the client through the code so we don't show password in plaintext
         $client = $this->logIn($client);

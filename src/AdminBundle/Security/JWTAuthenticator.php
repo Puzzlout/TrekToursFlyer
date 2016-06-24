@@ -44,7 +44,11 @@ class JWTAuthenticator implements SimpleFormAuthenticatorInterface
             $user = $userProvider->getAnonymousUser();
         } else {
             // Get the user for the injected UserProvider
-            $user = $userProvider->loadUserByCredentials($token->getUsername(), $token->getCredentials());
+            try {
+                $user = $userProvider->loadUserByCredentials($token->getUsername(), $token->getCredentials());
+            } catch (\Exception $e) {
+                throw new AuthenticationException(sprintf('API error.'));
+            }
             if (!$user) {
                 throw new AuthenticationException(sprintf('Invalid Credentials.'));
             }
