@@ -57,7 +57,6 @@ class AdminControllerTest extends WebTestCase
             'Assert that unauthorized access redirects to admin/login');
     }
 
-
     private function logIn($client)
     {
         $session = $client->getContainer()->get('session');
