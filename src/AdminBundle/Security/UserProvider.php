@@ -18,7 +18,9 @@ class UserProvider implements UserProviderInterface
         $jwt = $this->apiService->postLogin($username, $password);
         if(isset($jwt->token)) {
             $data = $this->apiService->getUserProfile($jwt->token);
-            return new User($data, $data->roles);
+            $user = new User($data, $data->roles);
+            $user->setToken($jwt->token);
+            return $user;
         }
         return false;
 
