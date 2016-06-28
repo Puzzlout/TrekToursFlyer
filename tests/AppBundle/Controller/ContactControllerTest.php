@@ -13,6 +13,6 @@ class ContactControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/en/contact');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertContains('Contact', $crawler->filter('h2')->text());
+        $this->assertContains('contact', $crawler->filter('h2')->text());
     }
 }
