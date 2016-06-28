@@ -84,4 +84,11 @@ class JWTAuthenticatorTest extends \PHPUnit_Framework_TestCase
         $JWTAuthenticator = new JWTAuthenticator($this->apiService);
         $JWTAuthenticator->authenticateToken($userToken, $userProvider, 'test');
     }
+
+    public function testSupportsToken()
+    {
+        $userToken = new UsernamePasswordToken('test', 'test', 'test');
+        $JWTAuthenticator = new JWTAuthenticator($this->apiService);
+        $this->assertTrue($JWTAuthenticator->supportsToken($userToken, 'test'));
+    }
 }

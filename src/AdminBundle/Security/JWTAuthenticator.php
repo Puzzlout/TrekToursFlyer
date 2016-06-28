@@ -25,6 +25,7 @@ class JWTAuthenticator implements SimpleFormAuthenticatorInterface
     {
         return new UsernamePasswordToken($username, $password, $providerKey);
     }
+
     /**
      * @param TokenInterface $token
      * @param UserProviderInterface $userProvider
@@ -37,9 +38,9 @@ class JWTAuthenticator implements SimpleFormAuthenticatorInterface
     public function authenticateToken(TokenInterface $token, UserProviderInterface $userProvider, $providerKey)
     {
         // The user provider should implement UserProviderInterface
-        if (!$userProvider instanceof UserProviderInterface) {
+        /*if (!$userProvider instanceof UserProviderInterface) {
             throw new InvalidArgumentException('Argument must implement UserProviderInterface');
-        }
+        }*/
         if ($token->getCredentials() === null) {
             $user = $userProvider->getAnonymousUser();
         } else {
@@ -60,6 +61,7 @@ class JWTAuthenticator implements SimpleFormAuthenticatorInterface
             $user->getRoles()
         );
     }
+
     public function supportsToken(TokenInterface $token, $providerKey)
     {
         return $token instanceof UsernamePasswordToken;

@@ -7,13 +7,19 @@ class UserTest extends \PHPUnit_Framework_TestCase
 {
 
     private $dataMock;
-
+    private $dataMock2;
     protected function setUp()
     {
         $this->dataMock = (object) [
             "id" => 1,
             "username" => "test",
             "enmail" => "test@test.com",
+            "enabled" => true
+        ];
+        $this->dataMock2 = (object) [
+            "id" => 2,
+            "username" => "test2",
+            "enmail" => "test2@test.com",
             "enabled" => true
         ];
     }
@@ -69,7 +75,19 @@ class UserTest extends \PHPUnit_Framework_TestCase
     {
         $user1 = new User($this->dataMock, []);
         $user2 = new User($this->dataMock, []);
+        $user3 = new User($this->dataMock2, []);
         $this->assertTrue($user1->isEqualTo($user2));
+
+        $userInterfaceMock = $this->getMockBuilder('Symfony\Component\Security\Core\User\UserInterface')
+            ->disableOriginalConstructor()->getMock();
+        $this->assertFalse($user1->isEqualTo($userInterfaceMock));
+        $this->assertFalse($user1->isEqualTo($user3));
+    }
+
+    public function testEraseCredentials()
+    {
+        $user = new User($this->dataMock, []);
+        $this->assertNull($user->eraseCredentials());
     }
 
 }
