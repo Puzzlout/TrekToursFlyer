@@ -4,6 +4,12 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    api_auth.api_service:
+        class: AdminBundle\Security\ApiService
+        arguments: ["@circle.restclient", %api_url%]
+    api_auth.api_user_provider:
+        class: AdminBundle\Security\UserProvider
+        arguments: ["@api_auth.api_service"]
+    api_auth.jwt_authenticator:
+        class: AdminBundle\Security\JWTAuthenticator
+        arguments: ["@api_auth.api_service"]
