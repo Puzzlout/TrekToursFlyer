@@ -8,9 +8,20 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Validator\Constraints;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class CustomerInfoRequestType extends AbstractType
 {
+    /**
+     * @param OptionsResolver $resolver
+     */
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults([
+            'csrf_protection' => false
+        ]);
+    }
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -19,9 +30,9 @@ class CustomerInfoRequestType extends AbstractType
                 'constraints' => array(
                     new Constraints\NotBlank(['message' => 'contact_form_blank_first_name']),
                     new Constraints\Length(['min' => 3, 'max' => 100,
-                        'minMessage' => 'contact_form_minlength_first_name',
-                        'maxMessage' => 'contact_form_maxlength_first_name']
-                        ),
+                            'minMessage' => 'contact_form_minlength_first_name',
+                            'maxMessage' => 'contact_form_maxlength_first_name']
+                    ),
                     new Constraints\Regex(['pattern' => '/^[\p{L}]+$/ui', 'message' => 'contact_form_regex_first_name']))
             ))
             ->add('last_name', TextType::class, array(
