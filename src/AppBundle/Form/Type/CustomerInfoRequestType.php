@@ -2,11 +2,13 @@
 namespace AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Validator\Constraints;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -56,6 +58,11 @@ class CustomerInfoRequestType extends AbstractType
                     ]))
 
             ))
+            ->add('has_sent_copy_to_client', CheckboxType::class, array(
+                'label' => 'form_input_has_sent_copy_to_client',
+                'required' => false,
+                'value' => 1
+            ))
             ->add('phone_number', TextType::class, array(
                 'label' => 'form_input_phone_number',
                 'constraints' => array(
@@ -70,6 +77,16 @@ class CustomerInfoRequestType extends AbstractType
                     new Constraints\Regex(['pattern' => '/^(?!.*<[^>]+>).*/', 'message' => 'contact_form_regex_message']))
             ))
             ->add('send', SubmitType::class, ['label' => 'form_button_send'])
+            ->get('has_sent_copy_to_client')->addModelTransformer(new CallbackTransformer(
+                function ($hasSentCopyToClient)
+                {
+                    return $hasSentCopyToClient;
+                },
+                function ($hasSentCopyToClient)
+                {
+                    return ($hasSentCopyToClient) ? 1 : 0;
+                }
+            ))
         ;
     }
 }

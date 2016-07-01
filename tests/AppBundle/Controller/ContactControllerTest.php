@@ -27,6 +27,7 @@ class ContactControllerTest extends WebTestCase
                 "first_name" => "Test",
                 "last_name" => "Test",
                 "phone_number" => "+111222333444",
+                "has_sent_copy_to_client" => true,
                 "message" => "This is test message",
                 "status" => "TBP",
                 "created" => "2016-05-23T18:51:55+0200",
@@ -52,6 +53,7 @@ class ContactControllerTest extends WebTestCase
             'customer_info_request[last_name]' => 'Test',
             'customer_info_request[email]' => 'test@test.com',
             'customer_info_request[phone_number]' => '+111222333444',
+            'customer_info_request[has_sent_copy_to_client]' => 1,
             'customer_info_request[message]' => 'This is test message',
             'customer_info_request[send]' => ''
         ], 'POST');

@@ -38,7 +38,7 @@ class ContactController extends Controller
                     'action' => $this->generateUrl('contact'),
                     'method' => 'POST'
                 ));
-                $this->addFlash('cri_success', $this->get('translator')->trans('div_success'));
+                $this->addFlash('cri_success', $this->get('translator')->trans('div_success', [], 'contact'));
             } catch (\Exception $e) {
                 $form->addError(new FormError('API error'));
             }
