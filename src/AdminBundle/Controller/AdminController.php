@@ -36,19 +36,29 @@ class AdminController extends Controller
         $apiUrl = $this->getParameter('api_url');
         $apiFormat = $this->getParameter('api_format');
         $restClient = $this->container->get('circle.restclient');
-        $query = '?limit=50';
+        $query = '?limit=5';
         $limit = $request->query->get('limit');
         if(isset($limit) and trim($limit) != '') {
             $query = '?limit='.$limit;
+        } else {
+            $limit = 5;
+        }
+        $page = $request->query->get('page');
+        if(isset($page) and trim($page) != '') {
+            $query .= '&offset='.($page-1)*$limit;
+        } else {
+            $page = 1;
+            $query .= '&offset=0';
         }
         $from = $request->query->get('from');
         if(isset($from) and trim($from) != '') {
-            $query = '?from='.$from;
+            $query .= '&from='.$from;
         }
         $to = $request->query->get('to');
         if(isset($to) and trim($to) != '') {
-            $query = '?to='.$to;
+            $query .= '&to='.$to;
         }
+
 
         $response = $restClient->get($apiUrl.'/customerinforequests'.$apiFormat.$query, [
             CURLOPT_HTTPHEADER => ['Authorization: Bearer '.$this->getUser()->getToken()]
@@ -56,9 +66,28 @@ class AdminController extends Controller
         if($response->getStatusCode() != 200) {
             throw new \Exception();
         }
+        $totalCount = $response->headers->get('X-Total-Count');
+        $totalPages = (int)ceil($totalCount/$limit);
+        $previousParams = $nextParams = $request->query->all();
+        if($page <= 1) {
+            $page = 1;
+            $previousParams['page'] = 1;
+            $nextParams['page'] = $page+1;
+        } else if($page >= $totalPages) {
+            $page = $totalPages;
+            $nextParams['page'] = $totalPages;
+            $previousParams['page'] = $page - 1;
+        } else {
+            $nextParams['page'] = $page + 1;
+            $previousParams['page'] = $page - 1;
+        }
         $customerInfoRequests = json_decode($response->getContent());
         return $this->render('AdminBundle:customerinforequests:index.html.twig', [
-            'customerInfoRequests' => $customerInfoRequests
+            'customerInfoRequests' => $customerInfoRequests,
+            'page' => $page,
+            'totalPages' => $totalPages,
+            'previousParams' => $previousParams,
+            'nextParams' => $nextParams
         ]);
     }
 
