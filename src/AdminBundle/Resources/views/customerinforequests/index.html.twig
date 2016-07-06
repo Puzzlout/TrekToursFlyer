@@ -2,7 +2,14 @@
 {% block title %}{{ parent() }} Customer Info Requests{% endblock %}
 {% block content %}
     {% set queryParams = app.request.query.all %}
-    <form class="col-md-offset-4 col-md-4" action="" method="GET">
+    <div id="message-pagination" class="pagination col-md-4">
+        <span class="text-info">Page {{ page }}</span>
+        <span>
+            {% if page>1 %} <a id="message-pagination-previous" href="{{ path(app.request.attributes.get('_route'), previousParams) }}">Previous</a> {% endif %}
+            {% if page<totalPages %} <a id="message-pagination-next" href="{{ path(app.request.attributes.get('_route'), nextParams) }}">Next</a> {% endif %}
+        </span>
+    </div>
+    <form class="col-md-4" action="" method="GET">
         <div class="col-md-3">
             <label id="from">From</label> <input value="{{ app.request.get('from') }}" class="form-control" type="date" id="from" name="from" placeholder="yyyy-mm-dd" />
         </div>
@@ -34,6 +41,7 @@
     <div class="content">
         <table class="table table-striped">
             <tr>
+                <th>View Message</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Created</th>
@@ -41,8 +49,12 @@
             </tr>
         {% for cri in customerInfoRequests %}
             <tr>
+                <td>
+                    <a href="#" class="text-center view-message" data-id="{{ cri.id }}"><span class="glyphicon glyphicon-envelope"></span></a>
+                    <input id="message-{{ cri.id }}" type="hidden" name="message" value="{{ cri.message }}" />
+                </td>
                 <td>{{ cri.first_name }} {{ cri.last_name }}</td>
-                <td>{{ cri.email }}</td>
+                <td><a href="mailto:{{ cri.email }}">{{ cri.email }}</a></td>
                 <td>{{ cri.created | date("d/m/Y") }}</td>
                 <td>{{ cri.status  }}
                     {% if cri.status == 'TBP' %}
@@ -58,5 +70,21 @@
             </tr>
         {% endfor %}
         </table>
+        <div id="message-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Message</h4>
+                    </div>
+                    <div class="modal-body" id="message-body">
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

@@ -6,12 +6,12 @@ use AdminBundle\Security\User;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\BrowserKit\Cookie;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
-
 class AdminControllerTest extends WebTestCase
 {
     private $restClient;
     private $mockGetCRIResponse;
     private $restResponse;
+    private $restHeaders;
 
     protected function setUp()
     {
@@ -23,22 +23,32 @@ class AdminControllerTest extends WebTestCase
             ->getMockBuilder('Symfony\Component\HttpFoundation\Response')
             ->disableOriginalConstructor()
             ->getMock();
-        $this->mockGetCRIResponse = json_encode(
+        $this->restHeaders = $this
+            ->getMockBuilder('Symfony\Component\HttpFoundation\HeaderBag')
+            ->disableOriginalConstructor()
+            ->getMock();
+        $this->mockGetCRIResponse[0] = json_encode(
             [
                 [
                     "id" => 1,
                     "email" => "test@test.com",
                     "first_name" => "test",
                     "last_name" => "test",
+                    "message" => "test",
                     "status" => "TBP",
                     "created" => "2016-05-23T18:51:55+0200",
                     "updated" => "2016-05-23T18:51:55+0200"
-                ],
+                ]
+            ]
+        );
+        $this->mockGetCRIResponse[1] = json_encode(
+            [
                 [
                     "id" => 2,
                     "email" => "test2@test.com",
                     "first_name" => "test2",
                     "last_name" => "test2",
+                    "message" => "test",
                     "status" => "RTC",
                     "created" => "2016-05-27T18:00:00+0200",
                     "updated" => "2016-05-27T18:00:00+0200"
@@ -101,23 +111,81 @@ class AdminControllerTest extends WebTestCase
         $client = static::createClient();
 
         $client = $this->logIn($client);
-        $this->restResponse->expects($this->once())->method('getContent')->willReturn($this->mockGetCRIResponse);
-        $this->restResponse->expects($this->once())->method('getStatusCode')->willReturn(200);
-        $this->restClient->expects($this->once())->method('get')->willReturn($this->restResponse);
+        $this->restHeaders->expects($this->any())->method('get')->willReturn(2);
+        $this->restResponse->headers = $this->restHeaders;
+        $this->restResponse->expects($this->any())->method('getContent')->willReturn($this->mockGetCRIResponse[0]);
+        $this->restResponse->expects($this->any())->method('getStatusCode')->willReturn(200);
+        $this->restClient->expects($this->any())->method('get')->willReturn($this->restResponse);
 
         $client->getContainer()->set('circle.restclient', $this->restClient);
         $crawler = $client->request('GET', $client->getContainer()->get('router')->generate('admin_cri'),
-            ['limit' => 2, 'from' => '2016-05-03', 'to' => '2016-06-03']);
+            ['limit' => 1, 'from' => '2016-05-03', 'to' => '2016-06-03']);
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        //check pagination
+        $this->assertEquals(1, $crawler->filter('div#message-pagination')->count());
+        $this->assertEquals(0, $crawler->filter('a#message-pagination-previous')->count());
+        $this->assertEquals(1, $crawler->filter('a#message-pagination-next')->count());
 
         //check filter form
         $this->assertEquals(1, $crawler->filter('input#from')->count());
         $this->assertEquals(1, $crawler->filter('input#to')->count());
         $this->assertEquals(1, $crawler->filter('select#limit')->count());
 
-        //check if there are 3 rows in the table (2 for results and 1 for table header)
-        $this->assertEquals(3, $crawler->filter('table.table-striped tr')->count());
+        //check if there are 2 rows in the table (1 for results and 1 for table header)
+        $this->assertEquals(2, $crawler->filter('table.table-striped tr')->count());
+
+        //click next link to go on second page
+        $nextPageLink = $crawler->filter('a#message-pagination-next')->eq(0)->link();
+        $client = static::createClient();
+        $client = $this->logIn($client);
+        $this->restHeaders->expects($this->any())->method('get')->willReturn(2);
+        $this->restResponse->headers = $this->restHeaders;
+        $this->restResponse->expects($this->any())->method('getContent')->willReturn($this->mockGetCRIResponse[1]);
+        $this->restResponse->expects($this->any())->method('getStatusCode')->willReturn(200);
+        $this->restClient->expects($this->any())->method('get')->willReturn($this->restResponse);
+
+        $client->getContainer()->set('circle.restclient', $this->restClient);
+        $link = parse_url($nextPageLink->getUri());
+        $queryParams = [];
+        parse_str($link['query'], $queryParams);
+        $crawler = $client->request('GET', $link['path'], $queryParams);
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        //check pagination
+        $this->assertEquals(1, $crawler->filter('div#message-pagination')->count());
+        $this->assertEquals(1, $crawler->filter('a#message-pagination-previous')->count());
+        $this->assertEquals(0, $crawler->filter('a#message-pagination-next')->count());
+
+        //check if there are 2 rows in the table (1 for results and 1 for table header)
+        $this->assertEquals(2, $crawler->filter('table.table-striped tr')->count());
+
+        $previousPageLink = $crawler->filter('a#message-pagination-previous')->link();
+
+        //click previous link to go back on first page
+        $client = static::createClient();
+        $client = $this->logIn($client);
+        $this->restHeaders->expects($this->any())->method('get')->willReturn(2);
+        $this->restResponse->headers = $this->restHeaders;
+        $this->restResponse->expects($this->any())->method('getContent')->willReturn($this->mockGetCRIResponse[0]);
+        $this->restResponse->expects($this->any())->method('getStatusCode')->willReturn(200);
+        $this->restClient->expects($this->any())->method('get')->willReturn($this->restResponse);
+
+        $client->getContainer()->set('circle.restclient', $this->restClient);
+        $link = parse_url($previousPageLink->getUri());
+        $queryParams = [];
+        parse_str($link['query'], $queryParams);
+        $crawler = $client->request('GET', $link['path'], $queryParams);
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        //check pagination
+        $this->assertEquals(1, $crawler->filter('div#message-pagination')->count());
+        $this->assertEquals(0, $crawler->filter('a#message-pagination-previous')->count());
+        $this->assertEquals(1, $crawler->filter('a#message-pagination-next')->count());
+
+        //check if there are 2 rows in the table (1 for results and 1 for table header)
+        $this->assertEquals(2, $crawler->filter('table.table-striped tr')->count());
     }
 
     /**
