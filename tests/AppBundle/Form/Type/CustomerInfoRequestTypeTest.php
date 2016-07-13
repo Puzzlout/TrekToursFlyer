@@ -16,7 +16,7 @@ class CustomerInfoRequestTypeTest extends TypeTestCase
 
     protected function getExtensions()
     {
-        $this->validator = $this->getMock('Symfony\Component\Validator\Validator\ValidatorInterface');
+        $this->validator = $this->getMockBuilder('Symfony\Component\Validator\Validator\ValidatorInterface')->getMock();
         $this->validator->method('validate')->will($this->returnValue(new ConstraintViolationList()));
         $metadata = $this->getMockBuilder('Symfony\Component\Validator\Mapping\ClassMetadata')
             ->disableOriginalConstructor()->getMock();

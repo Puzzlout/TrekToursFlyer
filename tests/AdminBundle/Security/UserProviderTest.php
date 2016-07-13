@@ -88,7 +88,7 @@ class UserProviderTest extends \PHPUnit_Framework_TestCase
     public function testRefreshUserException()
     {
         $userProvider = new UserProvider($this->apiService);
-        $mockUser = $this->getMock('Symfony\Component\Security\Core\User\UserInterface');
+        $mockUser = $this->getMockBuilder('Symfony\Component\Security\Core\User\UserInterface')->getMock();
         $userProvider->refreshUser($mockUser);
     }
 
@@ -96,7 +96,7 @@ class UserProviderTest extends \PHPUnit_Framework_TestCase
     {
         $userProvider = new UserProvider($this->apiService);
         $this->assertTrue($userProvider->supportsClass('AdminBundle\Security\User'));
-        $mockUser = $this->getMock('Symfony\Component\Security\Core\User\UserInterface');
+        $mockUser = $this->getMockBuilder('Symfony\Component\Security\Core\User\UserInterface')->getMock();
         $this->assertFalse($userProvider->supportsClass(get_class($mockUser)));
     }
 
