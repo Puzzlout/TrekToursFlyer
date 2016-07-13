@@ -58,8 +58,8 @@ class CustomerInfoRequestType extends AbstractType
                     ]))
 
             ))
-            ->add('has_sent_copy_to_client', CheckboxType::class, array(
-                'label' => 'form_input_has_sent_copy_to_client',
+            ->add('send_copy_to_client', CheckboxType::class, array(
+                'label' => 'form_input_send_copy_to_client',
                 'required' => false,
                 'value' => 1
             ))
@@ -77,14 +77,14 @@ class CustomerInfoRequestType extends AbstractType
                     new Constraints\Regex(['pattern' => '/^(?!.*<[^>]+>).*/', 'message' => 'contact_form_regex_message']))
             ))
             ->add('send', SubmitType::class, ['label' => 'form_button_send'])
-            ->get('has_sent_copy_to_client')->addModelTransformer(new CallbackTransformer(
-                function ($hasSentCopyToClient)
+            ->get('send_copy_to_client')->addModelTransformer(new CallbackTransformer(
+                function ($sendCopyToClient)
                 {
-                    return $hasSentCopyToClient;
+                    return $sendCopyToClient;
                 },
-                function ($hasSentCopyToClient)
+                function ($sendCopyToClient)
                 {
-                    return ($hasSentCopyToClient) ? 1 : 0;
+                    return ($sendCopyToClient) ? 1 : 0;
                 }
             ))
         ;

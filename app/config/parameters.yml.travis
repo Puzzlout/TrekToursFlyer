@@ -6,11 +6,11 @@ parameters:
     database_user: travis
     database_password: null
     mailer_transport: smtp
-    mailer_host: 'mail.supremecluster.com'
-    mailer_user: 'noreply@puzzlout.com'
-    mailer_password: '3PPVte6bn0'
-    mail_contact_address: 'contact@puzzlout.com'
-    mail_noreply_address: 'noreply@puzzlout.com'
+    mailer_host: 127.0.0.1
+    mailer_user: ~
+    mailer_password: ~
+    mail_contact_address: 'test@test.com'
+    mail_noreply_address: 'test@test.com'
     mail_admin_language: 'en'
     secret: ThisTokenIsNotSoSecretChangeIt
     api_url: http://api.trektoursflyer.dev

@@ -58,7 +58,7 @@ class CustomerInfoRequestTypeTest extends TypeTestCase
                     'last_name' => 'Testá',
                     'phone_number' => '+111222333444',
                     'message' => 'This is the test message',
-                    'has_sent_copy_to_client' => 1
+                    'send_copy_to_client' => 1
                 )
             ),
             array(

@@ -9,6 +9,7 @@ class ContactControllerTest extends WebTestCase
     private $restClient;
     private $restResponse;
     private $mockPostCRIResponse;
+    private $mailer;
 
     protected function setUp()
     {
@@ -20,6 +21,7 @@ class ContactControllerTest extends WebTestCase
             ->getMockBuilder('Symfony\Component\HttpFoundation\Response')
             ->disableOriginalConstructor()
             ->getMock();
+        $this->mailer = $this->getMockBuilder('Swift_Mailer')->disableOriginalConstructor()->getMock();
         $this->mockPostCRIResponse = json_encode(
             [
                 "id" => 1,
@@ -53,13 +55,17 @@ class ContactControllerTest extends WebTestCase
             'customer_info_request[last_name]' => 'Test',
             'customer_info_request[email]' => 'test@test.com',
             'customer_info_request[phone_number]' => '+111222333444',
-            'customer_info_request[has_sent_copy_to_client]' => 1,
+            'customer_info_request[send_copy_to_client]' => 1,
             'customer_info_request[message]' => 'This is test message',
             'customer_info_request[send]' => ''
         ], 'POST');
         $client = static::createClient();
         $this->restResponse->expects($this->once())->method('getStatusCode')->willReturn(201);
+        $this->restResponse->expects($this->once())->method('getContent')->willReturn($this->mockPostCRIResponse);
         $this->restClient->expects($this->once())->method('post')->willReturn($this->restResponse);
+        $this->restClient->expects($this->once())->method('patch')->willReturn($this->restResponse);
+        $this->mailer->expects($this->any())->method('send')->willReturn(1);
+        $client->getContainer()->set('mailer', $this->mailer);
         $client->getContainer()->set('circle.restclient', $this->restClient);
         $crawler = $client->submit($form);
         $this->assertEquals(200, $client->getResponse()->getStatusCode());

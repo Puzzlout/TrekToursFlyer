@@ -27,19 +27,110 @@ class ContactController extends Controller
             $restClient = $this->container->get('circle.restclient');
             $formData = $form->getData();
             $formData['status'] = 'TBP';
-            try {
-                $response = $restClient->post($apiUrl.'/customerinforequests'.$apiFormat, json_encode($formData));
-                if($response->getStatusCode() != 201) {
-                    throw new \Exception();
+            $response = $restClient->post($apiUrl.'/customerinforequests'.$apiFormat, json_encode($formData));
+            $customerInfoRequest = json_decode($response->getContent());
+            if($response->getStatusCode() == 201 && $customerInfoRequest->id) {
+                //send emails
+                $noReplyAddress = $this->container->getParameter('mail_noreply_address');
+                $contactAddress = $this->container->getParameter('mail_contact_address');
+                $adminLanguage = $this->container->getParameter('mail_admin_language');
+                $adminMessageSent = $clientMessageSent = 0;
+                $adminMessage = \Swift_Message::newInstance()
+                    ->setSubject($this->get('translator')->trans(
+                        'admin_subject',
+                        [],
+                        'email',
+                        $adminLanguage
+                        ))
+                    ->setFrom($noReplyAddress)
+                    ->setTo($contactAddress)
+                    ->setBody(
+                        $this->renderView(
+                            'AppBundle:emails:cri_admin.html.twig',
+                            [
+                                'first_name' => $formData['first_name'],
+                                'last_name' => $formData['last_name'],
+                                'message' => $formData['message'],
+                                'phone_number' => $formData['phone_number'],
+                                'email' => $formData['email'],
+                                'admin_email_language' => $adminLanguage
+                            ]
+                        ),
+                        'text/html'
+                    )->addPart(
+                        $this->renderView(
+                            'AppBundle:emails:cri_admin.txt.twig',
+                            [
+                                'first_name' => $formData['first_name'],
+                                'last_name' => $formData['last_name'],
+                                'message' => $formData['message'],
+                                'phone_number' => $formData['phone_number'],
+                                'email' => $formData['email'],
+                                'admin_email_language' => $adminLanguage
+                            ]
+                        ),
+                        'text/plain'
+                    )
+                ;
+                if($noReplyAddress && $contactAddress) {
+                    $adminMessageSent = $this->get('mailer')->send($adminMessage);
+                }
+
+                if($formData['send_copy_to_client'] == 1) {
+                    $clientMessage = \Swift_Message::newInstance()
+                        ->setSubject($this->get('translator')->trans(
+                            'client_subject',
+                            [],
+                            'email'
+                        ))
+                        ->setFrom($noReplyAddress)
+                        ->setTo($formData['email'])
+                        ->setBody(
+                            $this->renderView(
+                                'AppBundle:emails:cri_client.html.twig',
+                                [
+                                    'first_name' => $formData['first_name'],
+                                    'last_name' => $formData['last_name'],
+                                    'message' => $formData['message']
+                                ]
+                            ),
+                            'text/html'
+                        )->addPart(
+                            $this->renderView(
+                                'AppBundle:emails:cri_client.txt.twig',
+                                [
+                                    'first_name' => $formData['first_name'],
+                                    'last_name' => $formData['last_name'],
+                                    'message' => $formData['message']
+                                ]
+                            ),
+                            'text/plain'
+                        )
+                    ;
+                    if($noReplyAddress) {
+                        $clientMessageSent = $this->get('mailer')->send($clientMessage);
+                    }
+                }
+
+                if($adminMessageSent != 0 || ($formData['send_copy_to_client'] == 1 && $clientMessageSent != 0)) {
+                    $adminEmailSent = ($adminMessageSent != 0) ? 1 : 0;
+                    $clientEmailSent = ($clientMessageSent != 0) ? 1 : 0;
+                    $response = $restClient->patch(
+                        $apiUrl.'/customerinforequests/'.$customerInfoRequest->id.'/sentemails'.$apiFormat,
+                        json_encode([
+                            'admin_email_sent' => $adminEmailSent,
+                            'client_email_sent' => $clientEmailSent
+                        ]));
                 }
 
                 unset($form);
                 $form = $this->createForm(CustomerInfoRequestType::class, null, array(
+                    'translation_domain' => 'contact',
                     'action' => $this->generateUrl('contact'),
                     'method' => 'POST'
                 ));
                 $this->addFlash('cri_success', $this->get('translator')->trans('div_success', [], 'contact'));
-            } catch (\Exception $e) {
+            } else {
                 $form->addError(new FormError('API error'));
             }
         }
