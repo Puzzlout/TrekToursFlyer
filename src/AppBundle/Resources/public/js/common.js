@@ -18,20 +18,20 @@ $(document).ready(function () {
     showCookieConsent();
 
     $(".cookie-consent-button").click(function () {
-        var cc_val;
+        var ccVal;
         if ($(this).hasClass("cc-button-positive")) {
-            cc_val = "1";
+            ccVal = "1";
         } else {
-            cc_val = "0";
+            ccVal = "0";
         }
-        createCookie("usr_cc", cc_val, 4745);
+        createCookie("usr_cc", ccVal, 4745);
         $(".cookie-consent").slideUp("fast");
-    })
+    });
 });
 
 function showCookieConsent() {
-    var usr_cc = readCookie("usr_cc");
-    if (!usr_cc) {
+    var usrCc = readCookie("usr_cc");
+    if (!usrCc) {
         $(".cookie-consent").slideDown("slow");
     }
 }

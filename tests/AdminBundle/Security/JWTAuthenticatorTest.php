@@ -28,8 +28,8 @@ class JWTAuthenticatorTest extends \PHPUnit_Framework_TestCase
 
     public function testConstructor()
     {
-        $JWTAuthenticator = new JWTAuthenticator($this->apiService);
-        $this->assertInstanceOf('AdminBundle\Security\JWTAuthenticator', $JWTAuthenticator);
+        $jwtAuthenticator = new JWTAuthenticator($this->apiService);
+        $this->assertInstanceOf('AdminBundle\Security\JWTAuthenticator', $jwtAuthenticator);
     }
 
     public function testCreateToken()
@@ -38,8 +38,8 @@ class JWTAuthenticatorTest extends \PHPUnit_Framework_TestCase
             ->getMockBuilder('Symfony\Component\HttpFoundation\Request')
             ->disableOriginalConstructor()
             ->getMock();
-        $JWTAuthenticator = new JWTAuthenticator($this->apiService);
-        $usernamePasswordToken = $JWTAuthenticator->createToken($request, 'test', 'test', 'test');
+        $jwtAuthenticator = new JWTAuthenticator($this->apiService);
+        $usernamePasswordToken = $jwtAuthenticator->createToken($request, 'test', 'test', 'test');
         $this->assertInstanceOf(
             'Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken',
             $usernamePasswordToken);
@@ -54,8 +54,8 @@ class JWTAuthenticatorTest extends \PHPUnit_Framework_TestCase
             ->getMock();
         $userProvider->expects($this->once())->method('loadUserByCredentials')->willReturn($userProviderUser);
 
-        $JWTAuthenticator = new JWTAuthenticator($this->apiService);
-        $usernamePasswordToken = $JWTAuthenticator->authenticateToken($userToken, $userProvider, 'test');
+        $jwtAuthenticator = new JWTAuthenticator($this->apiService);
+        $usernamePasswordToken = $jwtAuthenticator->authenticateToken($userToken, $userProvider, 'test');
         $this->assertInstanceOf(
             'Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken',
             $usernamePasswordToken);
@@ -66,11 +66,27 @@ class JWTAuthenticatorTest extends \PHPUnit_Framework_TestCase
         $userProvider = $this->getMockBuilder('AdminBundle\Security\UserProvider')->disableOriginalConstructor()
             ->getMock();
         $userProvider->expects($this->once())->method('getAnonymousUser')->willReturn(new AnonymousUser());
-        $JWTAuthenticator = new JWTAuthenticator($this->apiService);
+        $jwtAuthenticator = new JWTAuthenticator($this->apiService);
         $userToken = new UsernamePasswordToken('test', 'test', 'test');
         $userToken->eraseCredentials();
-        $usernamePasswordToken = $JWTAuthenticator->authenticateToken($userToken, $userProvider, 'test');
+        $usernamePasswordToken = $jwtAuthenticator->authenticateToken($userToken, $userProvider, 'test');
         $this->assertInstanceOf('AdminBundle\Security\AnonymousUser', $usernamePasswordToken->getUser());
+    }
+
+    /**
+     * @expectedException Symfony\Component\Security\Core\Exception\AuthenticationException
+     */
+    public function testAuthenticateTokenApiError()
+    {
+        $userToken = new UsernamePasswordToken('test', 'test', 'test');
+
+        $userProvider = $this->getMockBuilder('AdminBundle\Security\UserProvider')->disableOriginalConstructor()
+            ->getMock();
+        $userProvider->expects($this->once())->method('loadUserByCredentials')
+            ->willThrowException(new \Exception('test'));
+
+        $jwtAuthenticator = new JWTAuthenticator($this->apiService);
+        $jwtAuthenticator->authenticateToken($userToken, $userProvider, 'test');
     }
 
     /**
@@ -81,14 +97,14 @@ class JWTAuthenticatorTest extends \PHPUnit_Framework_TestCase
         $userProvider = $this->getMockBuilder('AdminBundle\Security\UserProvider')->disableOriginalConstructor()
             ->getMock();
         $userToken = new UsernamePasswordToken('test', false, 'test');
-        $JWTAuthenticator = new JWTAuthenticator($this->apiService);
-        $JWTAuthenticator->authenticateToken($userToken, $userProvider, 'test');
+        $jwtAuthenticator = new JWTAuthenticator($this->apiService);
+        $jwtAuthenticator->authenticateToken($userToken, $userProvider, 'test');
     }
 
     public function testSupportsToken()
     {
         $userToken = new UsernamePasswordToken('test', 'test', 'test');
-        $JWTAuthenticator = new JWTAuthenticator($this->apiService);
-        $this->assertTrue($JWTAuthenticator->supportsToken($userToken, 'test'));
+        $jwtAuthenticator = new JWTAuthenticator($this->apiService);
+        $this->assertTrue($jwtAuthenticator->supportsToken($userToken, 'test'));
     }
 }
