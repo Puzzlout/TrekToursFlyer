@@ -35,7 +35,9 @@ class CustomerInfoRequestType extends AbstractType
                             'minMessage' => 'contact_form_minlength_first_name',
                             'maxMessage' => 'contact_form_maxlength_first_name']
                     ),
-                    new Constraints\Regex(['pattern' => '/^[\p{L}]+$/ui', 'message' => 'contact_form_regex_first_name']))
+                    new Constraints\Regex([
+                        'pattern' => '/^[\p{L}]+$/ui',
+                        'message' => 'contact_form_regex_first_name']))
             ))
             ->add('last_name', TextType::class, array(
                 'label' => 'form_input_last_name',
@@ -45,21 +47,23 @@ class CustomerInfoRequestType extends AbstractType
                         'minMessage' => 'contact_form_minlength_last_name',
                         'maxMessage' => 'contact_form_maxlength_last_name',
                     ]),
-                    new Constraints\Regex(['pattern' => '/^[\p{L}]+$/ui', 'message' => 'contact_form_regex_last_name']))
+                    new Constraints\Regex([
+                        'pattern' => '/^[\p{L}]+$/ui',
+                        'message' => 'contact_form_regex_last_name']))
             ))
             ->add('email', EmailType::class, array(
                 'label' => 'form_input_email',
                 'constraints' => array(
                     new Constraints\NotBlank(['message' => 'contact_form_blank_email']),
-                    new Constraints\Length(['max' => 100, 'maxMessage'=>'contact_form_maxlength_email']),
+                    new Constraints\Length(['max' => 100, 'maxMessage' => 'contact_form_maxlength_email']),
                     new Constraints\Regex([
                         'pattern' => '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/',
                         'message' => 'contact_form_regex_email'
                     ]))
 
             ))
-            ->add('has_sent_copy_to_client', CheckboxType::class, array(
-                'label' => 'form_input_has_sent_copy_to_client',
+            ->add('send_copy_to_client', CheckboxType::class, array(
+                'label' => 'form_input_send_copy_to_client',
                 'required' => false,
                 'value' => 1
             ))
@@ -74,19 +78,18 @@ class CustomerInfoRequestType extends AbstractType
                 'label' => 'form_textarea_message',
                 'constraints' => array(
                     new Constraints\NotBlank(['message' => 'contact_form_blank_message']),
-                    new Constraints\Regex(['pattern' => '/^(?!.*<[^>]+>).*/', 'message' => 'contact_form_regex_message']))
+                    new Constraints\Regex([
+                        'pattern' => '/^(?!.*<[^>]+>).*/',
+                        'message' => 'contact_form_regex_message']))
             ))
             ->add('send', SubmitType::class, ['label' => 'form_button_send'])
-            ->get('has_sent_copy_to_client')->addModelTransformer(new CallbackTransformer(
-                function ($hasSentCopyToClient)
-                {
-                    return $hasSentCopyToClient;
+            ->get('send_copy_to_client')->addModelTransformer(new CallbackTransformer(
+                function ($sendCopyToClient) {
+                    return $sendCopyToClient;
                 },
-                function ($hasSentCopyToClient)
-                {
-                    return ($hasSentCopyToClient) ? 1 : 0;
+                function ($sendCopyToClient) {
+                    return ($sendCopyToClient) ? 1 : 0;
                 }
-            ))
-        ;
+            ));
     }
 }

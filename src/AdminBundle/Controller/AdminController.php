@@ -50,13 +50,13 @@ class AdminController extends Controller
             $page = 1;
             $query .= '&offset=0';
         }
-        $from = $request->query->get('from');
-        if(isset($from) and trim($from) != '') {
-            $query .= '&from='.$from;
+        $fromDate = $request->query->get('from');
+        if(isset($fromDate) and trim($fromDate) != '') {
+            $query = '?from='.$fromDate;
         }
-        $to = $request->query->get('to');
-        if(isset($to) and trim($to) != '') {
-            $query .= '&to='.$to;
+        $toDate = $request->query->get('to');
+        if(isset($toDate) and trim($toDate) != '') {
+            $query = '?to='.$toDate;
         }
 
 
@@ -108,7 +108,7 @@ class AdminController extends Controller
                         'Authorization: Bearer '.$this->getUser()->getToken(),
                         'Content-Type:application/json'
                     ]
-            ]);
+                ]);
             if($response->getStatusCode() != 200) {
                 throw new \Exception('Error processing request');
             }
