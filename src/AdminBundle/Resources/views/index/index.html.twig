@@ -1,4 +1,7 @@
+{% extends 'AdminBundle::layout.html.twig' %}
+{% block title %}{{ parent() }} Index{% endblock %}
 {% block content %}
-    Welcome to Admin panel
-    <a href="{{ path('lexik_translation_overview') }}">Manage translations</a>
+    Welcome to Admin panel<br/>
+    <a href="{{ path('lexik_translation_overview') }}">Manage translations</a><br/>
+    <a href="{{ path('admin_cri') }}">Manage Customer Info Requests</a>
 {% endblock %}
