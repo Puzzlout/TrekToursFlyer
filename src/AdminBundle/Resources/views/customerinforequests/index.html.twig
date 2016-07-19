@@ -1,0 +1,90 @@
+{% extends 'AdminBundle::layout.html.twig' %}
+{% block title %}{{ parent() }} Customer Info Requests{% endblock %}
+{% block content %}
+    {% set queryParams = app.request.query.all %}
+    <div id="message-pagination" class="pagination col-md-4">
+        <span class="text-info">Page {{ page }}</span>
+        <span>
+            {% if page>1 %} <a id="message-pagination-previous" href="{{ path(app.request.attributes.get('_route'), previousParams) }}">Previous</a> {% endif %}
+            {% if page<totalPages %} <a id="message-pagination-next" href="{{ path(app.request.attributes.get('_route'), nextParams) }}">Next</a> {% endif %}
+        </span>
+    </div>
+    <form class="col-md-4" action="" method="GET">
+        <div class="col-md-3">
+            <label id="from">From</label> <input value="{{ app.request.get('from') }}" class="form-control" type="date" id="from" name="from" placeholder="yyyy-mm-dd" />
+        </div>
+        <div class="col-md-3">
+            <label for="to">To</label> <input value="{{ app.request.get('to') }}" class="form-control" type="date" id="to" name="to" placeholder="yyyy-mm-dd" />
+        </div>
+        <div class="col-md-3">
+            <label for="limit">Limit</label>
+            <select class="form-control" id="limit" name="limit">
+                <option {% if app.request.get('limit') == 5 %}selected="selected"{% endif %} value="5">5</option>
+                <option {% if app.request.get('limit') == 10 %}selected="selected"{% endif %} value="10">10</option>
+                <option {% if app.request.get('limit') == 25 %}selected="selected"{% endif %} value="25">25</option>
+                <option {% if app.request.get('limit') == 50 %}selected="selected"{% endif %} value="50">50</option>
+                <option {% if app.request.get('limit') == 100 %}selected="selected"{% endif %} value="100">100</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label></label>
+            <input type="submit" class="form-control btn btn-primary" value="Filter" />
+        </div>
+    </form>
+    <div class="col-md-4">
+        {% for flash_message in app.session.flashBag.get('admin_update_status') %}
+            <div class="alert alert-success admin_update_status">
+                {{ flash_message }}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="content">
+        <table class="table table-striped">
+            <tr>
+                <th>View Message</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Created</th>
+                <th>Status</th>
+            </tr>
+        {% for cri in customerInfoRequests %}
+            <tr>
+                <td>
+                    <a href="#" class="text-center view-message" data-id="{{ cri.id }}"><span class="glyphicon glyphicon-envelope"></span></a>
+                    <input id="message-{{ cri.id }}" type="hidden" name="message" value="{{ cri.message }}" />
+                </td>
+                <td>{{ cri.first_name }} {{ cri.last_name }}</td>
+                <td><a href="mailto:{{ cri.email }}">{{ cri.email }}</a></td>
+                <td>{{ cri.created | date("d/m/Y") }}</td>
+                <td>{{ cri.status  }}
+                    {% if cri.status == 'TBP' %}
+                        <a title="Replied To Client" href="#" data-id="{{ cri.id }}" data-status="RTC" class="update-status"><span class="glyphicon glyphicon-envelope"></span></a>
+                    {% endif %}
+                    {% if cri.status != 'RQC' %}
+                        <a title="Request Closed" href="#" data-id="{{ cri.id }}" data-status="RQC" class="update-status"><span class="glyphicon glyphicon-ok"></span></a>
+                    {% endif %}
+                    <form id="status-form-{{ cri.id }}" action="{{ path('admin_cri_update_status', { 'id': cri.id }) }}" method="post">
+                        <input id="status-{{ cri.id }}" type="hidden" name="status" value="TBP" />
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+        <div id="message-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Message</h4>
+                    </div>
+                    <div class="modal-body" id="message-body">
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% trans from 'email' into admin_email_language %}admin_p_hello{% endtrans %},
+
+{% trans from 'email' into admin_email_language %}admin_p_youreceived{% endtrans %} {{ first_name }} {{ last_name }}:
+{{ message }}
+
+{% trans from 'email' into admin_email_language %}admin_p_email{% endtrans %}: {{ email }}
+{% if phone_number %}{% trans from 'email' into admin_email_language %}admin_p_phonenumber{% endtrans %}: {{ phone_number }}{% endif %}

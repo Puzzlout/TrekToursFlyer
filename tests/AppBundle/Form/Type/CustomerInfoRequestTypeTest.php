@@ -16,7 +16,7 @@ class CustomerInfoRequestTypeTest extends TypeTestCase
 
     protected function getExtensions()
     {
-        $this->validator = $this->getMock('Symfony\Component\Validator\Validator\ValidatorInterface');
+        $this->validator = $this->getMockBuilder('Symfony\Component\Validator\Validator\ValidatorInterface')->getMock();
         $this->validator->method('validate')->will($this->returnValue(new ConstraintViolationList()));
         $metadata = $this->getMockBuilder('Symfony\Component\Validator\Mapping\ClassMetadata')
             ->disableOriginalConstructor()->getMock();
@@ -43,20 +43,8 @@ class CustomerInfoRequestTypeTest extends TypeTestCase
         $view = $form->createView();
         $children = $view->children;
 
-        /*$translator = $this->getMockBuilder('Symfony\Bundle\FrameworkBundle\Translation\Translator')
-        ->disableOriginalConstructor()->getMock();*/
-
         foreach (array_keys($data) as $key) {
             $this->assertArrayHasKey($key, $children);
-            /*foreach($form->get($key)->getConfig()->getOption('constraints') as $constraint)
-            {
-                $validatorName = $constraint->validatedBy();
-                $validator = new $validatorName;
-                $context = new \Symfony\Component\Validator\Context\ExecutionContext($this->validator, '', $translator);
-                $message = isset($constraint->message) ? $constraint->message : $constraint->exactMessage;
-                $validator->initialize($context);
-                var_dump($validator->validate($data[$key], $constraint));
-            }*/
         }
     }
 
@@ -69,7 +57,8 @@ class CustomerInfoRequestTypeTest extends TypeTestCase
                     'first_name' => 'Tèst',
                     'last_name' => 'Testá',
                     'phone_number' => '+111222333444',
-                    'message' => 'This is the test message'
+                    'message' => 'This is the test message',
+                    'send_copy_to_client' => 1
                 )
             ),
             array(

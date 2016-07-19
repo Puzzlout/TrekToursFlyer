@@ -1,0 +1,17 @@
+# Example parameters
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: symfony
+    database_user: travis
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: ~
+    mailer_password: ~
+    mail_contact_address: 'test@test.com'
+    mail_noreply_address: 'test@test.com'
+    mail_admin_language: 'en'
+    secret: ThisTokenIsNotSoSecretChangeIt
+    api_url: http://api.trektoursflyer.dev
+    api_format: .json

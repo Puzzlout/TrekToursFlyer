@@ -1,6 +1,9 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/book/security.html
 security:
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
     encoders:
         Symfony\Component\Security\Core\User\User:
             algorithm: bcrypt
@@ -13,6 +16,8 @@ security:
                     admin:
                         password: $2y$15$VrzLkf38ytLMerKXOIQMGefRGzRF1hiuwUu3NP5znfFpHq.9X867K
                         roles: 'ROLE_ADMIN'
+        api_user_provider:
+            id: api_auth.api_user_provider
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -22,10 +27,13 @@ security:
 
         main:
             anonymous: ~
-            form_login:
+            stateless: false
+            provider: api_user_provider
+            simple_form:
                 login_path: admin_login
                 check_path: admin_login
                 default_target_path: admin_index
+                authenticator: api_auth.jwt_authenticator
             logout:
                 path: /admin/logout
                 target: /
