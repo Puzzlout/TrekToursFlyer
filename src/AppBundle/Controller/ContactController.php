@@ -73,7 +73,11 @@ class ContactController extends Controller
                     )
                 ;
                 if($noReplyAddress && $contactAddress) {
-                    $adminMessageSent = $this->get('mailer')->send($adminMessage);
+                    try {
+                        $adminMessageSent = $this->get('mailer')->send($adminMessage);
+                    } catch (\Exception $e) {
+                        $adminMessageSent = 0;
+                    }
                 }
 
                 if($formData['send_copy_to_client'] == 1) {
@@ -108,7 +112,11 @@ class ContactController extends Controller
                         )
                     ;
                     if($noReplyAddress) {
-                        $clientMessageSent = $this->get('mailer')->send($clientMessage);
+                        try {
+                            $clientMessageSent = $this->get('mailer')->send($clientMessage);
+                        } catch (\Exception $e) {
+                            $clientMessageSent = 0;
+                        }
                     }
                 }
 
