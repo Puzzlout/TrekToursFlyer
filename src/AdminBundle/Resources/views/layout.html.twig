@@ -10,17 +10,36 @@
 {% endblock %}
 {% block body %}
     {% block header %}
+        {% if app.user %}
+            {{ include('AdminBundle:module:navbar.html.twig') }}
+        {% endif %}
     {% endblock %}
+    {% block flash_message %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% set flashes = app.session.flashbag.all() %}
+                    {% if flashes | length > 0 %}
+                        {% for type, messages in flashes %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ type }}">{{ message }}</div>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endblock flash_message %}
     {% block content %}{% endblock %}
     {% block footer %}
     {% endblock %}
-    {% block javascripts %}
-        {{ parent() }}
-        {% javascripts
-        'assets/vendor/jquery/dist/jquery.min.js'
-        'assets/vendor/bootstrap/dist/js/bootstrap.min.js'
-        'bundles/admin/js/*' %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-    {% endblock %}
+{% endblock %}
+{% block javascripts %}
+ {{ parent() }}
+ {% javascripts
+ 'assets/vendor/jquery/dist/jquery.min.js'
+ 'assets/vendor/bootstrap/dist/js/bootstrap.min.js'
+ 'bundles/admin/js/*' %}
+ <script type="text/javascript" src="{{ asset_url }}"></script>
+ {% endjavascripts %}
 {% endblock %}
