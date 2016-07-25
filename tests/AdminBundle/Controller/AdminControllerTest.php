@@ -10,6 +10,7 @@ class AdminControllerTest extends WebTestCase
 {
     private $restClient;
     private $mockGetCRIResponse;
+    private $mockGetCRIResponseMultiple;
     private $restResponse;
     private $restHeaders;
 
@@ -55,6 +56,24 @@ class AdminControllerTest extends WebTestCase
                 ]
             ]
         );
+
+        $responseCRIArray = [];
+        for($i=1;$i<=20;$i++) {
+            $responseCRIArray[$i] = [
+                "id" => $i,
+                "email" => "test$i@test.com",
+                "first_name" => "test$i",
+                "last_name" => "test$i",
+                "message" => "test $i",
+                "status" => "RTC",
+                "created" => "2016-05-27T18:00:00+0200",
+                "updated" => "2016-05-27T18:00:00+0200"
+            ];
+        }
+        $this->mockGetCRIResponseMultiple[0] = json_encode(array_slice($responseCRIArray,0,5));
+        $this->mockGetCRIResponseMultiple[1] = json_encode(array_slice($responseCRIArray,5,5));
+        $this->mockGetCRIResponseMultiple[2] = json_encode(array_slice($responseCRIArray,10,5));
+        $this->mockGetCRIResponseMultiple[3] = json_encode(array_slice($responseCRIArray,15,5));
     }
 
     public function testIndexAction()
@@ -186,6 +205,60 @@ class AdminControllerTest extends WebTestCase
 
         //check if there are 2 rows in the table (1 for results and 1 for table header)
         $this->assertEquals(2, $crawler->filter('table.table-striped tr')->count());
+    }
+
+    public function testMultipleCustomerInfoRequestsAction()
+    {
+        $client = static::createClient();
+
+        $client = $this->logIn($client);
+        $this->restHeaders->expects($this->any())->method('get')->willReturn(20);
+        $this->restResponse->headers = $this->restHeaders;
+        $this->restResponse->expects($this->any())->method('getContent')
+            ->willReturn($this->mockGetCRIResponseMultiple[0]);
+        $this->restResponse->expects($this->any())->method('getStatusCode')->willReturn(200);
+        $this->restClient->expects($this->any())->method('get')->willReturn($this->restResponse);
+
+        $client->getContainer()->set('circle.restclient', $this->restClient);
+        //without limit, test defaults
+        $crawler = $client->request('GET', $client->getContainer()->get('router')->generate('admin_cri'),
+            ['from' => '2016-05-03', 'to' => '2016-06-03']);
+
+        //check status code
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        //check pagination
+        $this->assertEquals(1, $crawler->filter('div#message-pagination')->count());
+        $this->assertEquals(0, $crawler->filter('a#message-pagination-previous')->count());
+        $this->assertEquals(1, $crawler->filter('a#message-pagination-next')->count());
+
+        //check if there are 6 rows in the table (5 for default limit results and 1 for table header)
+        $this->assertEquals(6, $crawler->filter('table.table-striped tr')->count());
+
+        $nextPageLink = $crawler->filter('a#message-pagination-next')->eq(0)->link();
+        $client = static::createClient();
+        $client = $this->logIn($client);
+        $this->restHeaders->expects($this->any())->method('get')->willReturn(2);
+        $this->restResponse->headers = $this->restHeaders;
+        $this->restResponse->expects($this->any())->method('getContent')
+            ->willReturn($this->mockGetCRIResponseMultiple[1]);
+        $this->restResponse->expects($this->any())->method('getStatusCode')->willReturn(200);
+        $this->restClient->expects($this->any())->method('get')->willReturn($this->restResponse);
+        $client->getContainer()->set('circle.restclient', $this->restClient);
+        $link = parse_url($nextPageLink->getUri());
+        $queryParams = [];
+        parse_str($link['query'], $queryParams);
+        $crawler = $client->request('GET', $link['path'], $queryParams);
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        //check pagination
+        $this->assertEquals(1, $crawler->filter('div#message-pagination')->count());
+        $this->assertEquals(1, $crawler->filter('a#message-pagination-previous')->count());
+        $this->assertEquals(1, $crawler->filter('a#message-pagination-next')->count());
+
+        //check if there are 6 rows in the table (1 for results and 1 for table header)
+        $this->assertEquals(6, $crawler->filter('table.table-striped tr')->count());
     }
 
     /**
