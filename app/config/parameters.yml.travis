@@ -19,5 +19,5 @@ parameters:
     secret: ThisTokenIsNotSoSecretChangeIt
     api_url: http://api.trektoursflyer.dev
     api_format: .json
-    recaptcha_secret: '6LdY6yUTAAAAAFSEBuA3G1AyhOx6tzqILUe3HA-r'
-    recaptcha_key: '6LdY6yUTAAAAAMq-Vw7fWY8fLkvLh7CGAm3iio8A'
+    recaptcha_secret: '6LdYySYTAAAAAONjo0rnip6P0683oIUMBjAtxIsp'
+    recaptcha_key: '6LdYySYTAAAAAHsQPC8FOFbyADhZbWZNx7147ZY8'
