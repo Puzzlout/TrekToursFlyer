@@ -1,6 +1,6 @@
 # $1: git tag
 regex='^[0-9]+\.[0-9]+\.[0-9]+'
-if [[$1=~$regex]]
+if [[("$1"=~"$regex")]]
 then
 echo "Release $1"
 git config --global user.email "builds@travis-ci.com"
