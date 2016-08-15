@@ -1,5 +1,5 @@
 # $1: git tag
-echo "$1" | grep -q ""^[0-9]+\.[0-9]+\.[0-9]+"
+echo "$1" | grep -q "^[0-9]+\.[0-9]+\.[0-9]+"
 if [  $? -eq 0  ] ;then
 echo "Release $1"
 git config --global user.email "builds@travis-ci.com"
