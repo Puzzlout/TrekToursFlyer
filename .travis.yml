@@ -15,5 +15,5 @@ script:
 
 after_success:
   - export GIT_TAG=\"$(git log --format=%B --no-merges -n 1)\"
-  - ./tagrelease.sh $GIT_TAG
+  - bash tagrelease.sh $GIT_TAG
   - bash <(curl -s https://codecov.io/bash)
