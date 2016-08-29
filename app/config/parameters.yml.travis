@@ -22,3 +22,4 @@ parameters:
     recaptcha_secret: '6LdYySYTAAAAAONjo0rnip6P0683oIUMBjAtxIsp'
     recaptcha_key: '6LdYySYTAAAAAHsQPC8FOFbyADhZbWZNx7147ZY8'
     release_version_tag: 'v1'
+    google_analytics: ~
