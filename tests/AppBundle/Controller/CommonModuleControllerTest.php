@@ -30,7 +30,10 @@ class CommonModuleControllerTest extends WebTestCase
     {
         $client = static::createClient();
         $tracking =  $client->getKernel()->getContainer()->getParameter('google_analytics');
-
+        if(is_null($tracking))
+        {
+            $tracking = '';
+        }
         //with usr_cc cookie set to 1
         $cookie = new Cookie('usr_cc', 1);
         $client->getCookieJar()->set($cookie);
