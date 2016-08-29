@@ -67,6 +67,10 @@ class CommonModuleController extends Controller
         {
             $cookiesEnabled = $request->cookies->get('usr_cc');
             $trackingCode = $this->container->getParameter('google_analytics');
+            if(is_null($trackingCode))
+            {
+                $cookiesEnabled = false;
+            }
         }
         return $this->render(
             "AppBundle:module:analytics.html.twig",
