@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class CommonModuleController extends Controller
 {
@@ -56,6 +57,25 @@ class CommonModuleController extends Controller
     public function cookieAction()
     {
         return $this->render("AppBundle:module:cookie.html.twig");
+    }
+
+    public function analyticsAction(Request $request)
+    {
+        $trackingCode = null;
+        $cookiesEnabled = false;
+        if($request->cookies->has('usr_cc'))
+        {
+            $cookiesEnabled = $request->cookies->get('usr_cc');
+            $trackingCode = $this->container->getParameter('google_analytics');
+            if(is_null($trackingCode))
+            {
+                $cookiesEnabled = false;
+            }
+        }
+        return $this->render(
+            "AppBundle:module:analytics.html.twig",
+            ['tracking' => $trackingCode, 'enabled' => $cookiesEnabled]
+        );
     }
 
 }
