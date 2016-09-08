@@ -46,12 +46,33 @@ class CommonModuleController extends Controller
 
     public function partnerAction()
     {
-        return $this->render("AppBundle:module:partner.html.twig");
+        $translator = $this->get('translator');
+        $showLink1 = filter_var($translator->trans('footer_partner_a_link1_href'), FILTER_VALIDATE_URL);
+        $showLink2 = filter_var($translator->trans('footer_partner_a_link2_href'), FILTER_VALIDATE_URL);
+        return $this->render(
+            "AppBundle:module:partner.html.twig",
+            [
+                "showLink1" => $showLink1,
+                "showLink2" => $showLink2,
+            ]
+        );
     }
 
     public function socialAction()
     {
-        return $this->render("AppBundle:module:social.html.twig");
+        $translator = $this->get('translator');
+        $showLink1 = filter_var($translator->trans('footer_social_a_link1_href'), FILTER_VALIDATE_URL);
+        $showLink2 = filter_var($translator->trans('footer_social_a_link2_href'), FILTER_VALIDATE_URL);
+        $showLink3 = filter_var($translator->trans('footer_social_a_link3_href'), FILTER_VALIDATE_URL);
+        return $this->render(
+            "AppBundle:module:social.html.twig",
+            [
+                "showLink1" => $showLink1,
+                "showLink2" => $showLink2,
+                "showLink3" => $showLink3
+
+            ]
+        );
     }
 
     public function cookieAction()

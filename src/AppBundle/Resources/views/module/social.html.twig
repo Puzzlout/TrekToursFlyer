@@ -1,15 +1,21 @@
+{% if showLink1 %}
 <span>
-	<a href="{{ path('{% trans %}footer_social_a_link1_href{% endtrans %}') }}" target="_blank">
+	<a href='{% trans %}footer_social_a_link1_href{% endtrans %}' target="_blank">
 		{% trans %}footer_social_a_link1{% endtrans %}
 	</a>
 </span>
+{% endif %}
+{% if showLink2 %}
 <span>
-	<a href="{{ path('{% trans %}footer_social_a_link2_href{% endtrans %}') }}" target="_blank">
+	<a href='{% trans %}footer_social_a_link2_href{% endtrans %}' target="_blank">
 		{% trans %}footer_social_a_link2{% endtrans %}
 	</a>
 </span>
+{% endif %}
+{% if showLink3 %}
 <span>
-	<a href="{{ path('{% trans %}footer_social_a_link2_href{% endtrans %}') }}" target="_blank">
+	<a href='{% trans %}footer_social_a_link2_href{% endtrans %}' target="_blank">
 		{% trans %}footer_social_a_link3{% endtrans %}
 	</a>
 </span>
+{% endif %}
