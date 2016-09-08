@@ -1,2 +1,10 @@
-<span><a href="{{ path('home') }}" target="_blank">{% trans %}footer_partner_a_link1{% endtrans %}</a></span>
-<span><a href="{{ path('home') }}" target="_blank">{% trans %}footer_partner_a_link2{% endtrans %}</a></span>
+<span>
+	<a href="{{ path('{% trans %}footer_partner_a_link1_href{% endtrans %}') }}" target="_blank">
+		{% trans %}footer_partner_a_link1{% endtrans %}
+	</a>
+</span>
+<span>
+	<a href="{{ path('{% trans %}footer_partner_a_link2_href{% endtrans %}') }}" target="_blank">
+		{% trans %}footer_partner_a_link2{% endtrans %}
+	</a>
+</span>
