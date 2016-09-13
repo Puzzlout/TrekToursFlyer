@@ -1,48 +1,7 @@
 {% extends 'AppBundle::layout.html.twig' %}
 {% block title %}{{ parent() }}Home{% endblock %}
 {% block homepage_carousel %}
-    <div id="carousel-example-generic" class="carousel slide tt-carousel" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active tt-carousel-item"
-                 style="background-image:url('{{ asset('bundles/app/images/home/slide1.jpg') }}');">
-                <!--<img src="{{ asset('bundles/app/images/home/slide1.jpg') }}" alt="...">-->
-                <div class="carousel-caption">
-                    <p><a class="carousel-view-product" href="{{ path('product_get', {'productId': 1}) }}">
-                            Description for Trek 1
-                            <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div class="item tt-carousel-item"
-                 style="background-image:url('{{ asset('bundles/app/images/home/slide2.jpg') }}');">
-                <!--<img src="{{ asset('bundles/app/images/home/slide2.jpg') }}" alt="...">-->
-                <div class="carousel-caption">
-                    <p>
-                        <a class="carousel-view-product" href="{{ path('product_get', {'productId': 2}) }}">
-                            Description for Trek 2
-                            <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
+    {{ include('AppBundle:home/modules:herobanner.html.twig') }}
+    {{ include('AppBundle:home/modules:information.html.twig') }}
+    {{ include('AppBundle:home/modules:contact.html.twig') }}
 {% endblock %}
