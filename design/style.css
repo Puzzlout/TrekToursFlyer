@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
-body{background:#f2f2f2; font-family: 'Open Sans', sans-serif;}
-
 /*Global*/
+body{background:#f2f2f2; font-family: 'Open Sans', sans-serif;}
+.container{min-width:320px}
 p.cta a{padding:12px 30px; background:#017f84; color:#FFF; border:1px solid #015c76; text-transform:uppercase}
 p.cta{margin:22px 0 0 0}
 p.cta a:hover{opacity:0.8}
@@ -20,13 +20,10 @@ h2{font-size:28px!important; font-weight:normal}
 #languages a {padding:22px!important}
 .navbar-brand img{margin-top:8px}
 
-/*Carousel*/
-.tt-carousel-item{max-height:590px; background-size:cover!important; background-position:center center!important}
-#carousel-example-generic{overflow:hidden!important}
-.carousel-control span{display:none}
+/*image header*/
+.headerbg{height:590px; background-size:cover!important; background-position:center center!important; min-width:320px}
 .slide-cta{color:#FFF; padding-top:80px}
 .slide-cta p.sous-titre{ font-size:25px}
-.carousel-control{max-height:640px!important}
 
 /*Blocs hp*/
 .blochp div{ background:#FFF; padding:27px}
@@ -40,7 +37,9 @@ footer{ background:#d5d8d9!important; color:#000!important; font-size:13px; colo
 #footer-left{margin-top:-20px}
 footer a:hover{opacity:0.8}
 
-
+@media only screen and (max-width: 995px) {
+a.navbar-brand img{ width:150px; height:auto; margin-top:0}
+}
 @media only screen and (max-width: 768px) {
 #upnavbar{overflow:hidden; width:320px; height:100%; position:fixed; right:0; padding-left:20px; display:none}
 #navbar{width:300px; height:100%!important; background:#000; max-height:none; overflow-y:scroll; overflow-x:hidden; display:block; -moz-box-shadow: 0px 0px 30px 0px #656565;
@@ -53,18 +52,18 @@ position:absolute; left:300px
 }
 @media only screen and (max-width: 788px) {
 .mentions{margin-bottom:20px}
-a.navbar-brand img{ width:150px; height:auto; margin-top:0}
-.tt-carousel-item, #carousel-example-generic{max-height:400px}
+.headerbg{max-height:400px}
 .slide-cta{padding-top:10px}
-.carousel-control{max-height:450px!important}
 }
 @media only screen and (max-width: 480px) {
-.tt-carousel-item, #carousel-example-generic{max-height:300px}
-.carousel-control{max-height:350px!important}
+.headerbg{max-height:300px}
 h1{font-size:25px}
 .slide-cta p.sous-titre{ font-size:14px}
 #footer-right img{width:30px; height:30px}
 #footer-right span{margin-right:5px}
+}
+@media only screen and (max-width: 360px) {
+.mt360{margin-top:100px!important}
 }
 
 
