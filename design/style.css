@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
 /*Global*/
-body{background:#f2f2f2; font-family: 'Open Sans', sans-serif;}
+html, body, header{height:100%}
+body{background:#f2f2f2; font-family: 'Open Sans', sans-serif; }
 .container{min-width:320px}
 p.cta a{padding:12px 30px; background:#017f84; color:#FFF; border:1px solid #015c76; text-transform:uppercase}
 p.cta{margin:22px 0 0 0}
@@ -21,7 +22,7 @@ h2{font-size:28px!important; font-weight:normal}
 .navbar-brand img{margin-top:8px}
 
 /*image header*/
-.headerbg{height:590px; background-size:cover!important; background-position:center center!important; min-width:320px}
+.headerbg{height:100%!important; background-size:cover!important; background-position:center center!important; min-width:320px}
 .slide-cta{color:#FFF; padding-top:80px}
 .slide-cta p.sous-titre{ font-size:25px}
 
@@ -38,7 +39,7 @@ footer{ background:#d5d8d9!important; color:#000!important; font-size:13px; colo
 footer a:hover{opacity:0.8}
 
 @media only screen and (max-width: 995px) {
-a.navbar-brand img{ width:150px; height:auto; margin-top:0}
+a.navbar-brand img{ width:150px; height:auto; margin-top:15px}
 }
 @media only screen and (max-width: 768px) {
 #upnavbar{overflow:hidden; width:320px; height:100%; position:fixed; right:0; padding-left:20px; display:none}
@@ -51,12 +52,13 @@ position:absolute; left:300px
 }
 }
 @media only screen and (max-width: 788px) {
+a.navbar-brand img{ width:150px; height:auto; margin-top:0}
 .mentions{margin-bottom:20px}
-.headerbg{max-height:400px}
+.headerbg{max-height:100%}
 .slide-cta{padding-top:10px}
 }
 @media only screen and (max-width: 480px) {
-.headerbg{max-height:300px}
+.headerbg{mx-height:100%}
 h1{font-size:25px}
 .slide-cta p.sous-titre{ font-size:14px}
 #footer-right img{width:30px; height:30px}
