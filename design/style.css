@@ -15,15 +15,22 @@ h2{font-size:28px!important; font-weight:normal}
 #navbar >ul >li >a{padding:30px}
 #navbar >ul >li.active{ background:#017f84}
 #navbar >ul >li.active a{ text-decoration:none}
-#header-menu{background:#001d26}
+#header-menu{background-color: rgba(0, 29, 38, 0.75);}
 #navbar >ul >li ul{ background:#001d26}
 #languages > a > img {width:35px!important; height:35px!important}
 #languages a {padding:22px!important}
 .navbar-brand img{margin-top:8px}
 
 /*image header*/
-.headerbg{height:100%!important; background-size:cover!important; background-position:center center!important; min-width:320px}
-.slide-cta{color:#FFF; padding-top:80px}
+.headerbg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%!important; background: url(img/slider1.jpg); background-size:cover!important; background-position:center right !important; min-width:300px}
+.slide-cta{
+    position:relative;
+    top: 50px;
+    color:#FFF; padding-top:80px}
 .slide-cta p.sous-titre{ font-size:25px}
 
 /*Blocs hp*/
@@ -58,9 +65,9 @@ a.navbar-brand img{ width:150px; height:auto; margin-top:0}
 .slide-cta{padding-top:10px}
 }
 @media only screen and (max-width: 480px) {
-.headerbg{mx-height:100%}
-h1{font-size:25px}
-.slide-cta p.sous-titre{ font-size:14px}
+.headerbg{mx-height:100%; }
+h1{font-size:35px}
+.slide-cta p.sous-titre{ font-size:18px}
 #footer-right img{width:30px; height:30px}
 #footer-right span{margin-right:5px}
 }
