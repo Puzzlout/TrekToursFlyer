@@ -3,7 +3,7 @@
 /*Global*/
 html, body, header{height:100%}
 body{background:#f2f2f2; font-family: 'Open Sans', sans-serif; }
-.container{min-width:320px}
+.container{min-width:300px}
 p.cta a{padding:12px 30px; background:#017f84; color:#FFF; border:1px solid #015c76; text-transform:uppercase}
 p.cta{margin:22px 0 0 0}
 p.cta a:hover{opacity:0.8}
@@ -22,7 +22,7 @@ h2{font-size:28px!important; font-weight:normal}
 .navbar-brand img{margin-top:8px}
 
 /*image header*/
-.headerbg{height:100%!important; background-size:cover!important; background-position:center center!important; min-width:320px}
+.headerbg{height:100%!important; background-size:cover!important; background-position:center center!important; min-width:320px; background: url(img/slider1.jpg)}
 .slide-cta{color:#FFF; padding-top:80px}
 .slide-cta p.sous-titre{ font-size:25px}
 
@@ -57,6 +57,12 @@ a.navbar-brand img{ width:150px; height:auto; margin-top:0}
 .headerbg{max-height:100%}
 .slide-cta{padding-top:10px}
 }
+@media only screen and (max-width: 680px) {
+	#footer-right, #footer-left{clear:both!important; text-align:center; width:100%;}
+	#footer-left{ margin-top:0px}
+	#footer-right{ margin-top:10px}
+
+}
 @media only screen and (max-width: 480px) {
 .headerbg{mx-height:100%}
 h1{font-size:25px}
@@ -64,8 +70,10 @@ h1{font-size:25px}
 #footer-right img{width:30px; height:30px}
 #footer-right span{margin-right:5px}
 }
+@media only screen and (max-width: 380px) {
+.headerbg{background: url(img/slider1-smartphone.jpg)}
+}
 @media only screen and (max-width: 360px) {
-.mt360{margin-top:100px!important}
 }
 
 
