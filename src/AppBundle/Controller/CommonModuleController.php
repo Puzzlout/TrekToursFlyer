@@ -61,15 +61,17 @@ class CommonModuleController extends Controller
     public function socialAction()
     {
         $translator = $this->get('translator');
-        $showLink1 = filter_var($translator->trans('footer_social_a_link1_href'), FILTER_VALIDATE_URL);
-        $showLink2 = filter_var($translator->trans('footer_social_a_link2_href'), FILTER_VALIDATE_URL);
-        $showLink3 = filter_var($translator->trans('footer_social_a_link3_href'), FILTER_VALIDATE_URL);
+        $showLinkFacebook = filter_var($translator->trans('footer_social_a_facebook_href'), FILTER_VALIDATE_URL);
+        $showLinkTwitter = filter_var($translator->trans('footer_social_a_twitter_href'), FILTER_VALIDATE_URL);
+        $showLinkGoogle = filter_var($translator->trans('footer_social_a_google_href'), FILTER_VALIDATE_URL);
+        $showLinkPintrest = filter_var($translator->trans('footer_social_a_pintrest_href'), FILTER_VALIDATE_URL);
         return $this->render(
             "AppBundle:module:social.html.twig",
             [
-                "showLink1" => $showLink1,
-                "showLink2" => $showLink2,
-                "showLink3" => $showLink3
+                "showLinkFacebook" => $showLinkFacebook,
+                "showLinkTwitter" => $showLinkTwitter,
+                "showLinkGoogle" => $showLinkGoogle,
+                "showLinkPintrest" => $showLinkPintrest
 
             ]
         );

@@ -3,10 +3,11 @@
 {% block stylesheets %}
     {{ parent() }}
     {% stylesheets
-    'assets/vendor/bootstrap/dist/css/bootstrap.min.css'
     'bundles/app/css/*'
+    'assets/vendor/bootstrap/dist/css/bootstrap.min.css'
     filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     {% endstylesheets %}
 {% endblock %}
 {% block javascripts %}

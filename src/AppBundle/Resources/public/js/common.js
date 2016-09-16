@@ -13,8 +13,18 @@
  }
  });
  });*/
-
+var menuopen=0;
+var what = (/(iPhone|iPod|iPad).*AppleWebKit/i.test(navigator.userAgent)) ? 'touchstart' : 'click';
 $(document).ready(function () {
+    if(menuopen==0){
+        $('#upnavbar').show();
+        $( "#navbar" ).show().animate({left: "40px"}, 200, function() {});menuopen=1;
+    }
+    else if(menuopen==1){
+        $( "#navbar" ).animate({left: "300px"}, 200, function() {$('#upnavbar').hide();});menuopen=0;
+    }
+
+
     showCookieConsent();
 
     $(".cookie-consent-button").click(function () {

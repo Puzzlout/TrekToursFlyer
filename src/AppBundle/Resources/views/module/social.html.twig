@@ -1,21 +1,28 @@
-{% if showLink1 %}
+{% if showLinkFacebook %}
 <span>
-	<a href='{% trans %}footer_social_a_link1_href{% endtrans %}' target="_blank">
-		{% trans %}footer_social_a_link1{% endtrans %}
+	<a href='{% trans %}footer_social_a_facebook_href{% endtrans %}' target="_blank">
+		<img src="{{ asset('bundles/app/images/social/facebook.gif') }}" width="39" height="39" alt="facebook">
 	</a>
 </span>
 {% endif %}
-{% if showLink2 %}
+{% if showLinkTwitter %}
 <span>
-	<a href='{% trans %}footer_social_a_link2_href{% endtrans %}' target="_blank">
-		{% trans %}footer_social_a_link2{% endtrans %}
+	<a href='{% trans %}footer_social_a_twitter_href{% endtrans %}' target="_blank">
+		<img src="{{ asset('bundles/app/images/social/twitter.gif') }}" width="39" height="39" alt="twitter" />
 	</a>
 </span>
 {% endif %}
-{% if showLink3 %}
+{% if showLinkGoogle %}
 <span>
-	<a href='{% trans %}footer_social_a_link2_href{% endtrans %}' target="_blank">
-		{% trans %}footer_social_a_link3{% endtrans %}
+	<a href='{% trans %}footer_social_a_google_href{% endtrans %}' target="_blank">
+		<img src="{{ asset('bundles/app/images/social/google.gif') }}" width="39" height="39" alt="google" />
+	</a>
+</span>
+{% endif %}
+{% if showLinkPintrest %}
+	<span>
+	<a href='{% trans %}footer_social_a_pintrest_href{% endtrans %}' target="_blank">
+		<img src="{{ asset('bundles/app/images/social/pinterest.gif') }}" width="39" height="39" alt="pintrest" />
 	</a>
 </span>
 {% endif %}
