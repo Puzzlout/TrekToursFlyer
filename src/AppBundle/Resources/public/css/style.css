@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 /*Global*/
-html, body {height:100%}
+html, body{height:100%}
 body{background:#f2f2f2; font-family: 'Open Sans', sans-serif; }
 .container{min-width:300px}
 p.cta a{padding:12px 30px; background:#017f84; color:#FFF; border:1px solid #015c76; text-transform:uppercase}
@@ -71,7 +71,8 @@ footer a:hover{opacity:0.8}
 	#footer-right span{margin-right:5px}
 }
 @media only screen and (max-width: 380px) {
-	.headerbg{background: url(img/slider1-smartphone.jpg)}
+	.headerbg{background: url('../images/home/slider1-smartphone.jpg')}
 }
 @media only screen and (max-width: 360px) {
 }
+
