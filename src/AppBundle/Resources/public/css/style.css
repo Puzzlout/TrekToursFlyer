@@ -22,7 +22,7 @@ h2{font-size:28px!important; font-weight:normal}
 .navbar-brand img{margin-top:8px}
 
 /*image header*/
-.headerbg{height:100%!important; background-size:cover!important; background-position:center center!important; min-width:320px; background: url(img/slider1.jpg)}
+.headerbg{height:100%!important; background-size:cover!important; background-position:center center!important; min-width:320px; background: url(../images/home/slider1.jpg)}
 .slide-cta{color:#FFF; padding-top:80px}
 .slide-cta p.sous-titre{ font-size:25px}
 

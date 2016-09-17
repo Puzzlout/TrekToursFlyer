@@ -1,18 +1,22 @@
-<section id="module-contact">
-    <img src="{{ asset('bundles/app/images/home/slide2.jpg') }}" alt="{% trans from "home" %}module_contact_img_alt{% endtrans %}"/>
-    <h1>
-        {% trans from "home" %}
-        module_contact_title_h1
-        {% endtrans %}
-    </h1>
-    <p>
-        {% trans from "home" %}
-        module_contact_description_p
-        {% endtrans %}
-    </p>
-    <a href="{{ path('contact') }}">
-        {% trans from "home" %}
-        module_contact_link_a
-        {% endtrans %}
-    </a>
-</section>
+<div class="col-md-4 blochp">
+    <div>
+        <div class="img" style="background: url('/bundles/app/images/home/img2.jpg') no-repeat center center"></div>
+        <h2>
+            {% trans from "home" %}
+            module_contact_title_h1
+            {% endtrans %}
+        </h2>
+        <p>
+            {% trans from "home" %}
+            module_contact_description_p
+            {% endtrans %}
+        </p>
+        <p class="cta">
+            <a href="{{ path('contact') }}">
+                {% trans from "home" %}
+                module_contact_link_a
+                {% endtrans %}
+            </a>
+        </p>
+    </div>
+</div>

@@ -1,18 +1,21 @@
-<section id="module-herobanner">
-    <img src="{{ asset('bundles/app/images/home/slide2.jpg') }}" alt="{% trans from "home" %}module_herobanner_img_alt{% endtrans %}"/>
-    <h1>
-        {% trans from "home" %}
-        module_herobanner_title_h1
-        {% endtrans %}
-    </h1>
-    <p>
-        {% trans from "home" %}
-        module_herobanner_description_p
-        {% endtrans %}
-    </p>
-    <a href="{{ path('product_get', {'productId': 1}) }}">
-        {% trans from "home" %}
-        module_herobanner_link_a
-        {% endtrans %}
-    </a>
-</section>
+<div class="headerbg">
+    <div class="slide-cta container">
+        <h1>
+            {% trans from "home" %}
+            module_herobanner_title_h1
+            {% endtrans %}
+        </h1>
+        <p class="sous-titre">
+            {% trans from "home" %}
+            module_herobanner_description_p
+            {% endtrans %}
+        </p>
+        <p class="cta mt360">
+            <a href="{{ path('product_get', {'productId': 1}) }}">
+                {% trans from "home" %}
+                module_herobanner_link_a
+                {% endtrans %}
+            </a>
+        </p>
+    </div>
+</div>

@@ -16,6 +16,7 @@
 var menuopen=0;
 var what = (/(iPhone|iPod|iPad).*AppleWebKit/i.test(navigator.userAgent)) ? 'touchstart' : 'click';
 $(document).ready(function () {
+    $('header:has(.headerbg)').css('height','100%');
     $(document).on(what, '#butnavbar', function (e) {
         if(menuopen==0){
             $('#upnavbar').show();
