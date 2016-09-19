@@ -2,14 +2,6 @@
     <hr/>
     <div id="footer-links" class="container">
         <div class="row">
-            <div class="col-xs-12">
-                <p class="text-center mentions">
-                    <a href="#">{% trans %}footer_a_legal_terms_text{% endtrans %}</a>   |   <a href="#">{% trans %}footer_a_sales_terms_text{% endtrans %}</a><br>
-                    © ebikemontblanc.com 2016
-                </p>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-md-6">
                 <div class="footer-partners">
                     {{ render(controller('AppBundle:CommonModule:partner')) }}
@@ -19,6 +11,14 @@
                 <div class="footer-social">
                     {{ render(controller('AppBundle:CommonModule:social')) }}
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center mentions">
+                    <a href="#">{% trans %}footer_a_legal_terms_text{% endtrans %}</a>   |   <a href="#">{% trans %}footer_a_sales_terms_text{% endtrans %}</a><br>
+                    © ebikemontblanc.com 2016
+                </p>
             </div>
         </div>
     </div>
