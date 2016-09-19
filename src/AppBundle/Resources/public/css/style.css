@@ -120,16 +120,8 @@ footer {
     color: #001d26
 }
 
-.mentions {
-    margin-bottom: -30px;
-}
-
 .mentions a {
     color: #000
-}
-
-#footer-left {
-    margin-top: -20px
 }
 
 footer a:hover {
