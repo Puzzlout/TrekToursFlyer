@@ -23,18 +23,10 @@
     .headerbg{max-height:100%}
     .slide-cta{padding-top:10px}
 }
-@media only screen and (max-width: 680px) {
-    #footer-right, #footer-left{clear:both!important; text-align:center; width:100%;}
-    #footer-left{ margin-top:0px}
-    #footer-right{ margin-top:10px}
-
-}
 @media only screen and (max-width: 480px) {
     .headerbg{mx-height:100%}
     h1{font-size:25px}
     .slide-cta p.sous-titre{ font-size:14px}
-    #footer-right img{width:30px; height:30px}
-    #footer-right span{margin-right:5px}
 }
 
 @media only screen and (max-width: 360px) {
