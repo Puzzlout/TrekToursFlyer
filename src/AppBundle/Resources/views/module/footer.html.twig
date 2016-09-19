@@ -2,14 +2,10 @@
     <hr/>
     <div id="footer-links" class="container">
         <p class="text-center mentions">
-            <a href="#">Mentions légales</a>   |   <a href="#">Conditions générales de ventes</a><br>
+            <a href="#">{% trans %}footer_a_legal_terms_text{% endtrans %}</a>   |   <a href="#">{% trans %}footer_a_sales_terms_text{% endtrans %}</a><br>
             © ebikemontblanc.com 2016
         </p>
-        <div id="footer-left" class="pull-left">
-            {{ render(controller('AppBundle:CommonModule:partner')) }}
+        {{ render(controller('AppBundle:CommonModule:partner')) }}
+        {{ render(controller('AppBundle:CommonModule:social')) }}
         </div>
-        <div id="footer-right" class="pull-right">
-            {{ render(controller('AppBundle:CommonModule:social')) }}
-        </div>
-    </div>
 </footer>

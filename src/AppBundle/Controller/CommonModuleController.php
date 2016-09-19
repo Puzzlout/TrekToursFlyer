@@ -39,9 +39,15 @@ class CommonModuleController extends Controller
             ['route' => $currentRoute, 'routeParams' => $currentRouteParams]);
     }
 
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function footerAction()
     {
-        return $this->render("AppBundle:module:footer.html.twig");
+        $currentYear = date('Y');
+        return $this->render(
+            "AppBundle:module:footer.html.twig",
+            ["currentYear" => $currentYear]);
     }
 
     public function partnerAction()

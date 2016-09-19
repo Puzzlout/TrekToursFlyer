@@ -1,28 +1,30 @@
-{% if showLinkFacebook %}
-<span>
-	<a href='{% trans %}footer_social_a_facebook_href{% endtrans %}' target="_blank">
-		<img src="{{ asset('bundles/app/images/social/facebook.gif') }}" width="39" height="39" alt="facebook">
-	</a>
-</span>
-{% endif %}
-{% if showLinkTwitter %}
-<span>
-	<a href='{% trans %}footer_social_a_twitter_href{% endtrans %}' target="_blank">
-		<img src="{{ asset('bundles/app/images/social/twitter.gif') }}" width="39" height="39" alt="twitter" />
-	</a>
-</span>
-{% endif %}
-{% if showLinkGoogle %}
-<span>
-	<a href='{% trans %}footer_social_a_google_href{% endtrans %}' target="_blank">
-		<img src="{{ asset('bundles/app/images/social/google.gif') }}" width="39" height="39" alt="google" />
-	</a>
-</span>
-{% endif %}
-{% if showLinkPintrest %}
-	<span>
-	<a href='{% trans %}footer_social_a_pintrest_href{% endtrans %}' target="_blank">
-		<img src="{{ asset('bundles/app/images/social/pinterest.gif') }}" width="39" height="39" alt="pintrest" />
-	</a>
-</span>
-{% endif %}
+<div id="footer-right" class="pull-right footer-social">
+    {% if showLinkFacebook %}
+        <span>
+			<a href='{% trans %}footer_social_a_facebook_href{% endtrans %}' target="_blank">
+				<img src="{{ asset('bundles/app/images/social/facebook.gif') }}" width="39" height="39" alt="facebook">
+			</a>
+		</span>
+    {% endif %}
+    {% if showLinkTwitter %}
+        <span>
+			<a href='{% trans %}footer_social_a_twitter_href{% endtrans %}' target="_blank">
+				<img src="{{ asset('bundles/app/images/social/twitter.gif') }}" width="39" height="39" alt="twitter"/>
+			</a>
+		</span>
+    {% endif %}
+    {% if showLinkGoogle %}
+        <span>
+			<a href='{% trans %}footer_social_a_google_href{% endtrans %}' target="_blank">
+				<img src="{{ asset('bundles/app/images/social/google.gif') }}" width="39" height="39" alt="google"/>
+			</a>
+		</span>
+    {% endif %}
+    {% if showLinkPintrest %}
+        <span>
+			<a href='{% trans %}footer_social_a_pintrest_href{% endtrans %}' target="_blank">
+				<img src="{{ asset('bundles/app/images/social/pinterest.gif') }}" width="39" height="39" alt="pintrest"/>
+			</a>
+		</span>
+    {% endif %}
+</div>

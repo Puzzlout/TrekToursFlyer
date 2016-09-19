@@ -33,6 +33,11 @@
     font-size: 3em;
 }
 
+/* Home page */
+.brand-name {font-family: "Varela Round", "Open Sans";}
+.ebike-brand {color: #019e7b;}
+.mtb-brand {color: #FFF;}
+
 /* Product page */
 #product-header {
     background-image: url('../images/mtblanc_header.jpg');

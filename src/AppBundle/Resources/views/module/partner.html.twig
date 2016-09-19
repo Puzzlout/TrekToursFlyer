@@ -1,14 +1,18 @@
-{% if showLink1 %}
-<span>En partenariat avec <br>
-	<a href='{% trans %}footer_partner_a_link1_href{% endtrans %}' target="_blank">
-		<img src="{{ asset('/bundles/app/images/partner/merida.jpg') }}" width="129" height="51">
+<div id="footer-left" class="pull-left footer-partners">
+    {% if showLink1 %}
+        <span>{% trans %}footer_partner_span{% endtrans %}<br>
+	<a class="partner-link" href='{% trans %}footer_partner_a_link1_href{% endtrans %}' target="_blank">
+		<img src="{{ asset('/bundles/app/images/partner/merida.jpg') }}" width="129" height="51"
+             alt="{% trans %}footer_partner_a_link2{% endtrans %}">
 	</a>
 </span>
-{% endif %}
-{% if showLink2 %}
-<span>
-	<a href='{% trans %}footer_partner_a_link2_href{% endtrans %}' target="_blank">
-		{% trans %}footer_partner_a_link2{% endtrans %}
+    {% endif %}
+    {% if showLink2 %}
+        <span>
+	<a class="partner-link" href='{% trans %}footer_partner_a_link2_href{% endtrans %}' target="_blank">
+		<img src="{{ asset('/bundles/app/images/partner/hotels-tradition.png') }}" width="129" height="51"
+             alt="{% trans %}footer_partner_a_link2{% endtrans %}">
 	</a>
 </span>
-{% endif %}
+    {% endif %}
+</div>
