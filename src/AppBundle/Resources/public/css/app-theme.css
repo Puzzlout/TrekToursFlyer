@@ -38,6 +38,14 @@
 .ebike-brand {color: #019e7b;}
 .mtb-brand {color: #FFF;}
 
+.btn-custom-color {
+    background-color: #017f84;
+    background: #017f84;
+    color: #FFF;
+    border: 1px solid #015c76;
+    text-transform: uppercase
+}
+
 /* Product page */
 #product-header {
     background-image: url('../images/mtblanc_header.jpg');

@@ -3,6 +3,19 @@ body {
     padding-top: 50px;
 }
 
+/* Homepage */
+
+.module-info div.img {
+    background: url('../images/home/img1.jpg') no-repeat center center;
+}
+.module-contact div.img {
+    background: url('../images/home/img2.jpg') no-repeat center center;
+}
+
+.btn-custom-color {
+    padding: 12px 20px;
+}
+
 /* Product page */
 #product-header {
     height: 400px;
@@ -44,6 +57,10 @@ body {
     margin-right: 10px
 }
 
+img.hotels-tradition {
+    background-color: #FFF;
+}
+/* Cookie consent */
 .cookie-consent {
     display: none;
     font-size: 1.3em;

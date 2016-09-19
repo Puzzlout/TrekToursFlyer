@@ -1,6 +1,6 @@
 <div class="col-md-4 blochp">
-    <div>
-        <div class="img" style="background: url('../bundles/app/images/home/img2.jpg') no-repeat center center"></div>
+    <div class="module-contact">
+        <div class="img"></div>
         <h2>
             {% trans from "home" %}
             module_contact_title_h1
@@ -11,10 +11,10 @@
             module_contact_description_p
             {% endtrans %}
         </p>
-        <p class="cta">
-            <a href="{{ path('contact') }}">
+        <p>
+            <a class="btn btn-default btn-custom-color" href="{{ path('contact') }}">
                 {% trans from "home" %}
-                module_contact_link_a
+                module_contact_link_text
                 {% endtrans %}
             </a>
         </p>

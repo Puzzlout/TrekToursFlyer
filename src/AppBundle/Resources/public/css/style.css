@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* CSS Document */
 /*Global*/
 html, body {
@@ -28,16 +27,6 @@ p.cta {
 
 p.cta a:hover {
     opacity: 0.8
-}
-
-h1 {
-    font-weight: normal;
-    font-size: 45px
-}
-
-h2 {
-    font-size: 28px !important;
-    font-weight: normal
 }
 
 /*MENU*/
@@ -87,13 +76,8 @@ h2 {
     background: url(../images/home/slider1.jpg);
 }
 
-.slide-cta {
-    color: #FFF;
+.herobanner {
     padding-top: 80px;
-}
-
-.slide-cta p.sous-titre {
-    font-size: 25px;
 }
 
 /*Blocs hp*/
