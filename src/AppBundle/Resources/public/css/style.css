@@ -120,9 +120,9 @@ footer {
     color: #001d26
 }
 
+.mentions { padding-left: 20px }
 .mentions a {
     color: #000;
-    padding: 20px 0;
 }
 
 footer a:hover {
