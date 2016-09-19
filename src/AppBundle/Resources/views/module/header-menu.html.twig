@@ -1,45 +1,48 @@
 <nav id="header-menu" class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container-fluid">
+    <div class="container">
         <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+            <button data-toggle="collapse" data-target="#navbar" type="button" class="navbar-toggle" aria-expanded="true" id="butnavbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">{% trans %}header-menu_a_name{% endtrans %}</a>
+            <a class="navbar-brand" href="{{ path('home') }}"><span class="ebike-brand">ebike</span><span class="mtb-brand">montblanc.com</span></a>
         </div>
-        <div class="navbar-collapse collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="{% if route=='home' %}active{% endif %}"><a href="{{ path('home') }}">{% trans %}header-menu_a_home{% endtrans %}</a></li>
-                <li class="dropdown {% if route=='product_get' %}active{% endif %}">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">
-                        {% trans %}header-menu_a_products{% endtrans %}
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu navbar-inverse" role="menu">
-                        <li class="{% if currentUri==path('product_get', {'productId': 1}) %}active{% endif %}">
-                            <a href="{{ path('product_get', {'productId': 1}) }}">
-                                {% trans %}header-menu_a_product1{% endtrans %}
-                            </a>
-                        </li>
-                        <li class="{% if currentUri==path('product_get', {'productId': 2}) %}active{% endif %}">
-                            <a href="{{ path('product_get', {'productId': 2}) }}">
-                                {% trans %}header-menu_a_product2{% endtrans %}
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="{% if route=='contact' %}active{% endif %}">
-                    <a href="{{ path('contact') }}">
-                        {% trans %}header-menu_a_contact{% endtrans %}
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li class="dropdown">
-                    {{ render(controller('AppBundle:CommonModule:languageMenu')) }}
-                </li>
-            </ul>
+        <div id="upnavbar">
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="{% if route=='home' %}active{% endif %}">
+                        <a href="{{ path('home') }}">{% trans %}header-menu_a_home{% endtrans %}</a>
+                    </li>
+                    <li class="dropdown {% if route=='product_get' %}active{% endif %}">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">
+                            {% trans %}header-menu_a_products{% endtrans %}
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu navbar-inverse" role="menu">
+                            <li class="{% if currentUri==path('product_get', {'productId': 1}) %}active{% endif %}">
+                                <a href="{{ path('product_get', {'productId': 1}) }}">
+                                    {% trans %}header-menu_a_product1{% endtrans %}
+                                </a>
+                            </li>
+                            <li class="{% if currentUri==path('product_get', {'productId': 2}) %}active{% endif %}">
+                                <a href="{{ path('product_get', {'productId': 2}) }}">
+                                    {% trans %}header-menu_a_product2{% endtrans %}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="{% if route=='contact' %}active{% endif %}">
+                        <a href="{{ path('contact') }}">
+                            {% trans %}header-menu_a_contact{% endtrans %}
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown" id="languages">
+                        {{ render(controller('AppBundle:CommonModule:languageMenu')) }}
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

@@ -7,6 +7,8 @@
     'bundles/app/css/*'
     filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     {% endstylesheets %}
 {% endblock %}
 {% block javascripts %}
@@ -23,8 +25,7 @@
     {% block header %}
         <header>
             {{ render(controller('AppBundle:CommonModule:headerMenu')) }}
-            {% block homepage_carousel %}
-            {% endblock %}
+            {% block homepage_carousel %}{% endblock %}
         </header>
     {% endblock %}
     {% block content %}{% endblock %}

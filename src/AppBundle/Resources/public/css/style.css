@@ -1,0 +1,115 @@
+/* CSS Document */
+/*Global*/
+html, body {
+    height: 100%
+}
+
+body {
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    min-width: 300px
+}
+
+p.cta a {
+    padding: 12px 30px;
+    background: #017f84;
+    color: #FFF;
+    border: 1px solid #015c76;
+    text-transform: uppercase
+}
+
+p.cta {
+    margin: 22px 0 0 0
+}
+
+p.cta a:hover {
+    opacity: 0.8
+}
+
+/*MENU*/
+#upnavbar {
+    display: block
+}
+
+#navbar > ul > li > a {
+    padding: 30px
+}
+
+#navbar > ul > li.active {
+    background: #017f84
+}
+
+#navbar > ul > li.active a {
+    text-decoration: none
+}
+
+#header-menu {
+    background: #001d26
+}
+
+#navbar > ul > li ul {
+    background: #001d26
+}
+
+#languages > a > img {
+    width: 35px !important;
+    height: 35px !important
+}
+
+#languages a {
+    padding: 22px !important
+}
+
+.navbar-brand img {
+    margin-top: 8px
+}
+
+/*image header*/
+.headerbg {
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    min-width: 320px;
+    background: url(../images/home/slider1.jpg);
+}
+
+.herobanner {
+    padding-top: 80px;
+}
+
+/*Blocs hp*/
+.blochp div {
+    background: #FFF;
+    padding: 27px
+}
+
+.blochp > div > .img {
+    height: 200px;
+    background-size: cover
+}
+
+.mtb50 {
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+/*Footer*/
+footer {
+    background: #d5d8d9 !important;
+    color: #000 !important;
+    font-size: 13px;
+    color: #001d26
+}
+
+.mentions { padding-top: 20px }
+.mentions a {
+    color: #000;
+}
+
+footer a:hover {
+    opacity: 0.8
+}
+
