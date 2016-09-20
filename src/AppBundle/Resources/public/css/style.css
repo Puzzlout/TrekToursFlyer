@@ -68,17 +68,6 @@ p.cta a:hover {
 }
 
 /*image header*/
-.headerbg {
-    height: 100% !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    min-width: 320px;
-    background: url(../images/home/slider1.jpg);
-}
-
-.herobanner {
-    padding-top: 80px;
-}
 
 /*Blocs hp*/
 .blochp div {

@@ -11,6 +11,10 @@
     p.herobanner-subtitle {
         font-size: 24px !important;
     }
+    .herobanner {
+        padding-top: 80px;
+    }
+
 
 }
 @media only screen and (max-width: 960px) {
@@ -20,6 +24,9 @@
     }
     p.herobanner-subtitle {
         font-size: 20px !important;
+    }
+    .herobanner {
+        padding-top: 60px;
     }
 
 }
@@ -40,6 +47,10 @@
     }
     p.herobanner-subtitle {
         font-size: 18px !important;
+    }
+    .herobanner {
+        padding-top: 30px;
+        padding-left: 40px;
     }
 
 }

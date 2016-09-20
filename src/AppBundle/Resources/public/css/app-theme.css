@@ -34,6 +34,18 @@
 }
 
 /* Home page */
+
+.headerbg {
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    min-width: 320px;
+    background: url(../images/home/slider1bis.jpg);
+}
+
+.herobanner-title, .herobanner-subtitle {
+    color: #FFF;;
+}
 .brand-name {font-family: "Varela Round", "Open Sans";}
 .ebike-brand {color: #019e7b;}
 .mtb-brand {color: #FFF;}

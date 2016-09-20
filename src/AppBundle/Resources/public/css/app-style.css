@@ -43,6 +43,12 @@ body {
     padding: 50px 0 0 50px;
 }
 
+/* Contact form */
+
+.contact-title-form {
+    margin-top: 40px !important;
+}
+
 /* Language menu */
 .language-flag {
     width: 1.5em;

@@ -6,7 +6,7 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
 {% endblock %}
 {% block content %}
-    <h2>{% trans from 'contact' %} h2_contact {% endtrans %}</h2>
+    <h2 class="contact-title-form">{% trans from 'contact' %} h2_contact {% endtrans %}</h2>
     <div class="container">
         {% for flash_message in app.session.flashBag.get('cri_success') %}
             <div class="alert alert-success">
