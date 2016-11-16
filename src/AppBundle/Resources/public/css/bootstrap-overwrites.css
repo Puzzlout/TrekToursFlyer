@@ -1,3 +1,31 @@
-.container {
 
+.no-pd, .col-no-pd {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.col-pd-5 {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+.col-pd-10 {
+     padding-left: 5px !important;
+     padding-right: 5px !important;
+ }
+
+.row-no-mg {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.col-mg-5 {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+.col-mg-10 {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+.col-sm-4-ext {
+    width: 31.5%;
+    margin-bottom: 20px;
 }

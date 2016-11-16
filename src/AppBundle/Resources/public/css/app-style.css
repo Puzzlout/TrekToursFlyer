@@ -1,6 +1,10 @@
 /* Body offset for fixed navbar */
+* {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+}
 body {
     padding-top: 50px;
+    min-width: 320px;
 }
 
 /* Homepage */
@@ -8,6 +12,7 @@ body {
 .module-info div.img {
     background: url('../images/home/img1.jpg') no-repeat center center;
 }
+
 .module-contact div.img {
     background: url('../images/home/img2.jpg') no-repeat center center;
 }
@@ -18,29 +23,96 @@ body {
 
 /* Product page */
 #product-header {
-    height: 400px;
+    height: 200px;
 }
 
-#product-sections {
+.product-sections {
     padding: 0;
 }
 
-.section-list {
-    margin-bottom: 20px;
-}
-
-#vertical-menu {
-    height: 12em;
-    position: fixed;
-    right: 2em;
-    top: 50%;
-    margin-top: -6em;
-    z-index: 999;
-}
-
 .product-section {
-    min-height: 900px;
-    padding: 50px 0 0 50px;
+    padding: 20px 0;
+}
+
+#section-topbanner {
+    padding-top: 0;
+}
+.topbanner {
+    background: url('../images/product/topbanner.jpg') no-repeat center center / cover;
+    height: 500px;
+}
+.icon-box-img .icon-inner .fa {
+    font-size: 4em;
+}
+
+.lead {
+    margin-top: 20px;
+    font-size: large;
+}
+
+.img-box > div {
+}
+
+.img-box > div > img {
+    width: 100%;
+}
+
+.itinerary-icon {
+    font-size: 2em;
+}
+
+.stage-desc {
+    padding: 10px 0;
+}
+
+.itinerary-tech-detail {
+    padding: 10px 0;
+}
+
+
+.stage-1 {
+    background-color: #001d26;
+}
+
+.v-align {
+    display: flex;
+    align-items: center;
+}
+
+.faq div {
+    background-color: #017f84;
+}
+
+.faq-expand {
+    position: absolute;
+    top: 8px;
+    border-radius: 40px;
+    left: 5px;
+    height: 22px !important;
+    background-color: #fff !important;
+    cursor: pointer;
+}
+
+.faq-expand i {
+    font-size: 2em;
+    position: relative;
+    top: -2px;
+    left: 0px;
+}
+.faq .question h3 {
+    padding: 20px 10px;
+    color: #FFF;
+}
+
+.faq .answer {
+    display: none;
+}
+.faq .answer p {
+    margin: 0;
+    background-color: #017f84;
+    padding: 10px;
+    border: solid #017f84 4px;
+    border-radius: 0 0 4px 4px;
 }
 
 /* Contact form */
@@ -66,6 +138,7 @@ body {
 img.hotels-tradition {
     background-color: #FFF;
 }
+
 /* Cookie consent */
 .cookie-consent {
     display: none;
@@ -74,7 +147,7 @@ img.hotels-tradition {
     padding: 10px 0;
     position: fixed;
     text-align: center;
-    top: 50;
+    top: 50px;
     width: 100%;
     z-index: 999999;
 }
@@ -86,15 +159,21 @@ img.hotels-tradition {
 }
 
 .cookie-consent-button {
-	display: inline-block;
-	cursor: pointer;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .tt-carousel-item {
-	background-position: center center;
-	background-size: cover;
-	height: 800px;
+    background-position: center center;
+    background-size: cover;
+    height: 800px;
 }
+
 .carousel-view-product {
     line-height: 16px;
+}
+
+/** commons **/
+.large-p {
+    font-size: larger;
 }

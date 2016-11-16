@@ -4,6 +4,8 @@
     {{ parent() }}
     {% stylesheets
     'assets/vendor/bootstrap/dist/css/bootstrap.min.css'
+    'assets/vendor/flickity/dist/flickity.min.css'
+    'assets/vendor/font-awesome/css/font-awesome.min.css'
     'bundles/app/css/*'
     filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}"/>
@@ -16,6 +18,7 @@
     {% javascripts
     'assets/vendor/jquery/dist/jquery.min.js'
     'assets/vendor/bootstrap/dist/js/bootstrap.min.js'
+    'assets/vendor/flickity/dist/flickity.pkgd.min.js'
     'bundles/app/js/*' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}

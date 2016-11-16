@@ -1,3 +1,5 @@
+
+
 /* Navbar */
 .navbar.transparent {
     border-width: 0;
@@ -59,14 +61,31 @@
 }
 
 /* Product page */
-#product-header {
-    background-image: url('../images/mtblanc_header.jpg');
-    background-position: center;
-    background-size: cover;
+.topbanner img {
+    width: 100%;
 }
 
-.product-section {
-    border-bottom: 1px solid gray;
+.icon-box-img .icon-inner .fa {
+    font-size: 4em;
+    color: #017f84;
+}
+.icon-box-img .icon-inner .fa:hover {
+    font-size: 5em;
+    color: #001d26;
+}
+
+.uppercase, .uppercase-light {
+    text-transform: uppercase;
+}
+.uppercase,
+.lead {
+    color: #666;
+}
+
+.uppercase-light,
+.lead-light,
+.fa-light-color {
+    color: #ffd;
 }
 
 .section-list {
@@ -74,8 +93,8 @@
 }
 
 #product-sections > section:nth-child(even) {
-    color: white;
-    background-color: #222;
+    color: #222;
+    background-color: #fff;
 }
 
 #product-sections > section#section-iternary {
@@ -88,6 +107,14 @@
 
 #product-sections > section#section-review {
     background: rgba(0, 0, 0, 0) url("../images/product/background3.jpg") no-repeat fixed center center / cover;
+}
+
+.icon-container {
+    background-color: #017f84;
+    border-radius: 80px;
+}
+.icon-container .fa {
+    color: #fff;
 }
 
 /* Footer */
