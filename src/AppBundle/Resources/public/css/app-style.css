@@ -47,7 +47,6 @@ body {
 
 .lead {
     margin-top: 20px;
-    font-size: large;
 }
 
 .img-box > div {
@@ -58,7 +57,7 @@ body {
 }
 
 .itinerary-icon {
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .stage-desc {
@@ -70,8 +69,11 @@ body {
 }
 
 
-.stage-1 {
+.stage-even {
     background-color: #001d26;
+}
+.stage-odd {
+    background-color: #fff;
 }
 
 .v-align {
