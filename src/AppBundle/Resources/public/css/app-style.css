@@ -39,7 +39,7 @@ body {
 }
 .topbanner {
     background: url('../images/product/topbanner.jpg') no-repeat center center / cover;
-    height: 500px;
+    height: 30vw;
 }
 .icon-box-img .icon-inner .fa {
     font-size: 4em;
@@ -68,7 +68,6 @@ body {
     padding: 10px 0;
 }
 
-
 .stage-even {
     background-color: #001d26;
 }
@@ -76,6 +75,9 @@ body {
     background-color: #fff;
 }
 
+.stage-desc {
+    display: none;
+}
 .v-align {
     display: flex;
     align-items: center;
