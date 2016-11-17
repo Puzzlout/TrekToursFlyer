@@ -5,6 +5,7 @@
 body {
     padding-top: 50px;
     min-width: 320px;
+    background-color: #FFF;
 }
 
 /* Homepage */
@@ -81,6 +82,68 @@ body {
 .v-align {
     display: flex;
     align-items: center;
+}
+
+.bubble-icon {
+    width: 100%;
+    top: -10px;
+    text-align: center;
+}
+.bubble-icon-top {
+    margin: 0 auto;
+    width: 8em;
+    height: 8em;
+    background-color: #fff;
+    margin-bottom: -100px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    
+}
+.bubble-icon-left {
+    margin: 0 auto;
+    width: 8em;
+    height: 8em;
+    background-color: #fff;
+    margin-left: 0px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    
+}
+
+.bubble-wrapper {
+    display: table-row;
+}
+
+.bubble-wrapper > div,
+.bubble-wrapper > p {
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+
+.bubble-icon-top .fa {
+    top: 10px;
+    font-size: 4em;
+}
+.bubble-icon-left .fa {
+    left: 5px;
+    font-size: 2em;
+    line-height: 4em;
+}
+.bubble-icon-top .fa,
+.bubble-icon-left .fa {
+    position: relative;
+}
+#section-accommodation > div > div > div > p,
+#section-included > div > div > div > p {
+    padding: 50px 20px;
+    text-align: justify;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+#section-included > div > div > div > p {
+    padding: 20px 50px;
+    text-align: center;
 }
 
 .faq div {
