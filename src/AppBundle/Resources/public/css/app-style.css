@@ -2,6 +2,7 @@
 * {
     font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
 }
+
 body {
     padding-top: 50px;
     min-width: 320px;
@@ -38,10 +39,12 @@ body {
 #section-topbanner {
     padding-top: 0;
 }
+
 .topbanner {
     background: url('../images/product/topbanner.jpg') no-repeat center center / cover;
     height: 30vw;
 }
+
 .icon-box-img .icon-inner .fa {
     font-size: 4em;
 }
@@ -72,6 +75,7 @@ body {
 .stage-even {
     background-color: #001d26;
 }
+
 .stage-odd {
     background-color: #fff;
 }
@@ -79,6 +83,7 @@ body {
 .stage-desc {
     display: none;
 }
+
 .v-align {
     display: flex;
     align-items: center;
@@ -89,6 +94,7 @@ body {
     top: -10px;
     text-align: center;
 }
+
 .bubble-icon-top {
     margin: 0 auto;
     width: 8em;
@@ -97,8 +103,9 @@ body {
     margin-bottom: -100px;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
-    
+
 }
+
 .bubble-icon-left {
     margin: 0 auto;
     width: 8em;
@@ -107,10 +114,10 @@ body {
     margin-left: 0px;
     border-top-left-radius: 60px;
     border-bottom-left-radius: 60px;
-    
+
 }
 
-.bubble-wrapper {
+/*.bubble-wrapper {
     display: table-row;
 }
 
@@ -119,21 +126,30 @@ body {
     display: table-cell;
     vertical-align: middle;
     
-}
+}*/
 
 .bubble-icon-top .fa {
     top: 10px;
     font-size: 4em;
 }
+
+.bubble-icon-top .fa-check {
+    top: 10px;
+    font-size: 2em;
+    color: #333;
+}
+
 .bubble-icon-left .fa {
     left: 5px;
     font-size: 2em;
     line-height: 4em;
 }
+
 .bubble-icon-top .fa,
 .bubble-icon-left .fa {
     position: relative;
 }
+
 #section-accommodation > div > div > div > p,
 #section-included > div > div > div > p {
     padding: 50px 20px;
@@ -141,31 +157,35 @@ body {
     background-color: #FFF;
     border-radius: 5px;
 }
+
 #section-included > div > div > div > p {
     padding: 20px 50px;
     text-align: center;
+    min-height: 6em;
 }
 
 .faq div {
     background-color: #017f84;
+    margin: 20px 10px;
 }
 
 .faq-expand {
     position: absolute;
-    top: 8px;
-    border-radius: 40px;
-    left: 5px;
-    height: 22px !important;
+    top: -22px;
+    border-radius: 70px;
+    left: -20px;
+    height: 40px !important;
     background-color: #fff !important;
     cursor: pointer;
 }
 
 .faq-expand i {
-    font-size: 2em;
+    font-size: 4em;
     position: relative;
-    top: -2px;
-    left: 0px;
+    top: -10px;
+    left: 5px;
 }
+
 .faq .question h3 {
     padding: 20px 10px;
     color: #FFF;
@@ -173,7 +193,9 @@ body {
 
 .faq .answer {
     display: none;
+    color: #fff !important;
 }
+
 .faq .answer p {
     margin: 0;
     background-color: #017f84;
@@ -182,6 +204,28 @@ body {
     border-radius: 0 0 4px 4px;
 }
 
+.lined-head {
+    border-top: 1px solid #001d26;
+    position: relative;
+    top: 20px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.lined-head span {
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+    text-align: center;
+    padding: 2px 5px;
+    background: #001d26;
+    margin: 0 100px;
+    display: block;
+    position: relative;
+    top: -30px;
+    font-family: "Droid serif", serif;
+    padding: 10px 0;
+}
 /* Contact form */
 
 .contact-title-form {
