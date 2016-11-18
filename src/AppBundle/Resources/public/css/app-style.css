@@ -173,8 +173,8 @@ body {
     position: absolute;
     top: -22px;
     border-radius: 70px;
-    left: -20px;
-    height: 40px !important;
+    left: -15px;
+    height: 38px !important;
     background-color: #fff !important;
     cursor: pointer;
 }
@@ -183,7 +183,6 @@ body {
     font-size: 4em;
     position: relative;
     top: -10px;
-    left: 5px;
 }
 
 .faq .question h3 {

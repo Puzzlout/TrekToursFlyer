@@ -84,17 +84,10 @@ p.cta a:hover {
     padding-bottom: 50px
 }
 
-/*Footer*/
-footer {
-    background: #d5d8d9 !important;
-    color: #000 !important;
-    font-size: 13px;
-    color: #001d26
-}
 
 .mentions { padding-top: 20px }
 .mentions a {
-    color: #000;
+    color: #fff;
 }
 
 footer a:hover {

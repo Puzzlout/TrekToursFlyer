@@ -119,16 +119,16 @@
 
 /* Footer */
 #footer-menu {
-    background-color: #222;
+    background-color: #001d26;
     color: #fff;
 }
 
 #footer-links span > a {
-    color: #9d9d9d;
+    color: #fff;
 }
 
 #footer-links span > a:hover {
-    color: #fff;
+    font-weight: bolder;
 }
 
 .cookie-consent {
