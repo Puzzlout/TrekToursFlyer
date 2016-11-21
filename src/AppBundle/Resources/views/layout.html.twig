@@ -24,7 +24,6 @@
     {% endjavascripts %}
 {% endblock %}
 {% block body %}
-    {{ render(controller('AppBundle:CommonModule:cookie')) }}
     {% block header %}
         <header>
             {{ render(controller('AppBundle:CommonModule:headerMenu')) }}
@@ -35,5 +34,6 @@
     {% block footer %}
         {{ render(controller('AppBundle:CommonModule:footer')) }}
     {% endblock %}
+    {{ render(controller('AppBundle:CommonModule:cookie')) }}
     {{ render(controller('AppBundle:CommonModule:analytics')) }}
 {% endblock %}

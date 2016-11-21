@@ -25,7 +25,11 @@
     margin-left: 10px !important;
     margin-right: 10px !important;
 }
-.col-sm-4-ext {
-    width: 31.5%;
-    margin-bottom: 20px;
+.h1-no-mg {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+.p-no-mg {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }

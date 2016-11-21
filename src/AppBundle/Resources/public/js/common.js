@@ -30,9 +30,9 @@ $(document).ready(function () {
 
     showCookieConsent();
 
-    $(".cookie-consent-button").click(function () {
+    $(".cc-btn").click(function () {
         var ccVal;
-        if ($(this).hasClass("cc-button-positive")) {
+        if ($(this).hasClass("cc-btn-positive")) {
             ccVal = "1";
         } else {
             ccVal = "0";

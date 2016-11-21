@@ -18,12 +18,23 @@
         padding-top: 80px;
     }
 
+    .topbanner {
+        margin-top: 30px;
+    }
     .itinerary-tech-detail {
         font-size: larger;
+    }
+    .stats {
+        margin-top: 30px !important;
     }
 }
 
 @media only screen and (max-width: 960px) {
+    .navbar-brand {
+        height: 80px;
+        line-height: 50px;
+    }
+
     h1.herobanner-title {
         font-size: 38px !important;
         font-weight: bolder !important;
@@ -43,64 +54,15 @@
     .itinerary-tech-detail {
         font-size: large;
     }
-
+    #section-topbanner {
+        margin-top: 30px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-    #upnavbar {
-        overflow: hidden;
-        width: 320px;
-        height: 100%;
-        position: fixed;
-        right: 0;
-        padding-left: 20px;
-        display: none
-    }
-
-    #navbar {
-        width: 300px;
-        height: 100% !important;
-        background: #000;
-        max-height: none;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        display: block;
-        -moz-box-shadow: 0px 0px 30px 0px #656565;
-        -webkit-box-shadow: 0px 0px 30px 0px #656565;
-        -o-box-shadow: 0px 0px 30px 0px #656565;
-        box-shadow: 0px 0px 30px 0px #656565;
-        filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=NaN, Strength=30);
-        position: absolute;
-        left: 320px
-    }
-
-    h1.herobanner-title {
-        font-size: 32px !important;
-        font-weight: bolder !important;
-    }
-
-    p.herobanner-subtitle {
-        font-size: 18px !important;
-    }
-
-    .herobanner {
-        padding-top: 30px;
-        padding-left: 40px;
-    }
-    .itinerary-tech-detail {
-        font-size: small;
-    }
-    .topbanner {
-        height: 250px;
-    }
-
-}
-
-@media only screen and (max-width: 788px) {
-    a.navbar-brand img {
-        width: 150px;
-        height: auto;
-        margin-top: 0
+    .navbar-brand {
+        height: 40px;
+        line-height: 20px;
     }
 
     .headerbg {
@@ -110,8 +72,30 @@
     .slide-cta {
         padding-top: 10px
     }
+
     .lined-head span {
         margin: 0 !important;
+    }
+
+    .faq-expand {
+        position: absolute;
+        top: -15px;
+        border-radius: 50px;
+        left: -5px;
+        height: 1.6em !important;
+        background-color: #fff !important;
+        cursor: pointer;
+    }
+
+    .faq-expand i {
+        font-size: 3em;
+        position: relative;
+        top: -8px;
+        left: 0;
+    }
+
+    #section-topbanner {
+        margin-top: 0;
     }
 }
 

@@ -1,5 +1,17 @@
 <section id="section-iternary" class="product-section fadeIn">
     <div class="container-fluid no-pd">
+        <div class="row">
+            <div class="col-xs-12 text-center ">
+                <h1 class="lined-head">
+                    <span>
+                    {% trans from "product_section_itinerary" %}
+                        itinerary-header-title-h1
+                     {% endtrans %}
+                    </span>
+                </h1>
+            </div>
+        </div>
+
         {{ include('AppBundle:product/section/itinerary:stage1.html.twig') }}
         {{ include('AppBundle:product/section/itinerary:stage2.html.twig') }}
         {{ include('AppBundle:product/section/itinerary:stage3.html.twig') }}

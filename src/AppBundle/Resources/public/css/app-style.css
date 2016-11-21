@@ -39,19 +39,37 @@ body {
 #section-topbanner {
     padding-top: 0;
 }
+#section-topbanner > div.stats > div.stats-wrapper {
+    text-align: center;
+}
+#section-topbanner > div.stats > div.stats-wrapper > div {
+    margin: 0 30px;
+    background-color: #fff;
+    color: #666666 !important;
+    height: inherit;
+}
+.fa-icon-h {
+    color: #017f84;
+}
 
-.topbanner {
-    background: url('../images/product/topbanner.jpg') no-repeat center center / cover;
-    height: 30vw;
+.featured-box {
+    background-color: #fff;
+    padding: 20px 10px;
+    margin: 20px 0;
+    border-radius: 5px;
 }
 
 .icon-box-img .icon-inner .fa {
     font-size: 4em;
 }
 
-.lead {
-    margin-top: 20px;
+div.stats-wrapper > div > div > h1 {
+    line-height: 1.5em;
 }
+div.stats-wrapper > div > div > p {
+    line-height: 4.5em;
+}
+
 
 .img-box > div {
 }
@@ -60,10 +78,10 @@ body {
     width: 100%;
 }
 
-.itinerary-icon {
+.line-icon {
     font-size: 1.8em;
 }
-
+.line-icon-sm
 .stage-desc {
     padding: 10px 0;
 }
@@ -100,33 +118,11 @@ body {
     width: 8em;
     height: 8em;
     background-color: #fff;
-    margin-bottom: -100px;
+    margin-bottom: -80px;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
 
 }
-
-.bubble-icon-left {
-    margin: 0 auto;
-    width: 8em;
-    height: 8em;
-    background-color: #fff;
-    margin-left: 0px;
-    border-top-left-radius: 60px;
-    border-bottom-left-radius: 60px;
-
-}
-
-/*.bubble-wrapper {
-    display: table-row;
-}
-
-.bubble-wrapper > div,
-.bubble-wrapper > p {
-    display: table-cell;
-    vertical-align: middle;
-    
-}*/
 
 .bubble-icon-top .fa {
     top: 10px;
@@ -254,10 +250,10 @@ img.hotels-tradition {
     display: none;
     font-size: 1.3em;
     min-height: 50px;
-    padding: 10px 0;
+    padding: 20px 0;
     position: fixed;
     text-align: center;
-    top: 50px;
+    bottom: 0;
     width: 100%;
     z-index: 999999;
 }
