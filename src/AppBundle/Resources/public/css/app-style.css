@@ -39,6 +39,10 @@ body {
 #section-topbanner {
     padding-top: 0;
 }
+
+.stats > div > div {
+    margin-top: 40px;
+}
 #section-topbanner > div.stats > div.stats-wrapper {
     text-align: center;
 }
