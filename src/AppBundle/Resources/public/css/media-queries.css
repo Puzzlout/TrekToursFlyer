@@ -54,9 +54,6 @@
     .itinerary-tech-detail {
         font-size: large;
     }
-    #section-topbanner {
-        margin-top: 30px;
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -94,7 +91,7 @@
         left: 0;
     }
 
-    #section-topbanner {
+    #section-topbanner .headline {
         margin-top: 0;
     }
 }

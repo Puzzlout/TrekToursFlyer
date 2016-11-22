@@ -36,17 +36,11 @@ body {
     padding: 20px 0;
 }
 
-#section-topbanner {
-    padding-top: 0;
+#section-topbanner .headline {
+    margin-top: 30px;
 }
-
-.stats > div > div {
-    margin-top: 40px;
-}
-#section-topbanner > div.stats > div.stats-wrapper {
+#section-topbanner > div > div.topbanner-row {
     text-align: center;
-}
-#section-topbanner > div.stats > div.stats-wrapper > div {
     margin: 0 30px;
     background-color: #fff;
     color: #666666 !important;
@@ -66,14 +60,6 @@ body {
 .icon-box-img .icon-inner .fa {
     font-size: 4em;
 }
-
-div.stats-wrapper > div > div > h1 {
-    line-height: 1.5em;
-}
-div.stats-wrapper > div > div > p {
-    line-height: 4.5em;
-}
-
 
 .img-box > div {
 }
