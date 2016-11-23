@@ -32,6 +32,8 @@
     }
     #languages a {
         padding: 22px;
+        position: relative;
+        left: 20px;
     }
 
 }
@@ -69,6 +71,8 @@
     }
     #languages a {
         padding: 22px;
+        position: relative;
+        left: 20px;
     }
 
 }
@@ -113,6 +117,12 @@
     #languages {
         line-height: 3.25em;
     }
+    #languages a {
+        padding: 0;
+        position: relative;
+        left: 0;
+    }
+
 }
 
 @media only screen and (max-width: 480px) {
