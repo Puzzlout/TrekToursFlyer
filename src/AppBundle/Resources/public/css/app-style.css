@@ -9,6 +9,9 @@ body {
     background-color: #FFF;
 }
 
+#languages {
+    float: right;
+}
 /* Homepage */
 
 .module-info div.img {
@@ -33,11 +36,11 @@ body {
 }
 
 .product-section {
-    padding: 20px 0;
+    padding-bottom: 20px;
 }
 
 #section-topbanner .headline {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 #section-topbanner > div > div.topbanner-row {
     text-align: center;
@@ -46,6 +49,13 @@ body {
     color: #666666 !important;
     height: inherit;
 }
+div.topbanner-row > div:nth-child(2) > p.simple-p {
+    font-size: larger;
+}
+div.topbanner-row > div:nth-child(2) {
+    line-height: 4.25em;
+}
+
 .fa-icon-h {
     color: #017f84;
 }
@@ -71,7 +81,7 @@ body {
 .line-icon {
     font-size: 1.8em;
 }
-.line-icon-sm
+.line-icon-sm,
 .stage-desc {
     padding: 10px 0;
 }
@@ -105,10 +115,10 @@ body {
 
 .bubble-icon-top {
     margin: 0 auto;
+    margin-bottom: -80px;
     width: 8em;
     height: 8em;
     background-color: #fff;
-    margin-bottom: -80px;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
 
@@ -202,7 +212,6 @@ body {
     text-decoration: none;
     font-style: italic;
     text-align: center;
-    padding: 2px 5px;
     background: #001d26;
     margin: 0 100px;
     display: block;
