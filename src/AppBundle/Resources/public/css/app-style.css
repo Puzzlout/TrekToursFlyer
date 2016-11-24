@@ -245,15 +245,15 @@ div.topbanner-row > div:nth-child(2) {
 .contact-overlay {
     background-color:rgba(255, 255, 255, 0.75);
 }
-#customer_info_request > form > div > div > div > label,
-#customer_info_request > form > div > div > div > input {
-    line-height: 4em;
+#customer_info_request > form > div > div > div > div > div > label,
+#customer_info_request > form > div > div > div > div > div > input {
+    line-height: 3em;
 }
 
-#customer_info_request > form > div > div > div > input,
-#customer_info_request > form > div > div > div > textarea {
+#customer_info_request > form > div > div > div > div > div > input,
+#customer_info_request > form > div > div > div > div > div > textarea {
     font-size: larger;
-    height: 4em;
+    height: 3em;
     border: none !important;
     border-radius: 0;
     background-color: transparent;
@@ -263,14 +263,17 @@ div.topbanner-row > div:nth-child(2) {
     padding-left: 20px;
     padding-right: 20px;
 }
-#customer_info_request > form > div > div > div > textarea {
+#customer_info_request > form > div > div > div > div > div > textarea {
     resize: vertical;
     height: 100px;
 }
-#customer_info_request > form > div > div > div > input:focus,
-#customer_info_request > form > div > div > div > textarea:focus {
+#customer_info_request > form > div > div > div > div > div > input:focus,
+#customer_info_request > form > div > div > div > div > div > textarea:focus {
     color: #fff;
     background-color: #001d26;
+}
+#customer_info_request > form > div {
+    padding: 40px 0;
 }
 #customer_info_request .checkbox {
 
@@ -281,6 +284,10 @@ div.topbanner-row > div:nth-child(2) {
 /* Language menu */
 .language-flag {
     width: 1.5em;
+}
+
+#languages > ul > li > a > img {
+    height: 2em;
 }
 
 /* Footer */

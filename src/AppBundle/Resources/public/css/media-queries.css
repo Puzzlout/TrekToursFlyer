@@ -163,6 +163,14 @@
     .contact-img-bg {
         background: url('../images/home/slider1-smartphone.jpg') no-repeat center center / cover;
     }
+    #customer_info_request > div:nth-child(1) {
+        position: relative;
+        top: 20px;
+    }
+
+    #customer_info_request > form > div {
+        padding-top: 0;
+    }
 
 }
 
@@ -186,16 +194,6 @@
     .itinerary-tech-detail {
         font-size: x-small;
     }
-
-    #customer_info_request > div:nth-child(1) {
-        position: relative;
-        top: 20px;
-    }
-
-    .contact-title-form > span {
-        top: -45px;
-    }
-
 }
 
 @media only screen and (max-width: 360px) {
