@@ -27,6 +27,18 @@ body {
 }
 
 /* Product page */
+
+#section-highlights {
+    padding-bottom: 0;
+}
+#section-highlights > div.highlights-img {
+    background: url('../images/product/topbanner.jpg') no-repeat center center;
+    background-size: cover;
+    height: 60vh;
+}
+#section-highlights > .container-fluid {
+    margin-top: -50px;
+}
 #product-header {
     height: 200px;
 }
