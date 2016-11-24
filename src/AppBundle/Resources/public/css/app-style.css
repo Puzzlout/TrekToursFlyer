@@ -70,6 +70,8 @@ div.topbanner-row > div:nth-child(2) {
 
 .fa-icon-h {
     color: #017f84;
+    font-size: 3em;
+    font-weight: bolder;
 }
 
 .featured-box {
