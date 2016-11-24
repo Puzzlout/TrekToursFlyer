@@ -21,21 +21,34 @@
     .topbanner {
         margin-top: 30px;
     }
+
     .itinerary-tech-detail {
         font-size: larger;
     }
+
     .stats {
         margin-top: 30px !important;
     }
-    #languages {
+
+    #languages,
+    #languages > ul > li > a {
         line-height: 5em;
     }
-    #languages a {
-        padding: 22px;
+
+    #languages > a {
+        padding: 25px 20px;
         position: relative;
         left: 20px;
     }
 
+    #customer_info_request > div:nth-child(1) {
+        position: relative;
+        top: 60px;
+    }
+
+    .contact-title-form > span {
+        top: -50px;
+    }
 }
 
 @media only screen and (max-width: 960px) {
@@ -56,6 +69,7 @@
     .herobanner {
         padding-top: 60px;
     }
+
     .v-align {
         display: block;
     }
@@ -63,21 +77,35 @@
     .itinerary-tech-detail {
         font-size: large;
     }
+
     #section-topbanner .headline {
         margin-top: 0;
     }
-    #languages {
+
+    #languages,
+    #languages > ul > li > a {
         line-height: 5em;
     }
-    #languages a {
-        padding: 22px;
+
+    #languages > a {
+        padding: 20px;
         position: relative;
         left: 20px;
+    }
+
+    #customer_info_request > div:nth-child(1) {
+        position: relative;
+        top: 60px;
+    }
+
+    .contact-title-form > span {
+        top: -50px;
     }
 
 }
 
 @media only screen and (max-width: 768px) {
+
     .navbar-brand {
         height: 40px;
         line-height: 20px;
@@ -111,16 +139,29 @@
         top: -8px;
         left: 0;
     }
+
     #section-topbanner .headline {
         margin-top: 0;
     }
-    #languages {
-        line-height: 3.25em;
+
+    #languages,
+    #languages > ul > li > a {
+        line-height: 3.5em;
     }
-    #languages a {
+
+    #languages > a {
         padding: 0;
         position: relative;
         left: 0;
+    }
+
+    #languages > ul {
+        position: absolute;
+        left: -80%;
+    }
+
+    .contact-img-bg {
+        background: url('../images/home/slider1-smartphone.jpg') no-repeat center center / cover;
     }
 
 }
@@ -141,13 +182,22 @@
     h1.herobanner-title {
         font-weight: bolder !important;
     }
+
     .itinerary-tech-detail {
         font-size: x-small;
     }
 
+    #customer_info_request > div:nth-child(1) {
+        position: relative;
+        top: 20px;
+    }
+
+    .contact-title-form > span {
+        top: -45px;
+    }
 
 }
 
-    @media only screen and (max-width: 360px) {
-    }
+@media only screen and (max-width: 360px) {
+}
 

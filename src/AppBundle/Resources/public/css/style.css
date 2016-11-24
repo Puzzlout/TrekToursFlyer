@@ -57,6 +57,9 @@ p.cta a:hover {
     width: 35px !important;
     height: 35px !important
 }
+#languages > ul.dropdown-menu {
+    min-width: 85px;
+}
 
 .navbar-brand img {
     margin-top: 8px
