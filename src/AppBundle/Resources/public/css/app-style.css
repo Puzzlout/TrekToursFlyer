@@ -256,6 +256,10 @@ h1.lined-head > div > div.col-xs-10 {
 .contact-overlay {
     background-color:rgba(255, 255, 255, 0.75);
 }
+#customer_info_request > form > div > div > div > div > div > div > div > label {
+    font-size: larger;
+}
+
 #customer_info_request > form > div > div > div > div > div > div > div > label,
 #customer_info_request > form > div > div > div > div > div  > div > div > input {
     line-height: 3em;
@@ -288,6 +292,14 @@ h1.lined-head > div > div.col-xs-10 {
 }
 #customer_info_request .checkbox {
 
+}
+#customer_info_request > form > div > div > div > div.col-xs-10.col-mobile-fill.contact-overlay > div:nth-child(4) > div:nth-child(2)
+{
+    padding-bottom: 15px;
+}
+#customer_info_request div.g-recaptcha,
+#customer_info_request div.g-recaptcha > div {
+    margin: 0 auto;
 }
 #customer_info_request > div:nth-child(2) {
     margin-top: 30px;
