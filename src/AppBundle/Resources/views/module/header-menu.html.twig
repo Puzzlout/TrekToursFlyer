@@ -25,18 +25,6 @@
                            href="{{ path('product_get', {'productId': 1}) }}">
                             {% trans %}header-menu_a_products{% endtrans %}
                         </a>
-                        {#<ul class="dropdown-menu navbar-inverse" role="menu">
-                            <li class="{% if currentUri==path('product_get', {'productId': 1}) %}active{% endif %}">
-                                <a href="{{ path('product_get', {'productId': 1}) }}">
-                                    {% trans %}header-menu_a_product1{% endtrans %}
-                                </a>
-                            </li>
-                            <li class="{% if currentUri==path('product_get', {'productId': 2}) %}active{% endif %}">
-                                <a href="{{ path('product_get', {'productId': 2}) }}">
-                                    {% trans %}header-menu_a_product2{% endtrans %}
-                                </a>
-                            </li>
-                        </ul>#}
                     </li>
                     <li class="{% if route=='contact' %}active{% endif %}">
                         <a href="{{ path('contact') }}">
