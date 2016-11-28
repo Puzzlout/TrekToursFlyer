@@ -40,10 +40,16 @@
         position: relative;
         left: 20px;
     }
+    .contact-form-title,
+    .contact-form-result,
+    .contact-form-container
+    {
+        margin: 0 15%;
+    }
 
     .contact-form-title > div > h1 {
         margin-top: 45px;
-        margin-bottom: -10px;
+        margin-bottom: 15px;
     }
 }
 
@@ -96,9 +102,16 @@
         position: relative;
         left: 20px;
     }
+    .contact-form-title,
+    .contact-form-result,
+    .contact-form-container
+    {
+        margin: 0 5%;
+    }
+
     .contact-form-title > div > h1 {
         margin-top: 45px;
-        margin-bottom: -10px;
+        margin-bottom: 15px;
     }
 }
 
@@ -116,12 +129,14 @@
     .slide-cta {
         padding-top: 10px
     }
+    #section-highlights {
+        margin-top: 0px;
+    }
 
     #section-highlights > div.highlights-img {
         background: url('../images/product/tp-768w.jpg') no-repeat center center;
         background-size: cover;
         height: 60vh;
-
     }
 
     .lined-head span {
@@ -169,9 +184,16 @@
         background: url('../images/home/slider1-smartphone.jpg') no-repeat center center / cover;
     }
 
+    .contact-form-title,
+    .contact-form-result,
+    .contact-form-container
+    {
+        margin: 0 -15px;
+    }
+
     .contact-form-title > div > h1 {
         margin-top: 15px;
-        margin-bottom: -10px;
+        margin-bottom: 15px;
     }
 }
 

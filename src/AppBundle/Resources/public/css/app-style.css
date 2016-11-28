@@ -30,6 +30,7 @@ body {
 
 #section-highlights {
     padding-bottom: 0;
+    margin-top: 30px;
 }
 #section-highlights > div.highlights-img {
     background: url('../images/product/topbanner.jpg') no-repeat center center;
@@ -37,7 +38,7 @@ body {
     height: 60vh;
 }
 #section-highlights > .container-fluid {
-    margin-top: -50px;
+    margin-top: -80px;
 }
 #product-header {
     height: 200px;
@@ -47,18 +48,16 @@ body {
     padding: 0;
 }
 
-.product-section {
-    padding-bottom: 20px;
+#section-itinerary > div > div.row > div {
+    
 }
-
 #section-topbanner .headline {
     margin-top: 30px;
 }
 #section-topbanner > div > div.topbanner-row {
     text-align: center;
-    margin: 0 30px;
     background-color: #fff;
-    color: #666666 !important;
+    color: #666666;
     height: inherit;
 }
 div.topbanner-row > div:nth-child(2) > p.simple-p {
@@ -92,9 +91,6 @@ div.topbanner-row > div:nth-child(2) {
     width: 100%;
 }
 
-.line-icon {
-    font-size: 1.8em;
-}
 .line-icon-sm,
 .stage-desc {
     padding: 10px 0;
@@ -195,7 +191,7 @@ div.topbanner-row > div:nth-child(2) {
     top: -10px;
 }
 
-.faq .question h3 {
+.faq .question h2 {
     padding: 20px 10px;
     color: #FFF;
 }
