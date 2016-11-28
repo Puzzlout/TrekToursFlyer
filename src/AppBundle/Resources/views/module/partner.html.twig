@@ -1,20 +1,18 @@
-    <div class="row">
 {% if showLink1 %}
-        <div class="col-xs-6">
-        	<a class="partner-link" href='{% trans %}footer_partner_a_link1_href{% endtrans %}' target="_blank">
-        		<img src="{{ asset('/bundles/app/images/partner/merida.png') }}"
-					 class="partner-img merida"
-                     alt="{% trans %}footer_partner_a_link2{% endtrans %}">
-        	</a>
-        </div>
-{% endif %}
-{% if showLink2 %}
-        <div class="col-xs-6">
-        	<a class="partner-link" href='{% trans %}footer_partner_a_link2_href{% endtrans %}' target="_blank">
-        		<img src="{{ asset('/bundles/app/images/partner/hotels-tradition.png') }}"
-					 class="partner-img hotels-tradition"
-                     alt="{% trans %}footer_partner_a_link2{% endtrans %}">
-        	</a>
-        </div>
-{% endif %}
+    <div class="partner-container">
+        <a class="partner-link" href='{% trans %}footer_partner_a_link1_href{% endtrans %}' target="_blank">
+            <img src="{{ asset('/bundles/app/images/partner/merida.png') }}"
+                 class="partner-img merida"
+                 alt="{% trans %}footer_partner_a_link2{% endtrans %}">
+        </a>
     </div>
+{% endif %}
+    {% if showLink2 %}
+        <div class="partner-container">
+            <a class="partner-link" href='{% trans %}footer_partner_a_link2_href{% endtrans %}' target="_blank">
+                <img src="{{ asset('/bundles/app/images/partner/hotels-tradition.png') }}"
+                     class="partner-img hotels-tradition"
+                     alt="{% trans %}footer_partner_a_link2{% endtrans %}">
+            </a>
+        </div>
+    {% endif %}

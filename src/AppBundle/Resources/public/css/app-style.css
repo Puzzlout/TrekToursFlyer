@@ -319,6 +319,13 @@ img.hotels-tradition {
     background-color: #FFF;
 }
 
+.partner-container {
+    margin-left: 20px;
+}
+.partner-container {
+    float: left;
+}
+
 /* Cookie consent */
 .cookie-consent {
     display: none;
