@@ -69,7 +69,7 @@
     }
 
     .herobanner {
-        padding-top: 60px;
+        padding-top: 0px;
     }
 
     .v-align {
@@ -136,7 +136,7 @@
     #section-highlights > div.highlights-img {
         background: url('../images/product/tp-768w.jpg') no-repeat center center;
         background-size: cover;
-        height: 60vh;
+        height: 300px;
     }
 
     .lined-head span {
@@ -217,6 +217,15 @@
     .itinerary-tech-detail {
         font-size: x-small;
     }
+    #section-highlights > div.highlights-img {
+        background: url('../images/product/tp-768w.jpg') no-repeat center center;
+        background-size: cover;
+        height: 300px;
+    }
+    .contact-img-bg {
+        
+    }
+
 }
 
 @media only screen and (max-width: 360px) {

@@ -108,6 +108,10 @@ div.topbanner-row > div:nth-child(2) {
     background-color: #fff;
 }
 
+p.stage-text-desc {
+    padding: 10px 30px 20px 30px;
+    text-align: center;
+}
 .stage-desc {
     display: none;
 }
@@ -296,6 +300,14 @@ span.help-block > ul > li
     font-size: larger;
 }
 
+#customer_info_request_send_copy_to_client [type="checkbox"]:not(:checked),
+#customer_info_request_send_copy_to_client [type="checkbox"]:checked {
+    content: '';
+    position: absolute;
+    left:0; top: 2px;
+    width: 35px;
+    height: 35px;
+}
 
 /* Language menu */
 .language-flag {
@@ -321,9 +333,8 @@ img.hotels-tradition {
 
 .partner-container {
     margin-left: 20px;
-}
-.partner-container {
     float: left;
+    line-height: 80px;
 }
 
 /* Cookie consent */

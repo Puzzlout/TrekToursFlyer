@@ -40,6 +40,7 @@ class ContactController extends Controller
                 $apiUrl = $this->getParameter('api_url');
                 $apiFormat = $this->getParameter('api_format');
                 $formData = $form->getData();
+                error_log($formData['message']);
                 $formData['status'] = 'TBP';
                 $response = $restClient->post($apiUrl.'/customerinforequests'.$apiFormat, json_encode($formData));
                 $customerInfoRequest = json_decode($response->getContent());
