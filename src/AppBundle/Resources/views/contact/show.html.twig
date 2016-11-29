@@ -7,96 +7,98 @@
 {% endblock %}
 {% block content %}
     <div class="contact-img-bg">
-            <div class="container-fluid" id="customer_info_request">
-                <div class="row">
-                    <div class="col-xs-12 col-no-pd">
-                        <h1 class="contact-title-form lined-head">
-                            <span>
-                            {% trans from 'contact' %}
-                                contact-header-title
-                                {% endtrans %}
-                            </span>
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        {% for flash_message in app.session.flashBag.get('cri_success') %}
-                            <div class="alert alert-success">
-                                {{ flash_message }}
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                {{ form_start(form) }}
-                <div class="row">
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-10 contact-overlay">
-                        {{ form_errors(form) }}
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            {{ form_label(form.first_name) }}
-                            {{ form_errors(form.first_name) }}
-                            {{ form_widget(form.first_name) }}
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            {{ form_label(form.last_name) }}
-                            {{ form_errors(form.last_name) }}
-                            {{ form_widget(form.last_name) }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            {{ form_label(form.email) }}
-                            {{ form_errors(form.email) }}
-                            {{ form_widget(form.email) }}
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            {{ form_label(form.phone_number) }}
-                            {{ form_errors(form.phone_number) }}
-                            {{ form_widget(form.phone_number) }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="form-group">
-                            {{ form_label(form.message) }}
-                            {{ form_errors(form.message) }}
-                            {{ form_widget(form.message) }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 text-center">
-                        <div class="form-group">
-                            {{ form_label(form.send_copy_to_client) }}
-                            {{ form_errors(form.send_copy_to_client) }}
-                            {{ form_widget(form.send_copy_to_client) }}
-                        </div>
-                    </div>
-                    <div class="col-sm-6 text-center">
-                        <div class="form-group g-recaptcha" data-sitekey="{{ recaptcha_key }}"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 text-center">
-                        <div class="form-group contact-send-button">
-                            {{ form_widget(form.send) }}
-                        </div>
-                    </div>
-                </div>
-                {{ form_end(form) }}
-                    </div>
-                    <div class="col-xs-1"></div>
+        <div class="container-fluid" id="customer_info_request">
+            <div class="row contact-form-title">
+                <div class="col-xs-12">
+                    <h1 class="lined-head">
+                        {% trans from 'contact' %}
+                        contact-header-title
+                        {% endtrans %}
+                    </h1>
                 </div>
             </div>
+            <div class="row contact-form-result">
+                <div class="col-xs-12">
+                    {% for flash_message in app.session.flashBag.get('cri_success') %}
+                        <div class="alert alert-success">
+                            {{ flash_message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row contact-form-container">
+                <div class="col-xs-12">
+                    <div class="contact-overlay">
+                        {{ form_start(form) }}
+                        <div class="row">
+                            <div class="col-xs-12">
+                                {{ form_errors(form) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    {{ form_label(form.first_name) }}
+                                    {{ form_errors(form.first_name) }}
+                                    {{ form_widget(form.first_name) }}
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    {{ form_label(form.last_name) }}
+                                    {{ form_errors(form.last_name) }}
+                                    {{ form_widget(form.last_name) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    {{ form_label(form.email) }}
+                                    {{ form_errors(form.email) }}
+                                    {{ form_widget(form.email) }}
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    {{ form_label(form.phone_number) }}
+                                    {{ form_errors(form.phone_number) }}
+                                    {{ form_widget(form.phone_number) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    {{ form_label(form.message) }}
+                                    {{ form_errors(form.message) }}
+                                    {{ form_widget(form.message) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 text-center">
+                                <div class="form-group">
+                                    {{ form_label(form.send_copy_to_client) }}
+                                    {{ form_errors(form.send_copy_to_client) }}
+                                    {{ form_widget(form.send_copy_to_client) }}
+                                </div>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <div class="form-group g-recaptcha" data-sitekey="{{ recaptcha_key }}"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <div class="form-group contact-send-button">
+                                    {{ form_widget(form.send) }}
+                                </div>
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

@@ -40,14 +40,16 @@
         position: relative;
         left: 20px;
     }
-
-    #customer_info_request > div:nth-child(1) {
-        position: relative;
-        top: 60px;
+    .contact-form-title,
+    .contact-form-result,
+    .contact-form-container
+    {
+        margin: 0 15%;
     }
 
-    .contact-title-form > span {
-        top: -50px;
+    .contact-form-title > div > h1 {
+        margin-top: 45px;
+        margin-bottom: 15px;
     }
 }
 
@@ -67,12 +69,20 @@
     }
 
     .herobanner {
-        padding-top: 60px;
+        padding-top: 0px;
     }
 
     .v-align {
         display: block;
     }
+
+    #section-highlights > div.highlights-img {
+        background: url('../images/product/tp-960w.jpg') no-repeat center center;
+        background-size: cover;
+        height: 60vh;
+
+    }
+
 
     .itinerary-tech-detail {
         font-size: large;
@@ -92,16 +102,17 @@
         position: relative;
         left: 20px;
     }
-
-    #customer_info_request > div:nth-child(1) {
-        position: relative;
-        top: 60px;
+    .contact-form-title,
+    .contact-form-result,
+    .contact-form-container
+    {
+        margin: 0 5%;
     }
 
-    .contact-title-form > span {
-        top: -50px;
+    .contact-form-title > div > h1 {
+        margin-top: 45px;
+        margin-bottom: 15px;
     }
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -117,6 +128,15 @@
 
     .slide-cta {
         padding-top: 10px
+    }
+    #section-highlights {
+        margin-top: 0px;
+    }
+
+    #section-highlights > div.highlights-img {
+        background: url('../images/product/tp-768w.jpg') no-repeat center center;
+        background-size: cover;
+        height: 300px;
     }
 
     .lined-head span {
@@ -163,15 +183,18 @@
     .contact-img-bg {
         background: url('../images/home/slider1-smartphone.jpg') no-repeat center center / cover;
     }
-    #customer_info_request > div:nth-child(1) {
-        position: relative;
-        top: 20px;
+
+    .contact-form-title,
+    .contact-form-result,
+    .contact-form-container
+    {
+        margin: 0 -15px;
     }
 
-    #customer_info_request > form > div {
-        padding-top: 0;
+    .contact-form-title > div > h1 {
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
-
 }
 
 @media only screen and (max-width: 480px) {
@@ -194,6 +217,15 @@
     .itinerary-tech-detail {
         font-size: x-small;
     }
+    #section-highlights > div.highlights-img {
+        background: url('../images/product/tp-768w.jpg') no-repeat center center;
+        background-size: cover;
+        height: 300px;
+    }
+    .contact-img-bg {
+        
+    }
+
 }
 
 @media only screen and (max-width: 360px) {

@@ -30,6 +30,7 @@ body {
 
 #section-highlights {
     padding-bottom: 0;
+    margin-top: 30px;
 }
 #section-highlights > div.highlights-img {
     background: url('../images/product/topbanner.jpg') no-repeat center center;
@@ -37,7 +38,7 @@ body {
     height: 60vh;
 }
 #section-highlights > .container-fluid {
-    margin-top: -50px;
+    margin-top: -80px;
 }
 #product-header {
     height: 200px;
@@ -47,18 +48,16 @@ body {
     padding: 0;
 }
 
-.product-section {
-    padding-bottom: 20px;
+#section-itinerary > div > div.row > div {
+    
 }
-
 #section-topbanner .headline {
     margin-top: 30px;
 }
 #section-topbanner > div > div.topbanner-row {
     text-align: center;
-    margin: 0 30px;
     background-color: #fff;
-    color: #666666 !important;
+    color: #666666;
     height: inherit;
 }
 div.topbanner-row > div:nth-child(2) > p.simple-p {
@@ -92,9 +91,6 @@ div.topbanner-row > div:nth-child(2) {
     width: 100%;
 }
 
-.line-icon {
-    font-size: 1.8em;
-}
 .line-icon-sm,
 .stage-desc {
     padding: 10px 0;
@@ -112,6 +108,10 @@ div.topbanner-row > div:nth-child(2) {
     background-color: #fff;
 }
 
+p.stage-text-desc {
+    padding: 10px 30px 20px 30px;
+    text-align: center;
+}
 .stage-desc {
     display: none;
 }
@@ -214,47 +214,55 @@ div.topbanner-row > div:nth-child(2) {
     border-radius: 0 0 4px 4px;
 }
 
-.lined-head {
-    border-top: 1px solid #001d26;
-    position: relative;
-    top: 20px;
-    margin-bottom: 15px;
-    margin-top: 30px;
+.lined-head > div {
+    height: 0;
 }
 
-.lined-head span {
+h1.lined-head,
+.lined-head > span {
     color: #fff;
     text-decoration: none;
     font-style: italic;
     text-align: center;
     background: #001d26;
-    margin: 0 100px;
     display: block;
-    position: relative;
-    top: -30px;
     font-family: "Droid serif", serif;
     padding: 10px 0;
 }
-/* Contact form */
 
-.contact-title-form {
-    margin-top: 0;
-    padding: 20px 15px;
-}
+/* Contact form */
 
 .contact-img-bg {
     background: url('../images/home/slider1bis.jpg') no-repeat center center / cover;
 }
 .contact-overlay {
     background-color:rgba(255, 255, 255, 0.75);
+    margin-bottom: 15px;
 }
-#customer_info_request > form > div > div > div > div > div > label,
-#customer_info_request > form > div > div > div > div > div > input {
+#customer_info_request {
+    margin-bottom: -20px;
+}
+.contact-form-container {
+    margin-top: 25px;
+}
+
+#customer_info_request > div > div > div > form > div > div > div > label {
+    font-size: larger;
+}
+
+#customer_info_request > div > div > div > form > div > div > div > label,
+#customer_info_request > div > div > div > form > div > div > div > input,
+#customer_info_request > div > div > div > form > div > div > div > textarea {
+    text-indent: 1em;
+}
+
+#customer_info_request > div > div > div > form > div > div > div > label,
+#customer_info_request > div > div > div > form > div > div > div > input {
     line-height: 3em;
 }
 
-#customer_info_request > form > div > div > div > div > div > input,
-#customer_info_request > form > div > div > div > div > div > textarea {
+#customer_info_request > div > div > div > form > div > div > div > input,
+#customer_info_request > div > div > div > form > div > div > div > textarea {
     font-size: larger;
     height: 3em;
     border: none !important;
@@ -266,23 +274,41 @@ div.topbanner-row > div:nth-child(2) {
     padding-left: 20px;
     padding-right: 20px;
 }
-#customer_info_request > form > div > div > div > div > div > textarea {
+#customer_info_request > div > div > div > form > div > div > div > textarea {
     resize: vertical;
     height: 100px;
 }
-#customer_info_request > form > div > div > div > div > div > input:focus,
-#customer_info_request > form > div > div > div > div > div > textarea:focus {
+#customer_info_request > div > div > div > form > div > div > div > input:focus,
+#customer_info_request > div > div > div > form > div > div > div > textarea:focus {
     color: #fff;
     background-color: #001d26;
-}
-#customer_info_request > form > div {
-    padding: 40px 0;
 }
 #customer_info_request .checkbox {
 
 }
+#customer_info_request .contact-send-button {
+    margin-top: 20px;
+}
 
-#customer_info_request_send
+#customer_info_request div.g-recaptcha,
+#customer_info_request div.g-recaptcha > div {
+    margin: 0 auto;
+}
+span.help-block > ul > li
+{
+    color: red;
+    line-height: 1em;
+    font-size: larger;
+}
+
+#customer_info_request_send_copy_to_client [type="checkbox"]:not(:checked),
+#customer_info_request_send_copy_to_client [type="checkbox"]:checked {
+    content: '';
+    position: absolute;
+    left:0; top: 2px;
+    width: 35px;
+    height: 35px;
+}
 
 /* Language menu */
 .language-flag {
@@ -304,6 +330,12 @@ div.topbanner-row > div:nth-child(2) {
 
 img.hotels-tradition {
     background-color: #FFF;
+}
+
+.partner-container {
+    margin-left: 20px;
+    float: left;
+    line-height: 80px;
 }
 
 /* Cookie consent */
