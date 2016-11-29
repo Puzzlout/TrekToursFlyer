@@ -195,9 +195,10 @@ div.topbanner-row > div:nth-child(2) {
     top: -10px;
 }
 
-.faq .question h3 {
+.faq .question p {
     padding: 20px 10px;
     color: #FFF;
+    font-weight: bolder;
 }
 
 .faq .answer {
