@@ -34,19 +34,19 @@ class CommonModuleControllerTest extends WebTestCase
         {
             $tracking = '';
         }
-        //with usr_cc cookie set to 1
+        //with usr_cc terms set to 1
         $cookie = new Cookie('usr_cc', 1);
         $client->getCookieJar()->set($cookie);
         $crawler = $client->request('GET','/en/');
         $this->assertEquals(1, $crawler->filter('#analytics-script')->first()->count());
         $this->assertContains($tracking, $crawler->filter('#analytics-script')->first()->text());
 
-        //without usr_cc cookie set
+        //without usr_cc terms set
         $client = static::createClient();
         $crawler = $client->request('GET','/en/');
         $this->assertEquals(0, $crawler->filter('#analytics-script')->first()->count());
 
-        //with usr_cc cookie set to 0
+        //with usr_cc terms set to 0
         $client = static::createClient();
         $cookie = new Cookie('usr_cc', 0);
         $client->getCookieJar()->set($cookie);

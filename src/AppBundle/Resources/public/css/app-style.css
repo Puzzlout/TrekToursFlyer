@@ -242,7 +242,8 @@ h1.lined-head,
 #customer_info_request {
     margin-bottom: -20px;
 }
-.contact-form-container {
+.contact-form-container,
+.container-terms {
     margin-top: 25px;
 }
 
