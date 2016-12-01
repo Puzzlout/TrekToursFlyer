@@ -31,14 +31,16 @@ body {
 #section-highlights {
     padding-bottom: 0;
     margin-top: 30px;
+    margin-bottom: -50px;
 }
 #section-highlights > div.highlights-img {
     background: url('../images/product/topbanner.jpg') no-repeat center center;
     background-size: cover;
     height: 60vh;
 }
-#section-highlights > .container-fluid {
-    margin-top: -80px;
+#section-highlights > .container {
+    position: relative;
+    top: -50px;
 }
 #product-header {
     height: 200px;
@@ -72,6 +74,17 @@ div.topbanner-row > div:nth-child(2) {
     font-size: 3em;
     font-weight: bolder;
 }
+
+.fa-color1 {
+    color: #017f84;
+}
+.fa-color2 {
+    color: #017f84;
+}
+.fa-color3 {
+    color: #017f84;
+}
+
 
 .featured-box {
     background-color: #fff;
@@ -242,7 +255,6 @@ h1.lined-head,
 #customer_info_request {
     margin-bottom: -20px;
 }
-.contact-form-container,
 .container-terms {
     margin-top: 25px;
 }

@@ -40,12 +40,6 @@
         position: relative;
         left: 20px;
     }
-    .contact-form-title,
-    .contact-form-result,
-    .contact-form-container
-    {
-        margin: 0 15%;
-    }
 
     .contact-form-title > div > h1 {
         margin-top: 45px;
@@ -69,7 +63,7 @@
     }
 
     .herobanner {
-        padding-top: 0;
+        padding-top: 80px;
     }
 
     .v-align {
@@ -101,12 +95,6 @@
         padding: 20px;
         position: relative;
         left: 20px;
-    }
-    .contact-form-title,
-    .contact-form-result,
-    .contact-form-container
-    {
-        margin: 0 5%;
     }
 
     .contact-form-title > div > h1 {
@@ -183,12 +171,6 @@
 
     .contact-img-bg {
         background: url('../images/home/slider1-smartphone.jpg') no-repeat center center / cover;
-    }
-
-    .contact-form-title,
-    .contact-form-result,
-    .contact-form-container {
-        margin: 0 -15px;
     }
 
     .contact-form-title > div > h1 {
