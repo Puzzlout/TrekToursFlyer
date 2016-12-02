@@ -401,6 +401,10 @@ img.hotels-tradition {
     line-height: 16px;
 }
 
+/** Terms */
+.container-terms > div > div > p {
+    text-align: justify;
+}
 /** commons **/
 .large-p {
     font-size: larger;
