@@ -323,9 +323,25 @@ span.help-block > ul > li
     height: 35px;
 }
 
+div.checkbox {
+    margin-top: 0;
+}
+div.checkbox > label
+{
+    background-color: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    line-height: 74px;
+    padding-left: 30px;
+    padding-right: 10px;
+    display: inline-block;
+}
+#customer_info_request_send_copy_to_client {
+    position: relative;
+}
 /* Language menu */
 .language-flag {
-    width: 1.5em;
+    width: 2em;
 }
 
 #languages > ul > li > a > img {
