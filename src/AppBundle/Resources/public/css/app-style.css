@@ -6,7 +6,10 @@
 body {
     padding-top: 50px;
     min-width: 320px;
-    background-color: #FFF;
+    background: #d5d8d9;
+}
+html, body {
+    height: 100%
 }
 
 #languages {

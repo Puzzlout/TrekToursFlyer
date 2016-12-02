@@ -17,6 +17,7 @@ var menuopen=0;
 var what = (/(iPhone|iPod|iPad).*AppleWebKit/i.test(navigator.userAgent)) ? 'touchstart' : 'click';
 $(document).ready(function () {
     $('header:has(.headerbg)').css('height','100%');
+    $("#"+getElementIdForScrollAdjust()).scrollTop(-250);
     $(document).on(what, '#butnavbar', function (e) {
         if(menuopen==0){
             $('#upnavbar').show();
@@ -47,5 +48,12 @@ function showCookieConsent() {
     if (!usrCc) {
         $(".cookie-consent").slideDown("slow");
     }
+}
+function getElementIdForScrollAdjust() {
+    var url = document.location;
+    console.log(url);
+    var blockElementId = url.hash.substring(url.hash.indexOf("#")+1);
+    console.log(blockElementId);
+    return blockElementId;
 }
 

@@ -1,37 +1,7 @@
 /* CSS Document */
 /*Global*/
-html, body {
-    height: 100%
-}
-
-body {
-    background: #d5d8d9;
-}
-
-.container {
-    min-width: 300px
-}
-
-p.cta a {
-    padding: 12px 30px;
-    background: #017f84;
-    color: #FFF;
-    border: 1px solid #015c76;
-    text-transform: uppercase
-}
-
-p.cta {
-    margin: 22px 0 0 0
-}
-
-p.cta a:hover {
-    opacity: 0.8
-}
 
 /*MENU*/
-#upnavbar {
-    display: block
-}
 
 #navbar > ul > li > a {
     padding: 30px
