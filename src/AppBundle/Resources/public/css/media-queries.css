@@ -114,6 +114,10 @@
         max-height: 100%
     }
 
+    .herobanner {
+        padding-top: 15px;
+    }
+
     .slide-cta {
         padding-top: 10px
     }
