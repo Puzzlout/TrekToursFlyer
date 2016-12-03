@@ -4,7 +4,6 @@
 }
 
 body {
-    padding-top: 50px;
     min-width: 320px;
     background: #d5d8d9;
 }
@@ -12,10 +11,49 @@ html, body {
     height: 100%
 }
 
+/** Top navigation bar */
+
+#navbar > ul > li > a {
+    padding: 30px
+}
+#navbar > ul > li.active {
+    background: #017f84
+}
+
+#navbar > ul > li.active a {
+    text-decoration: none
+}
+
+#header-menu {
+    background: #001d26
+}
+
+#navbar > ul > li ul {
+    background: #001d26
+}
+#languages > a > img {
+    width: 35px !important;
+    height: 35px !important
+}
+
 #languages {
     float: right;
 }
 /* Homepage */
+
+.homepage-modules {
+    padding: 50px 0;
+}
+div > div.module-contact,
+div > div.module-info {
+    background: #FFF;
+    padding: 25px
+}
+div > div.module-contact > .img,
+div > div.module-info > .img {
+    height: 200px;
+    background-size: cover
+}
 
 .module-info div.img {
     background: url('../images/home/img1.jpg') no-repeat center center;
@@ -352,6 +390,10 @@ div.checkbox > label
 }
 
 /* Footer */
+footer a:hover {
+    opacity: 0.8
+}
+
 #footer-menu {
     padding-bottom: 10px;
 }
@@ -369,6 +411,12 @@ img.hotels-tradition {
     float: left;
     line-height: 80px;
 }
+
+.mentions { padding-top: 20px }
+.mentions a {
+    color: #fff;
+}
+
 
 /* Cookie consent */
 .cookie-consent {
