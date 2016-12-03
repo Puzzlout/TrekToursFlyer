@@ -1,8 +1,8 @@
-admin_p_hello: '{{admin_p_hello}}{{fr}}'
-admin_p_youreceived: '{{admin_p_youreceived}}{{fr}}'
-admin_p_email: '{{admin_p_email}}{{fr}}'
-admin_p_phonenumber: '{{admin_p_phonenumber}}{{fr}}'
-admin_subject: '{{admin_subject}}{{fr}}'
-client_subject: '{{client_subject}}{{en}}'
-client_p_hello: '{{client_p_hello}}{{fr}}'
-client_p_youhavesent: '{{client_p_youhavesent}}{{fr}}'
+admin_p_hello: Bonjour
+admin_p_youreceived: 'Vous aves reçu un message'
+admin_p_email: Email
+admin_p_phonenumber: Téléphone
+admin_subject: 'Nouvelle demande'
+client_subject: 'Copie de votre demande envoyée à TrekTours'
+client_p_hello: Bonjour
+client_p_youhavesent: 'Vous avez envoyé le message suivant'

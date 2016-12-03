@@ -1,53 +1,48 @@
-itinerary-stage1-title-h1: "itinerary-stage1-title-h1 FR"
-itinerary-stage1-description-p: "itinerary-stage1-description-p FR"
-itinerary-stage1-tech1-title-span: "itinerary-stage1-tech1-title-span FR"
-itinerary-stage1-tech1-value-span: "itinerary-stage1-tech1-value-span FR"
-itinerary-stage1-tech2-title-span: "itinerary-stage1-tech2-title-span FR"
-itinerary-stage1-tech2-value-span: "itinerary-stage1-tech2-value-span FR"
-itinerary-stage1-tech3-title-span: "itinerary-stage1-tech3-title-span FR"
-itinerary-stage1-tech3-value-span: "itinerary-stage1-tech3-value-span FR"
-
-itinerary-stage2-title-h1: "itinerary-stage2-title-h1 FR"
-itinerary-stage2-description-p: "itinerary-stage2-description-p FR"
-itinerary-stage2-tech1-title-span: "itinerary-stage2-tech1-title-span FR"
-itinerary-stage2-tech1-value-span: "itinerary-stage2-tech1-value-span FR"
-itinerary-stage2-tech2-title-span: "itinerary-stage2-tech2-title-span FR"
-itinerary-stage2-tech2-value-span: "itinerary-stage2-tech2-value-span FR"
-itinerary-stage2-tech3-title-span: "itinerary-stage2-tech3-title-span FR"
-itinerary-stage2-tech3-value-span: "itinerary-stage2-tech3-value-span FR"
-
-itinerary-stage3-title-h1: "itinerary-stage3-title-h1 FR"
-itinerary-stage3-description-p: "itinerary-stage3-description-p FR"
-itinerary-stage3-tech1-title-span: "itinerary-stage3-tech1-title-span FR"
-itinerary-stage3-tech1-value-span: "itinerary-stage3-tech1-value-span FR"
-itinerary-stage3-tech2-title-span: "itinerary-stage3-tech2-title-span FR"
-itinerary-stage3-tech2-value-span: "itinerary-stage3-tech2-value-span FR"
-itinerary-stage3-tech3-title-span: "itinerary-stage3-tech3-title-span FR"
-itinerary-stage3-tech3-value-span: "itinerary-stage3-tech3-value-span FR"
-
-itinerary-stage4-title-h1: "itinerary-stage4-title-h1 FR"
-itinerary-stage4-description-p: "itinerary-stage4-description-p FR"
-itinerary-stage4-tech1-title-span: "itinerary-stage4-tech1-title-span FR"
-itinerary-stage4-tech1-value-span: "itinerary-stage4-tech1-value-span FR"
-itinerary-stage4-tech2-title-span: "itinerary-stage4-tech2-title-span FR"
-itinerary-stage4-tech2-value-span: "itinerary-stage4-tech2-value-span FR"
-itinerary-stage4-tech3-title-span: "itinerary-stage4-tech3-title-span FR"
-itinerary-stage4-tech3-value-span: "itinerary-stage4-tech3-value-span FR"
-
-itinerary-stage5-title-h1: "itinerary-stage5-title-h1 FR"
-itinerary-stage5-description-p: "itinerary-stage5-description-p FR"
-itinerary-stage5-tech1-title-span: "itinerary-stage5-tech1-title-span FR"
-itinerary-stage5-tech1-value-span: "itinerary-stage5-tech1-value-span FR"
-itinerary-stage5-tech2-title-span: "itinerary-stage5-tech2-title-span FR"
-itinerary-stage5-tech2-value-span: "itinerary-stage5-tech2-value-span FR"
-itinerary-stage5-tech3-title-span: "itinerary-stage5-tech3-title-span FR"
-itinerary-stage5-tech3-value-span: "itinerary-stage5-tech3-value-span FR"
-
-itinerary-stage6-title-h1: "itinerary-stage6-title-h1 FR"
-itinerary-stage6-description-p: "itinerary-stage6-description-p FR"
-itinerary-stage6-tech1-title-span: "itinerary-stage6-tech1-title-span FR"
-itinerary-stage6-tech1-value-span: "itinerary-stage6-tech1-value-span FR"
-itinerary-stage6-tech2-title-span: "itinerary-stage6-tech2-title-span FR"
-itinerary-stage6-tech2-value-span: "itinerary-stage6-tech2-value-span FR"
-itinerary-stage6-tech3-title-span: "itinerary-stage6-tech3-title-span FR"
-itinerary-stage6-tech3-value-span: "itinerary-stage6-tech3-value-span FR"
+itinerary-stage1-title-h1: 'Les Contamines - Martigny'
+itinerary-stage1-description-p: 'L''itineraire  passe par le col de Voze puis le col de Balme.<br />- Difficulté :  niveau 3<br/>- Formule : découverte - aventure - grand tour'
+itinerary-stage1-tech1-title-span: Durée
+itinerary-stage1-tech1-value-span: '3 heures'
+itinerary-stage1-tech2-title-span: Montée
+itinerary-stage1-tech2-value-span: '+ 1200 m'
+itinerary-stage1-tech3-title-span: Descente
+itinerary-stage1-tech3-value-span: '- 800 m'
+itinerary-stage2-title-h1: 'Etape 2 - Martigny - Italie'
+itinerary-stage2-description-p: 'L''itineraire  passe par le col de Voze puis le col de Balme.<br /> Difficulté :  niveau 3<br/> Formule : aventure - grand tour'
+itinerary-stage2-tech1-title-span: Durée
+itinerary-stage2-tech1-value-span: '3 heures'
+itinerary-stage2-tech2-title-span: Montée
+itinerary-stage2-tech2-value-span: '+ 800m'
+itinerary-stage2-tech3-title-span: Descente
+itinerary-stage2-tech3-value-span: '-500'
+itinerary-stage3-title-h1: 'Etape 3 - Col du Bonhomme'
+itinerary-stage3-description-p: 'L''itineraire  passe par le col de Voze puis le col de Balme.<br /> Difficulté :  niveau 3<br/> Formule : aventure - grand tour'
+itinerary-stage3-tech1-title-span: Durée
+itinerary-stage3-tech1-value-span: '5 heures'
+itinerary-stage3-tech2-title-span: Montée
+itinerary-stage3-tech2-value-span: '+ 1200m'
+itinerary-stage3-tech3-title-span: Descnte
+itinerary-stage3-tech3-value-span: '- 800m'
+itinerary-stage4-title-h1: 'Etape 4 - Col du Bonhome - contamines'
+itinerary-stage4-description-p: 'Parcours technique vers les contamines'
+itinerary-stage4-tech1-title-span: Durée
+itinerary-stage4-tech1-value-span: '5 heures'
+itinerary-stage4-tech2-title-span: Montée
+itinerary-stage4-tech2-value-span: '+ 900 m'
+itinerary-stage4-tech3-title-span: Descente
+itinerary-stage4-tech3-value-span: '- 1000m'
+itinerary-stage5-title-h1: 'Etape 5 - Contamines - col Voze'
+itinerary-stage5-description-p: 'Magnifique montée'
+itinerary-stage5-tech1-title-span: Durée
+itinerary-stage5-tech1-value-span: '6 heures'
+itinerary-stage5-tech2-title-span: Montée
+itinerary-stage5-tech2-value-span: '+ 900 m'
+itinerary-stage5-tech3-title-span: Descente
+itinerary-stage5-tech3-value-span: '- 1000 m'
+itinerary-stage6-title-h1: 'Etape 6 -Chamonix - Suisse'
+itinerary-stage6-description-p: 'Decouverte de l''habitat suisse'
+itinerary-stage6-tech1-title-span: Durée
+itinerary-stage6-tech1-value-span: '5 heures'
+itinerary-stage6-tech2-title-span: Montée
+itinerary-stage6-tech2-value-span: '+ 1000m'
+itinerary-stage6-tech3-title-span: Descente
+itinerary-stage6-tech3-value-span: '- 800m'

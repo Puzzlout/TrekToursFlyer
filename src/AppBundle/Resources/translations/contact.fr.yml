@@ -1,10 +1,11 @@
-page_title: '{{page_title}}{{fr}}'
-h2_contact: '{{h2_contact}}{{fr}}'
-form_input_first_name: '{{form_input_first_name}}{{fr}}'
-form_input_last_name: '{{form_input_last_name}}{{fr}}'
-form_input_email: '{{form_input_email}}{{fr}}'
-form_input_phone_number: '{{form_input_phone_number}}{{fr}}'
-form_textarea_message: '{{form_textarea_message}}{{fr}}'
-form_button_send: '{{form_button_send}}{{fr}}'
-div_success: '{{div_success}}{{fr}}'
-form_input_send_copy_to_client: '{{form_input_send_copy_to_client}}{{fr}}'
+page_title: 'Page contact Ebike Mont-Blanc'
+h2_contact: 'Formulaire de contact'
+form_input_first_name: Prénom
+form_input_last_name: Nom
+form_input_email: Email
+form_input_phone_number: Téléphone
+form_textarea_message: 'Texte du message'
+form_button_send: Envoyer
+div_success: 'Merci pour votre message, nous allons le traiter dans les plus bref délais. Bonne journée.'
+form_input_send_copy_to_client: 'M''envoyer une copie'
+contact-header-title: 'Formulaire de contact'

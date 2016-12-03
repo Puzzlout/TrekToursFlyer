@@ -1,12 +1,12 @@
-header-menu_a_home: '{{header-menu_a_home}}{{de}}'
-header-menu_a_products: '{{header-menu_a_products}}{{de}}'
+header-menu_a_home: Startseite
+header-menu_a_products: header-menu_a_products
 header-menu_a_product1: '{{header-menu_a_product1}}{{de}}'
 header-menu_a_product2: '{{header-menu_a_product2}}{{de}}'
-header-menu_a_contact: '{{header-menu_a_contact}}{{de}}'
+header-menu_a_contact: 'Contact us'
 footer_partner_a_link1: '{{footer_partner_a_link1}}{{de}}'
 footer_partner_a_link2: '{{footer_partner_a_link2}}{{de}}'
-footer_partner_a_link1_href: '{{footer_partner_a_link1_href}}{{de}}'
-footer_partner_a_link2_href: '{{footer_partner_a_link2_href}}{{de}}'
+footer_partner_a_link1_href: 'http://merida-bikes.com/de_de'
+footer_partner_a_link2_href: 'http://hotels-chalets-tradition.com/en'
 footer_partner_span: '{{footer_partner_span}}{{de}}'
 footer_a_legal_terms_text: '{{footer_a_legal_terms_text}}{{de}}'
 footer_a_sales_terms_text: '{{footer_a_sales_terms_text}}{{de}}'
