@@ -1,6 +1,17 @@
 <div class="cookie-consent">
-    {% trans from 'cookie' %}div_cookieconsent_1{% endtrans %}
-    <a href="{{ path('terms') }}#terms-cookies">{% trans from 'cookie' %}div_cookieconsent_click{% endtrans %}</a> {% trans from 'cookie' %}div_cookieconsent_2{% endtrans %}
+    <p class="lead lead-dark cookie-consent-p">
+        <span class="cookie-consent-part">
+            {% trans from 'cookie' %}div_cookieconsent_1{% endtrans %}
+        </span>
+        <span class="cookie-consent-terms">
+            <a href="{{ path('terms') }}#terms-cookies">
+                {% trans from 'cookie' %}div_cookieconsent_click{% endtrans %}
+            </a>
+        </span>
+        <span class="cookie-consent-part">
+            {% trans from 'cookie' %}div_cookieconsent_2{% endtrans %}
+        </span>
+    </p>
     <div class="cc-button-wrapper">
         <div class="btn btn-success cc-btn cc-btn-positive">{% trans from 'cookie' %}div_cookieconsent_agree{% endtrans %}</div>
         <div class="btn btn-warning cc-btn cc-btn-negative">{% trans from 'cookie' %}div_cookieconsent_disagree{% endtrans %}</div>

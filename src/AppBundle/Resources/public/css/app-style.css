@@ -413,7 +413,10 @@ img.hotels-tradition {
     line-height: 80px;
 }
 
-.mentions { padding-top: 20px }
+.mentions {
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
 .mentions a {
     color: #fff;
 }
@@ -422,20 +425,26 @@ img.hotels-tradition {
 /* Cookie consent */
 .cookie-consent {
     display: none;
-    font-size: 1.3em;
     min-height: 50px;
-    padding: 20px 0;
+    padding: 5px 0;
     position: fixed;
     text-align: center;
     bottom: 0;
     width: 100%;
     z-index: 999999;
+    border-top: 1px solid #017f84;
 }
-
+.cookie-consent > p {
+    font-size: small;
+    margin-bottom: 2px;
+}
 .cc-button-wrapper {
     display: inline-block;
     margin: 0 15px;
     width: auto;
+}
+.cc-btn {
+    font-size: small;
 }
 
 .cookie-consent-button {
