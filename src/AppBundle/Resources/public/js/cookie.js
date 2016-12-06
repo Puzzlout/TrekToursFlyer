@@ -28,5 +28,5 @@ function deleteCookie(name) {
 
 
 /*function cookieTest() {
- console.log('Testing cookie set');
+ console.log('Testing terms set');
  }*/

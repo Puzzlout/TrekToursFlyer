@@ -1,3 +1,5 @@
+
+
 /* Navbar */
 .navbar.transparent {
     border-width: 0;
@@ -33,60 +35,98 @@
     font-size: 3em;
 }
 
-/* Product page */
-#product-header {
-    background-image: url('../images/mtblanc_header.jpg');
-    background-position: center;
-    background-size: cover;
+/* Home page */
+
+.headerbg {
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    min-width: 320px;
+    background: url(../images/home/slider1bis.jpg);
 }
 
-.product-section {
-    border-bottom: 1px solid gray;
+.herobanner-title, .herobanner-subtitle {
+    color: #FFF;;
+}
+.brand-name {font-family: "Varela Round", "Open Sans";}
+.ebike-brand {color: #019e7b;}
+.mtb-brand {color: #FFF;}
+
+.btn-custom-color,
+.contact-send-button button {
+    background-color: #017f84;
+    background: #017f84;
+    color: #FFF;
+    border: 1px solid #015c76;
+    text-transform: uppercase
+}
+.contact-send-button button {
+    font-size: larger;
+}
+
+/* Product page */
+.topbanner img {
+    width: 100%;
+}
+
+.icon-box-img .icon-inner .fa {
+    font-size: 4em;
+    color: #017f84;
+}
+.icon-box-img .icon-inner .fa:hover {
+    font-size: 5em;
+    color: #001d26;
+}
+
+.uppercase, .uppercase-light {
+    text-transform: uppercase;
+}
+.uppercase,
+.lead-dark {
+    color: #666;
+}
+
+.uppercase-light,
+.lead-light,
+.fa-light-color {
+    color: #fff;
 }
 
 .section-list {
     font-size: 1.3em;
 }
 
-#product-sections > section:nth-child(even) {
-    color: white;
-    background-color: #222;
-}
 
-#product-sections > section#section-iternary {
-    background: rgba(0, 0, 0, 0) url("../images/product/background1.jpg") no-repeat fixed center center / cover;
+.icon-container {
+    background-color: #017f84;
+    border-radius: 80px;
 }
-
-#product-sections > section#section-trip {
-    background: rgba(0, 0, 0, 0) url("../images/product/background2.jpg") no-repeat fixed center center / cover;
-}
-
-#product-sections > section#section-review {
-    background: rgba(0, 0, 0, 0) url("../images/product/background3.jpg") no-repeat fixed center center / cover;
+.icon-container .fa {
+    color: #fff;
 }
 
 /* Footer */
 #footer-menu {
-    background-color: #222;
+    background-color: #001d26;
     color: #fff;
 }
 
 #footer-links span > a {
-    color: #9d9d9d;
+    color: #fff;
 }
 
 #footer-links span > a:hover {
-    color: #fff;
+    font-weight: bolder;
 }
 
 .cookie-consent {
-    background: #000 none repeat scroll 0 0;
-    color: #fff;
+    background: #fff none repeat scroll 0 0;
+    color: #666;
 }
 
 .cookie-consent-button {
-    background-color: #e2e2e2;
-    border: 1px solid #e2e2e2;
+    background-color: #FFF;
+    border: 1px solid #333;
     border-radius: 5px;
     color: #000;
     font-size: 0.8em;
@@ -95,10 +135,8 @@
     width: 100px;
 }
 
-.cc-button-positive {
-    color: #3bb20d;
-}
-
-.cc-button-negative {
-    color: #ff0000;
+.partner-span { text-align: center; }
+.footer-social {
+    text-align: center;
+    line-height: 5;
 }

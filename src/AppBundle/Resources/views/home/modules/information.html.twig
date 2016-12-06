@@ -1,0 +1,22 @@
+<div class="col-md-8">
+    <div class="module-info">
+        <div class="img"></div>
+        <h2>
+            {% trans from "home" %}
+            module_info_title_h1
+            {% endtrans %}
+        </h2>
+        <p>
+            {% trans from "home" %}
+            module_info_description_p
+            {% endtrans %}
+        </p>
+        <p>
+            <a class="btn btn-default btn-custom-color" href="{{ path('product_get', {'productId': 1}) }}">
+                {% trans from "home" %}
+                module_info_link_text
+                {% endtrans %}
+            </a>
+        </p>
+    </div>
+</div>

@@ -1,12 +1,16 @@
 {% extends '::base.html.twig' %}
-{% block title %}Trek Tours Flyer - {% endblock %}
+{% block title %}E-bike Mont-Blanc - {% endblock %}
 {% block stylesheets %}
     {{ parent() }}
     {% stylesheets
     'assets/vendor/bootstrap/dist/css/bootstrap.min.css'
+    'assets/vendor/flickity/dist/flickity.min.css'
+    'assets/vendor/font-awesome/css/font-awesome.min.css'
     'bundles/app/css/*'
     filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     {% endstylesheets %}
 {% endblock %}
 {% block javascripts %}
@@ -14,22 +18,22 @@
     {% javascripts
     'assets/vendor/jquery/dist/jquery.min.js'
     'assets/vendor/bootstrap/dist/js/bootstrap.min.js'
+    'assets/vendor/flickity/dist/flickity.pkgd.min.js'
     'bundles/app/js/*' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 {% endblock %}
 {% block body %}
-    {{ render(controller('AppBundle:CommonModule:cookie')) }}
     {% block header %}
         <header>
             {{ render(controller('AppBundle:CommonModule:headerMenu')) }}
-            {% block homepage_carousel %}
-            {% endblock %}
+            {% block homepage_carousel %}{% endblock %}
         </header>
     {% endblock %}
     {% block content %}{% endblock %}
     {% block footer %}
         {{ render(controller('AppBundle:CommonModule:footer')) }}
     {% endblock %}
+    {{ render(controller('AppBundle:CommonModule:cookie')) }}
     {{ render(controller('AppBundle:CommonModule:analytics')) }}
 {% endblock %}

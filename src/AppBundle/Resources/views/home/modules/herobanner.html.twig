@@ -1,0 +1,34 @@
+<div class="headerbg">
+    <div class="herobanner container">
+        <div class="row">
+            <div class="col-xs-9">
+                <h1 class="herobanner-title">
+                    {% trans from "home" %}
+                    module_herobanner_title_h1
+                    {% endtrans %}
+                </h1>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <p class="herobanner-subtitle sous-titre">
+                    {% trans from "home" %}
+                    module_herobanner_description_p
+                    {% endtrans %}
+                </p>
+            </div>
+            <div class="col-xs-6"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <a class="btn btn-default btn-custom-color" href="{{ path('product_get', {'productId': 1}) }}">
+                    {% trans from "home" %}
+                    module_herobanner_link_text
+                    {% endtrans %}
+                </a>
+            </div>
+            <div class="col-xs-4"></div>
+        </div>
+    </div>
+</div>

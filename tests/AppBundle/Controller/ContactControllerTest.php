@@ -53,7 +53,7 @@ class ContactControllerTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals(1, $crawler->filter('div#customer_info_request')->count());
-        $this->assertContains('contact', $crawler->filter('h2')->text());
+        $this->assertContains('contact', strtolower($crawler->filter('#customer_info_request > div.row.contact-form-title > div > h1')->text()));
 
         //fetch form to and setup fields
 
@@ -95,7 +95,7 @@ class ContactControllerTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals(1, $crawler->filter('div#customer_info_request')->count());
-        $this->assertContains('contact', $crawler->filter('h2')->text());
+        $this->assertContains('contact', strtolower($crawler->filter('#customer_info_request > div.row.contact-form-title > div > h1')->text()));
 
         //fetch form to and setup fields
 
@@ -133,7 +133,7 @@ class ContactControllerTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals(1, $crawler->filter('div#customer_info_request')->count());
-        $this->assertContains('contact', $crawler->filter('h2')->text());
+        $this->assertContains('contact', strtolower($crawler->filter('#customer_info_request > div.row.contact-form-title > div > h1')->text()));
 
         //fetch form to and setup fields
 

@@ -13,11 +13,11 @@ class ProductControllerTest extends WebTestCase
     {
         $client = static::createClient();
         $productId = mt_rand(1, 3000);
-        $crawler = $client->request('GET', '/en/product/' . $productId);
+        $crawler = $client->request('GET', '/en/product/');
         $this->assertGreaterThan(
             0,
             $crawler->filter('html:contains("highlights")')->count(),
-            "GET /product/$productId; Failed asserting that 'Highlights is shown on page");
+            "GET /product; Failed asserting that 'Highlights is shown on page");
 
         $client->request('GET', '/product/asd');
         $this->assertTrue(

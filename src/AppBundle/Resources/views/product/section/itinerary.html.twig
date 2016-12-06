@@ -1,0 +1,22 @@
+<section id="section-itinerary" class="product-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-no-pd">
+                <h1 class="lined-head">
+                    {% trans from "product_section_itinerary" %}
+                    itinerary-header-title-h1
+                    {% endtrans %}
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        {#{{ include('AppBundle:product/section:topbanner.html.twig') }}#}
+        {{ include('AppBundle:product/section/itinerary:stage1.html.twig') }}
+        {{ include('AppBundle:product/section/itinerary:stage2.html.twig') }}
+        {{ include('AppBundle:product/section/itinerary:stage3.html.twig') }}
+        {{ include('AppBundle:product/section/itinerary:stage4.html.twig') }}
+        {{ include('AppBundle:product/section/itinerary:stage5.html.twig') }}
+        {{ include('AppBundle:product/section/itinerary:stage6.html.twig') }}
+    </div>
+</section>

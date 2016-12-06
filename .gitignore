@@ -96,3 +96,6 @@ build/
 
 # Node JS
 npm-debug.log
+
+# Macintosh temp files
+.DS_Store

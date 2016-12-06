@@ -5,21 +5,12 @@
         page_title
     {% endtrans %} - {{ id }}
 {% endblock %}
-{% block javascripts %}
-    {{ parent() }}
-    <script src="{{ asset('/bundles/app/js/product.js') }}" type="text/javascript"></script>
-{% endblock %}
 {% block content %}
-    <nav id="product-scrollspy">
-        {{ include('AppBundle:menu:vertical.html.twig') }}
-    </nav>
-    <section id="product-header" class="container-flud">
-    </section>
-    <div class="container-fluid" id="product-sections">
+    <div class="container-fluid product-sections">
         {{ include('AppBundle:product/section:highlights.html.twig') }}
-        {{ include('AppBundle:product/section:iternary.html.twig') }}
-        {{ include('AppBundle:product/section:accommodation.html.twig') }}
-        {{ include('AppBundle:product/section:trip.html.twig') }}
+        {{ include('AppBundle:product/section:itinerary.html.twig') }}
+        {{ include('AppBundle:product/section:description.html.twig') }}
+        {{ include('AppBundle:product/section:included.html.twig') }}
         {{ include('AppBundle:product/section:faq.html.twig') }}
         {{ include('AppBundle:product/section:review.html.twig') }}
     </div>

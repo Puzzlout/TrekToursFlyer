@@ -8,13 +8,13 @@ use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 
-class CookieUsageController extends Controller
+class TermsController extends Controller
 {
     /**
-     * @Route("/cookie-usage", name="cookie_usage")
+     * @Route("/terms", name="terms")
      */
-    public function showCookieUsageAction()
+    public function showTermsAction()
     {
-        return $this->render("AppBundle:cookie:show.html.twig");
+        return $this->render("AppBundle:terms:show.html.twig");
     }
 }

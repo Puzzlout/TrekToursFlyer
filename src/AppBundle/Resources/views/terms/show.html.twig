@@ -1,0 +1,60 @@
+{% extends 'AppBundle::layout.html.twig' %}
+{% block title %}{{ parent() }}{% trans from 'terms' %} page_title {% endtrans %}{% endblock %}
+{% block content %}
+    <div class="container container-terms">
+        <div class="row row-no-mg scroll-block-top" id="terms-legal">
+            <div class="col-xs-12 col-no-pd">
+                <h1 class="lined-head">
+                    {% trans from "terms" %}
+                    terms-legal-title
+                    {% endtrans %}
+                </h1>
+            </div>
+        </div>
+        <div class="row row-no-mg">
+            <div class="col-xs-12">
+                <p class="lead">
+                    {% trans from "terms" %}
+                    terms-legal-paragraph
+                    {% endtrans %}
+                </p>
+            </div>
+        </div>
+        <div class="row row-no-mg scroll-block-top" id="terms-sales">
+            <div class="col-xs-12 col-no-pd">
+                <h1 class="lined-head">
+                    {% trans from "terms" %}
+                    terms-sales-title
+                    {% endtrans %}
+                </h1>
+            </div>
+        </div>
+        <div class="row row-no-mg">
+            <div class="col-xs-12">
+                <p class="lead">
+                    {% trans from "terms" %}
+                    terms-sales-paragraph
+                    {% endtrans %}
+                </p>
+            </div>
+        </div>
+        <div class="row row-no-mg scroll-block-top" id="terms-cookies">
+            <div class="col-xs-12 col-no-pd">
+                <h1 class="lined-head">
+                    {% trans from "terms" %}
+                    terms-cookies-title
+                    {% endtrans %}
+                </h1>
+            </div>
+        </div>
+        <div class="row row-no-mg">
+            <div class="col-xs-12">
+                <p class="lead">
+                    {% trans from "terms" %}
+                    terms-cookies-paragraph
+                    {% endtrans %}
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

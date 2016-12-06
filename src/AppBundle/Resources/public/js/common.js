@@ -13,13 +13,27 @@
  }
  });
  });*/
-
+var menuopen=0;
+var what = (/(iPhone|iPod|iPad).*AppleWebKit/i.test(navigator.userAgent)) ? 'touchstart' : 'click';
 $(document).ready(function () {
+    $('header:has(.headerbg)').css('height','100%');
+    $("#"+getElementIdForScrollAdjust()).scrollTop(-250);
+    $(document).on(what, '#butnavbar', function (e) {
+        if(menuopen==0){
+            $('#upnavbar').show();
+            $( "#navbar" ).show().animate({left: "40px"}, 200, function() {});menuopen=1;
+        }
+        else if(menuopen==1){
+            $( "#navbar" ).animate({left: "300px"}, 200, function() {$('#upnavbar').hide();});menuopen=0;
+        }
+    });
+
+
     showCookieConsent();
 
-    $(".cookie-consent-button").click(function () {
+    $(".cc-btn").click(function () {
         var ccVal;
-        if ($(this).hasClass("cc-button-positive")) {
+        if ($(this).hasClass("cc-btn-positive")) {
             ccVal = "1";
         } else {
             ccVal = "0";
@@ -34,5 +48,12 @@ function showCookieConsent() {
     if (!usrCc) {
         $(".cookie-consent").slideDown("slow");
     }
+}
+function getElementIdForScrollAdjust() {
+    var url = document.location;
+    console.log(url);
+    var blockElementId = url.hash.substring(url.hash.indexOf("#")+1);
+    console.log(blockElementId);
+    return blockElementId;
 }
 
