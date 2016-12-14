@@ -1,0 +1,25 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: symfony
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: ssl0.ovh.net
+    mailer_user: contact@ebikemontblanc.com
+    mailer_password: '************'
+    mailer_port: 587
+    mailer_auth_mode: login
+    #mailer_encryption: tls
+    mailer_timeout: 20
+    mail_contact_address: contact@ebikemontblanc.com
+    mail_noreply_address: contact@ebikemontblanc.com
+    mail_admin_language: en
+    secret: ThisTokenIsNotSoSecretChangeIt
+    api_url: 'http://localhost/api/web'
+    api_format: .json
+    recaptcha_secret: 6LdYySYTAAAAAONjo0rnip6P0683oIUMBjAtxIsp
+    recaptcha_key: 6LdYySYTAAAAAHsQPC8FOFbyADhZbWZNx7147ZY8
+    release_version_tag: 1.0.4
+    google_analytics: UA-00000000-1

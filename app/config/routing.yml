@@ -10,6 +10,7 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
     prefix: /{_locale}
+    schemes: [%httpProtocol%]
     defaults: { _locale: en}
     requirements:
       _locale: fr|en|de

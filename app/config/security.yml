@@ -13,6 +13,7 @@ security:
         in_memory:
             memory:
                 users:
+                    #this user has been deactived
                     admin:
                         password: $2y$15$VrzLkf38ytLMerKXOIQMGefRGzRF1hiuwUu3NP5znfFpHq.9X867K
                         roles: 'ROLE_ADMIN'
