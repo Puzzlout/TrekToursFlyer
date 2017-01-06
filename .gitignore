@@ -61,7 +61,7 @@ build/
 !var/sessions/.gitkeep
 
 # Parameters
-/app/config/parameters.yml
+#/app/config/parameters.yml
 /app/config/parameters.ini
 
 # Managed by Composer
@@ -70,16 +70,16 @@ build/
 /bin/*
 !bin/console
 !bin/symfony_requirements
-/vendor/
+#/vendor/
 
 # Assets and user uploads
-/web/bundles/
-/web/uploads/
-/web/css/*
-/web/js/*
+#/web/bundles/
+#/web/uploads/
+#/web/css/*
+#/web/js/*
 
 # Assets managed by Bower
-/web/assets/vendor/
+#/web/assets/vendor/
 
 # PHPUnit
 #/app/phpunit.xml

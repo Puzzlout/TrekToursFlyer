@@ -1,0 +1,25 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: webdevjl_sf
+    database_user: webdevjl_sf
+    database_password: 'Puzzl0ut%2017'
+    mailer_transport: smtp
+    mailer_host: mail.supremecluster.com
+    mailer_user: noreply@puzzlout.com
+    mailer_password: noreply%%trektours%%16
+    mailer_port: 2525
+    mailer_auth_mode: cram-md5
+    mailer_encryption: tls
+    mailer_timeout: 20
+    mail_contact_address: contact@puzzlout.com
+    mail_noreply_address: noreply@puzzlout.com
+    mail_admin_language: en
+    secret: ThisTokenIsNotSoSecretChangeIt
+    api_url: 'http://api.trektoursflyer.dev'
+    api_format: .json
+    recaptcha_secret: 6LdYySYTAAAAAONjo0rnip6P0683oIUMBjAtxIsp
+    recaptcha_key: 6LdYySYTAAAAAHsQPC8FOFbyADhZbWZNx7147ZY8
+    release_version_tag: null
+    google_analytics: null
