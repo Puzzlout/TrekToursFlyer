@@ -1,47 +1,47 @@
-itinerary-stage1-title-h1: 'Les Contamines - Martigny'
-itinerary-stage1-description-p: 'L''itineraire  passe par le col de Voze puis le col de Balme.<br />- Difficulté :  niveau 3<br/>- Formule : découverte - aventure - grand tour'
-itinerary-stage1-tech1-title-span: Durée
-itinerary-stage1-tech1-value-span: '3 heures'
+itinerary-stage1-title-h1: 'Découverte Mont-Blanc'
+itinerary-stage1-description-p: 'Une étape au choix parmis celles proposées <br /> - Etape Les Contamines - Chamonix, passant par les chalets de bionnassay et au pied des glaciers du Mont-Blanc. <br /> - Etape Chamonix - Martigny, qui remonte la vallée de Chamonix pour atteindre la Suisse et Martigny. Le retour à Chamonix s''effectue en train (compris dans le pack) <br /> - L''étape du Val Ferret, côté italien (aller-retour) avec la nuit à Courmayeur.'
+itinerary-stage1-tech1-title-span: 'Durée :'
+itinerary-stage1-tech1-value-span: 'De 2h à 4h'
 itinerary-stage1-tech2-title-span: Montée
-itinerary-stage1-tech2-value-span: '+ 1200 m'
+itinerary-stage1-tech2-value-span: '+ 600 m'
 itinerary-stage1-tech3-title-span: Descente
-itinerary-stage1-tech3-value-span: '- 800 m'
-itinerary-stage2-title-h1: 'Etape 2 - Martigny - Italie'
-itinerary-stage2-description-p: 'L''itineraire  passe par le col de Voze puis le col de Balme.<br /> Difficulté :  niveau 3<br/> Formule : aventure - grand tour'
+itinerary-stage1-tech3-value-span: '- 600 m'
+itinerary-stage2-title-h1: 'Aventure Mont-Blanc'
+itinerary-stage2-description-p: 'Réalisez en 3 jours les étapes entre Les Contamines - Chamonix, Chamonix - Martigny, ainsi que le Val Ferret (Italie).'
 itinerary-stage2-tech1-title-span: Durée
 itinerary-stage2-tech1-value-span: '3 heures'
 itinerary-stage2-tech2-title-span: Montée
 itinerary-stage2-tech2-value-span: '+ 800m'
 itinerary-stage2-tech3-title-span: Descente
-itinerary-stage2-tech3-value-span: '-500'
-itinerary-stage3-title-h1: 'Etape 3 - Col du Bonhomme'
-itinerary-stage3-description-p: 'L''itineraire  passe par le col de Voze puis le col de Balme.<br /> Difficulté :  niveau 3<br/> Formule : aventure - grand tour'
+itinerary-stage2-tech3-value-span: '-1200'
+itinerary-stage3-title-h1: 'Le Tour du Mont Blanc'
+itinerary-stage3-description-p: 'Partez pendant 6 jours sur le tour du Mont Blanc.'
 itinerary-stage3-tech1-title-span: Durée
 itinerary-stage3-tech1-value-span: '5 heures'
 itinerary-stage3-tech2-title-span: Montée
-itinerary-stage3-tech2-value-span: '+ 1200m'
-itinerary-stage3-tech3-title-span: Descnte
-itinerary-stage3-tech3-value-span: '- 800m'
-itinerary-stage4-title-h1: 'Etape 4 - Col du Bonhome - contamines'
-itinerary-stage4-description-p: 'Parcours technique vers les contamines'
+itinerary-stage3-tech2-value-span: '+ 1000m'
+itinerary-stage3-tech3-title-span: Descente
+itinerary-stage3-tech3-value-span: '- 1000m'
+itinerary-stage4-title-h1: 'Mérida et Alley Oop'
+itinerary-stage4-description-p: 'Alley Oop (Les Contamines) travail en étroite collaboration avec Mérida pour fournir les E-bike de dernière génération.'
 itinerary-stage4-tech1-title-span: Durée
-itinerary-stage4-tech1-value-span: '5 heures'
+itinerary-stage4-tech1-value-span: '8 heures'
 itinerary-stage4-tech2-title-span: Montée
 itinerary-stage4-tech2-value-span: '+ 900 m'
 itinerary-stage4-tech3-title-span: Descente
 itinerary-stage4-tech3-value-span: '- 1000m'
-itinerary-stage5-title-h1: 'Etape 5 - Contamines - col Voze'
-itinerary-stage5-description-p: 'Magnifique montée'
+itinerary-stage5-title-h1: 'Hôtels Chalets de Tradition'
+itinerary-stage5-description-p: 'Avec les Hôtels Chalets de Tradition, l''hébergement s''effectue dans des hôtels 3 à 4 étoiles en pension complète (petit déjeuner, Pique-nique, dîner). <br /> Vous profiterez de l’accueil et du confort des logements en hôtels.'
 itinerary-stage5-tech1-title-span: Durée
 itinerary-stage5-tech1-value-span: '6 heures'
 itinerary-stage5-tech2-title-span: Montée
 itinerary-stage5-tech2-value-span: '+ 900 m'
 itinerary-stage5-tech3-title-span: Descente
 itinerary-stage5-tech3-value-span: '- 1000 m'
-itinerary-stage6-title-h1: 'Etape 6 -Chamonix - Suisse'
-itinerary-stage6-description-p: 'Decouverte de l''habitat suisse'
+itinerary-stage6-title-h1: 'Le SNAM (Syndicat National des Accompagnateurs Montagne)'
+itinerary-stage6-description-p: 'Les Accompagnateurs en Montagne du SNAM sont tous agréés par l''état et disposent du brevet d''état spécialisé pour la pratique du VTT'
 itinerary-stage6-tech1-title-span: Durée
-itinerary-stage6-tech1-value-span: '5 heures'
+itinerary-stage6-tech1-value-span: '7 heures'
 itinerary-stage6-tech2-title-span: Montée
 itinerary-stage6-tech2-value-span: '+ 1000m'
 itinerary-stage6-tech3-title-span: Descente

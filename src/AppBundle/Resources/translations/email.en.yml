@@ -3,6 +3,6 @@ admin_p_hello: Hello
 admin_p_youreceived: 'You received a message from'
 admin_p_email: Email
 admin_p_phonenumber: 'Phone Number'
-client_subject: 'A copy of your request sent to TrekTours'
+client_subject: 'A copy of your request sent to E-bike Mont Blanc'
 client_p_hello: Hello
 client_p_youhavesent: 'You have sent the following message'

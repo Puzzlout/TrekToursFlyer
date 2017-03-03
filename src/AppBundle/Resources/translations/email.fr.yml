@@ -1,8 +1,8 @@
 admin_p_hello: Bonjour
-admin_p_youreceived: 'Vous aves reçu un message'
+admin_p_youreceived: 'Vous avez reçu un message'
 admin_p_email: Email
 admin_p_phonenumber: Téléphone
 admin_subject: 'Nouvelle demande'
-client_subject: 'Copie de votre demande envoyée à TrekTours'
+client_subject: 'Copie de votre demande envoyée à E-bike Mont Blanc'
 client_p_hello: Bonjour
 client_p_youhavesent: 'Vous avez envoyé le message suivant'
