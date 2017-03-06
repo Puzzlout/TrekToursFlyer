@@ -3,10 +3,10 @@ git pull
 echo "Run composer..."
 composer install
 composer update
-npm install -g bower
+#npm install -g bower
 echo "Run bower..."
-bower install
-bower update
+#bower install
+#bower update
 echo "IMPORTANT: Require a mysql root user with no password"
 php bin/console doctrine:database:create --if-not-exists
 php bin/console doctrine:schema:update --force
