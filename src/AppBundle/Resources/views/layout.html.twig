@@ -3,20 +3,19 @@
 {% block stylesheets %}
     {{ parent() }}
     {% stylesheets
-    'bundles/app/vendor/bootstrap/dist/css/bootstrap.min.css'
-    'bundles/app/vendor/font-awesome/css/font-awesome.min.css'
+    'bundles/app/vendor/bootstrap.min.css'
+    'bundles/app/vendor/font-awesome.min.css'
     'bundles/app/css/*'
     filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round" rel="stylesheet">
     {% endstylesheets %}
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
     {% javascripts
-    'bundles/app/vendor/jquery/dist/jquery.min.js'
-    'bundles/app/vendor/bootstrap/dist/js/bootstrap.min.js'
+    'bundles/app/vendor/jquery.min.js'
+    'bundles/app/vendor/bootstrap.min.js'
     'bundles/app/js/*' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
